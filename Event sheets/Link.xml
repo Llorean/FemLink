@@ -61,9 +61,9 @@
                     <param id="0" name="Variable">DownPressed</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="5384385946236942" type="System">
-                    <param id="0" name="Variable">DownPressed</param>
-                    <param id="1" name="Value">0</param>
+                <action id="-10" name="Set value" sid="8563740693713287" type="LinkSprite">
+                    <param id="0" name="Instance variable">AniSpeed</param>
+                    <param id="1" name="Value">5</param>
                 </action>
             </actions>
         </event-block>
@@ -168,7 +168,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="6" name="Set speed" sid="9856602446224309" type="LinkSprite">
+                <action disabled="1" id="6" name="Set speed" sid="9856602446224309" type="LinkSprite">
                     <param id="0" name="Speed">max((LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed) * 15,10)</param>
                 </action>
                 <action id="-10" name="Set value" sid="6317846507353118" type="LinkSprite">
@@ -181,6 +181,10 @@
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="8568252187015545" type="LinkSprite">
                     <param id="0" name="Deceleration">750</param>
+                </action>
+                <action id="-10" name="Set value" sid="1550720488506317" type="LinkSprite">
+                    <param id="0" name="Instance variable">AniSpeed</param>
+                    <param id="1" name="Value">max((LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed) * 15,10)</param>
                 </action>
             </actions>
         </event-block>
@@ -202,6 +206,10 @@
                 <action id="-13" name="Set boolean" sid="7155622965393882" type="LinkSprite">
                     <param id="0" name="Instance variable">Landed</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2349316679389542" type="LinkSprite">
+                    <param id="0" name="Instance variable">AniSpeed</param>
+                    <param id="1" name="Value">8</param>
                 </action>
             </actions>
             <sub-events>
@@ -336,8 +344,12 @@
                 <action behavior="Platform" id="3" name="Set deceleration" sid="7060632732843931" type="LinkSprite">
                     <param id="0" name="Deceleration">750</param>
                 </action>
-                <action id="6" name="Set speed" sid="1377847170036342" type="LinkSprite">
+                <action disabled="1" id="6" name="Set speed" sid="1377847170036342" type="LinkSprite">
                     <param id="0" name="Speed">15</param>
+                </action>
+                <action id="-10" name="Set value" sid="9140802644067049" type="LinkSprite">
+                    <param id="0" name="Instance variable">AniSpeed</param>
+                    <param id="1" name="Value">15</param>
                 </action>
             </actions>
         </event-block>
@@ -418,6 +430,9 @@
                 <action id="4" name="Set animation" sid="9569263504499064" type="LinkWoodShield">
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="2461047948116671" type="LinkSprite">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
             </actions>
         </event-block>

@@ -111,6 +111,7 @@
                 <instance-variable name="JumpAccel" sid="1176759241810852" type="number" />
                 <instance-variable name="JumpDecel" sid="8027101894212862" type="number" />
                 <instance-variable name="Landed" sid="8179628900801144" type="boolean" />
+                <instance-variable name="AniSpeed" sid="3121218315861434" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9052845725288094">

@@ -70,6 +70,7 @@
                         <JumpAccel>350</JumpAccel>
                         <JumpDecel>0</JumpDecel>
                         <Landed>false</Landed>
+                        <AniSpeed>5</AniSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
