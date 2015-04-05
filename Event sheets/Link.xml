@@ -3,81 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
-        <event-block any="1" sid="8886481429188836">
-            <conditions>
-                <condition id="4" name="Is touching object" sid="7542460207604579" type="Touch">
-                    <param id="0" name="Object">LeftArrow</param>
-                </condition>
-                <condition id="0" name="On key pressed" sid="4405445557378506" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="2929662998851918" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">14</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="6605448299762965" type="LinkSprite">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="5913732864016489">
-            <conditions>
-                <condition id="4" name="Is touching object" sid="1732189077898198" type="Touch">
-                    <param id="0" name="Object">RightArrow</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="2596417451196312" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="9451128327241296" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">15</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="7789945557254265" type="LinkSprite">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="6943031363227481">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="924569298540612" type="Keyboard">
-                    <param id="0" name="Key">90 (Z)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="675057414644168" type="Touch">
-                    <param id="0" name="Object">JumpArrow</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="3958520243774078" type="LinkSprite">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5504536014655544">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="9200360682078836" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="518685141502423" type="FrameRate">
-                    <param id="0" name="Text">fps</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8101963807534129">
-            <conditions>
-                <condition id="3" name="On touched object" sid="5338063238008825" type="Touch">
-                    <param id="0" name="Object">FrameRate</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="11" name="Cancel fullscreen" sid="7224890422435276" type="Browser" />
-            </actions>
-        </event-block>
+        <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
         <event-block sid="960604882087377">
             <conditions>
                 <condition id="-18" name="On created" sid="2801020842146855" type="LinkSprite" />
@@ -131,6 +57,106 @@
                 <action behavior="Platform" id="4" name="Set jump strength" sid="8748480070655375" type="LinkSprite">
                     <param id="0" name="Jump strength">350</param>
                 </action>
+                <action id="-9" name="Set value" sid="993871728314511" type="System">
+                    <param id="0" name="Variable">DownPressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5384385946236942" type="System">
+                    <param id="0" name="Variable">DownPressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="819164391333958">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1209243342342426" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="8647278063767825" type="Touch">
+                    <param id="0" name="Object">LeftArrow</param>
+                </condition>
+                <condition id="3" name="Is button down" sid="7083320326881805" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">14</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="2185332941662798" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">2</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7996912046644641" type="LinkSprite">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7010856422738574">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1220244165182205" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="94019550966157" type="Touch">
+                    <param id="0" name="Object">RightArrow</param>
+                </condition>
+                <condition id="3" name="Is button down" sid="6009198013063227" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">15</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="8643160914378551" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="6520892725976037" type="LinkSprite">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7460307431076239">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1960191332917978" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="3" name="Is button down" sid="8487755986745782" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">13</param>
+                </condition>
+                <condition id="5" name="Compare axis" sid="4487440306131427" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Axis">1</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7339975723868591" type="System">
+                    <param id="0" name="Variable">DownPressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="5505160704682662">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4742061740599675" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+                <condition id="4" name="Is touching object" sid="3914218333899099" type="Touch">
+                    <param id="0" name="Object">JumpArrow</param>
+                </condition>
+                <condition id="3" name="Is button down" sid="7634941998414107" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
+                    <param id="0" name="Control">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7059704516993506">
@@ -158,10 +184,14 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1997841323430899">
+        <event-block any="1" sid="1997841323430899">
             <conditions>
                 <condition id="0" name="On key pressed" sid="1855683610675596" type="Keyboard">
-                    <param id="0" name="Key">88 (X)</param>
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="2820549009721176" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
                 </condition>
             </conditions>
             <actions>
@@ -206,12 +236,17 @@
         </event-block>
         <event-block sid="7033522409632183">
             <conditions>
-                <condition id="2" name="Key is down" sid="5621272745407384" type="Keyboard">
+                <condition disabled="1" id="2" name="Key is down" sid="5621272745407384" type="Keyboard">
                     <param id="0" name="Key">40 (Down arrow)</param>
                 </condition>
                 <condition behavior="Platform" id="2" name="Is on floor" sid="6131453956185095" type="LinkSprite" />
                 <condition id="2" inverted="1" name="Is playing" sid="1697638175414658" type="LinkSprite">
                     <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7830574791894767" type="System">
+                    <param id="0" name="Variable">DownPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>

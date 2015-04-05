@@ -489,7 +489,7 @@
         <global-instance type="Mouse" uid="4" />
         <global-instance type="Touch" uid="5">
             <properties>
-                <use-mouse-input>No</use-mouse-input>
+                <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
         <global-instance type="Audio" uid="6">
