@@ -155,7 +155,7 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
-                    <param id="0" name="Jump strength">295+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed/110)))</param>
+                    <param id="0" name="Jump strength">295+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*110)</param>
                 </action>
                 <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
                     <param id="0" name="Control">2</param>
@@ -244,9 +244,6 @@
         </event-block>
         <event-block sid="7033522409632183">
             <conditions>
-                <condition disabled="1" id="2" name="Key is down" sid="5621272745407384" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
                 <condition behavior="Platform" id="2" name="Is on floor" sid="6131453956185095" type="LinkSprite" />
                 <condition id="2" inverted="1" name="Is playing" sid="1697638175414658" type="LinkSprite">
                     <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
