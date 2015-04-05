@@ -7,6 +7,7 @@
         <event-block sid="7573396727527824">
             <conditions>
                 <condition id="14" name="On tap" sid="2092368242389719" type="Touch" />
+                <condition id="5" inverted="1" name="Is downloading update" sid="4469455947833829" type="Browser" />
             </conditions>
             <actions>
                 <action id="10" name="Request fullscreen" sid="8072427609495197" type="Browser">
@@ -56,6 +57,47 @@
             </conditions>
             <actions>
                 <action id="11" name="Cancel fullscreen" sid="6135357906528244" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="114269931720743">
+            <conditions>
+                <condition id="5" name="Is downloading update" sid="1380395700221538" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="5549376172567223" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="6152780648040646" type="System">
+                    <param id="0" name="Object to create">UpdateText</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9332825577114856">
+            <conditions>
+                <condition id="6" name="On update ready" sid="6733247552737373" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9068955419002031" type="UpdateText">
+                    <param id="0" name="Text">&quot;READY&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="8380766418758709">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7393136846751715" type="Touch">
+                    <param id="0" name="Object">UpdateText</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="8364600760414589" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpdateText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="7230307643131558" type="Browser" />
             </actions>
         </event-block>
     </events>
