@@ -55,7 +55,7 @@
                     <param id="0" name="Acceleration">1000</param>
                 </action>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="8748480070655375" type="LinkSprite">
-                    <param id="0" name="Jump strength">350</param>
+                    <param id="0" name="Jump strength">365</param>
                 </action>
                 <action id="-9" name="Set value" sid="993871728314511" type="System">
                     <param id="0" name="Variable">DownPressed</param>
@@ -154,6 +154,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
+                    <param id="0" name="Jump strength">335+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed/70)))</param>
+                </action>
                 <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
                     <param id="0" name="Control">2</param>
                 </action>

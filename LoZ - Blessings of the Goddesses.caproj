@@ -232,8 +232,8 @@
                         <collision-poly>
                             <point x="0" y="0.015625" />
                             <point x="0.96875" y="0.015625" />
-                            <point x="0.96875" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.96875" y="0.84375" />
+                            <point x="0" y="0.84375" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -242,8 +242,8 @@
                         <collision-poly>
                             <point x="0.03125" y="0.015625" />
                             <point x="1" y="0.015625" />
-                            <point x="1" y="1" />
-                            <point x="0.03125" y="1" />
+                            <point x="1" y="0.84375" />
+                            <point x="0.03125" y="0.84375" />
                         </collision-poly>
                     </frame>
                 </animation>
