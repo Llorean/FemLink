@@ -180,7 +180,7 @@
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="8568252187015545" type="LinkSprite">
-                    <param id="0" name="Deceleration">625</param>
+                    <param id="0" name="Deceleration">750</param>
                 </action>
             </actions>
         </event-block>
@@ -334,7 +334,7 @@
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="7060632732843931" type="LinkSprite">
-                    <param id="0" name="Deceleration">625</param>
+                    <param id="0" name="Deceleration">750</param>
                 </action>
                 <action id="6" name="Set speed" sid="1377847170036342" type="LinkSprite">
                     <param id="0" name="Speed">15</param>
