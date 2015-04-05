@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Castle</name>
+    <events>
+        <include>Link</include>
+        <event-block sid="7573396727527824">
+            <conditions>
+                <condition id="14" name="On tap" sid="2092368242389719" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="8072427609495197" type="Browser">
+                    <param id="0" name="Mode">4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1294748120725254" type="LeftArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4080868637095044" type="RightArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="375183878710102" type="JumpArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8325293955795914">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2141729266792959" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="7718967465711226" type="System">
+                    <param id="0" name="Object to create">LinkSprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1600</param>
+                    <param id="3" name="Y">3072</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
