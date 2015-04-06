@@ -371,6 +371,62 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="FallLeft" pingpong="0" repeatcount="1" repeatto="0" sid="7666392878302829" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.015625" />
+                            <point x="0.9375" y="0.015625" />
+                            <point x="0.9375" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="FallRight" pingpong="0" repeatcount="1" repeatto="0" sid="6624368189121553" speed="5">
+                    <frame duration="1" hotspotX="0.53125" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0.0625" y="1" />
+                            <point x="0.0625" y="0.015625" />
+                            <point x="1" y="0.015625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="FallStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="6224796994485039" speed="5">
+                    <frame duration="1" hotspotX="0.326087" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.652174" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="0.652174" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.630435" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.304348" y="0" />
+                            <point x="0.956522" y="0" />
+                            <point x="0.956522" y="1" />
+                            <point x="0.304348" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="FallStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="6685413344212696" speed="5">
+                    <frame duration="1" hotspotX="0.673913" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.347826" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.347826" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.369565" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.695652" y="1" />
+                            <point x="0.0434783" y="1" />
+                            <point x="0.0434783" y="0" />
+                            <point x="0.695652" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="LinkSword" sid="4923557293690689">

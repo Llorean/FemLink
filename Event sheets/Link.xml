@@ -307,7 +307,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="5081336302759668" type="LinkSprite">
                     <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Stand&quot;</param>
+                    <param id="1" name="Value">&quot;Fall&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="8530619298378027" type="LinkSprite">
                     <param id="0" name="Deceleration">LinkSprite.JumpDecel</param>
