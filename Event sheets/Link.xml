@@ -155,6 +155,9 @@
                     <param id="0" name="Gamepad">0</param>
                     <param id="1" name="Button">0</param>
                 </condition>
+                <condition id="0" name="On key pressed" sid="2566414681367415" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
@@ -199,6 +202,9 @@
                 <condition id="6" name="On button pressed" sid="2820549009721176" type="Gamepad">
                     <param id="0" name="Gamepad">0</param>
                     <param id="1" name="Button">2</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="1298369517802259" type="Keyboard">
+                    <param id="0" name="Key">17 (Ctrl)</param>
                 </condition>
             </conditions>
             <actions>
