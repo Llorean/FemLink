@@ -88,7 +88,7 @@
         </object-type>
         <object-type name="CastleBGTiles" sid="2924325693202287">
             <plugin id="Tilemap" />
-            <texture original-source="C:\Projects\Misc\Tilemaps\CastleBGTiles.png" />
+            <texture original-source="C:\Projects\Misc\Tilesets\CastleBGTiles.png" />
             <tiles>
                 <tile id="0">
                     <collision-poly>
