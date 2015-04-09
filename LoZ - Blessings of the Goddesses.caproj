@@ -83,7 +83,7 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Projects\Misc\Tilemaps\CastleGameTiles.png" />
+            <texture original-source="C:\Projects\Misc\Tilesets\CastleGameTiles.png" />
             <tiles />
         </object-type>
         <object-type name="CastleBGTiles" sid="2924325693202287">
