@@ -429,28 +429,42 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="8435762796726875" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.015625" />
+                            <point x="0.9375" y="0.015625" />
+                            <point x="0.9375" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="2646351413769631" speed="5">
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.0625" y="1" />
+                            <point x="0.0625" y="0.015625" />
+                            <point x="1" y="0.015625" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4302095671223656" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.015625" />
+                            <point x="0.9375" y="0.015625" />
+                            <point x="0.9375" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="2195281341065375" speed="5">
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.0625" y="1" />
+                            <point x="0.0625" y="0.015625" />
+                            <point x="1" y="0.015625" />
                         </collision-poly>
                     </frame>
                 </animation>

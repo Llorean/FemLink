@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
+        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">12</variable>
+        <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
         <variable constant="0" name="UpPressed" sid="8030079085818844" static="0" type="number">0</variable>
         <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
         <event-block sid="960604882087377">
@@ -72,6 +74,15 @@
                 <action id="-10" name="Set value" sid="8563740693713287" type="LinkSprite">
                     <param id="0" name="Instance variable">AniSpeed</param>
                     <param id="1" name="Value">5</param>
+                </action>
+                <action id="-5" name="Set width" sid="8581731100330863" type="HeartBorder">
+                    <param id="0" name="Width">16 * Containers</param>
+                </action>
+                <action id="-5" name="Set width" sid="5530658632412351" type="HeartTop">
+                    <param id="0" name="Width">8 * floor(CurrentHealth / 2)</param>
+                </action>
+                <action id="-5" name="Set width" sid="3382187573843774" type="HeartBottom">
+                    <param id="0" name="Width">8 * ceil(CurrentHealth / 2)</param>
                 </action>
             </actions>
         </event-block>
