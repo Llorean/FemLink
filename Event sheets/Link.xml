@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
-        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">12</variable>
+        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">1</variable>
         <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
         <variable constant="0" name="UpPressed" sid="8030079085818844" static="0" type="number">0</variable>
         <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
@@ -74,6 +74,10 @@
                 <action id="-10" name="Set value" sid="8563740693713287" type="LinkSprite">
                     <param id="0" name="Instance variable">AniSpeed</param>
                     <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="7048290906404684" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">min(CurrentHealth,Containers*4)</param>
                 </action>
                 <action id="-5" name="Set width" sid="8581731100330863" type="HeartBorder">
                     <param id="0" name="Width">16 * Containers</param>
@@ -546,6 +550,20 @@
                 <action id="6" name="Set speed" sid="5399779528133823" type="LinkSprite">
                     <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="9313361416830493">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6929994983566757" type="LinkSprite">
+                    <param id="0" name="Object">Heart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="6628709653237708" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1938267857740546" type="Heart" />
             </actions>
         </event-block>
     </events>
