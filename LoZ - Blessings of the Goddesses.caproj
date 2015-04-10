@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
@@ -665,6 +666,18 @@
         </object-type>
         <object-type name="UpdateText" sid="1661968187048641">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="HeartBorder" sid="5992506189187674">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Projects\FemLink\Resources\Sprites\heartoutline.png" />
+        </object-type>
+        <object-type name="HeartTop" sid="895408320920393">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Projects\FemLink\Resources\Sprites\heart.png" />
+        </object-type>
+        <object-type name="HeartBottom" sid="4758751804478428">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Projects\FemLink\Resources\Sprites\heart.png" />
         </object-type>
     </object-folder>
     <families />
