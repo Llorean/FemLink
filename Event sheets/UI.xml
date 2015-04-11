@@ -18,6 +18,12 @@
                 <action id="-15" name="Set visible" sid="8767332214748134" type="RightArrow">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="6834326313157096" type="DownArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1265537296982363" type="UpArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
                 <action id="-15" name="Set visible" sid="5608362697449065" type="JumpArrow">
                     <param id="0" name="Visibility">1</param>
                 </action>
