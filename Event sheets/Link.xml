@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
+        <variable constant="0" name="LinkJumpSustain" sid="2309712421259004" static="0" type="number">85</variable>
         <variable constant="0" name="LinkJump" sid="621929366359501" static="0" type="number">295</variable>
         <variable constant="0" name="LinkJumpVariance" sid="4833760876256142" static="0" type="number">110</variable>
         <variable constant="0" name="LinkJumpAccel" sid="4568488791387969" static="0" type="number">350</variable>
@@ -64,9 +65,6 @@
                 <action behavior="Platform" id="2" name="Set acceleration" sid="6242651461731604" type="LinkSprite">
                     <param id="0" name="Acceleration">LinkAccel</param>
                 </action>
-                <action behavior="Platform" disabled="1" id="4" name="Set jump strength" sid="8748480070655375" type="LinkSprite">
-                    <param id="0" name="Jump strength">LinkJump</param>
-                </action>
                 <action id="-9" name="Set value" sid="993871728314511" type="System">
                     <param id="0" name="Variable">DownPressed</param>
                     <param id="1" name="Value">0</param>
@@ -94,6 +92,9 @@
                 </action>
                 <action id="-5" name="Set width" sid="3382187573843774" type="HeartBottom">
                     <param id="0" name="Width">8 * ceil(CurrentHealth / 2)</param>
+                </action>
+                <action behavior="Platform" id="14" name="Set jump sustain" sid="530415314828537" type="LinkSprite">
+                    <param id="0" name="Jump sustain">LinkJumpSustain</param>
                 </action>
             </actions>
         </event-block>
@@ -632,7 +633,11 @@
                 </action>
                 <action id="-9" name="Set value" sid="7651348523468605" type="System">
                     <param id="0" name="Variable">LinkJump</param>
-                    <param id="1" name="Value">415</param>
+                    <param id="1" name="Value">315</param>
+                </action>
+                <action id="-9" name="Set value" sid="6146037813307051" type="System">
+                    <param id="0" name="Variable">LinkJumpSustain</param>
+                    <param id="1" name="Value">185</param>
                 </action>
                 <action id="-9" name="Set value" sid="8268459202447805" type="System">
                     <param id="0" name="Variable">LinkJumpVariance</param>
