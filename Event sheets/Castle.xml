@@ -37,6 +37,44 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6326784281241848">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6918882989226802" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="259074969579024">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8547735836385414" type="System">
+                            <param id="0" name="Object">SceneDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5194965865728515">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9418219740425454" type="SceneDoor">
+                                    <param id="0" name="Instance variable">Target</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Entrance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5317589769363961" type="LinkSprite" />
+                                <action id="-9" name="Destroy" sid="5665548588866803" type="LinkWoodShield" />
+                                <action id="-9" name="Destroy" sid="2763259695696394" type="LinkSword" />
+                                <action id="-3" name="Create object" sid="4359293098474376" type="System">
+                                    <param id="0" name="Object to create">LinkSprite</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="X">SceneDoor.X</param>
+                                    <param id="3" name="Y">SceneDoor.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="2249608534620288">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="5074489062945396" type="System">
