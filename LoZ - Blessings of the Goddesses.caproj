@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -91,7 +92,7 @@
         </object-type>
         <object-type name="CastleBGTiles" sid="2924325693202287">
             <plugin id="Tilemap" />
-            <texture original-source="C:\Projects\Misc\Tilesets\CastleBGTiles.png" />
+            <texture original-source="C:\Projects\FemLink\Resources\Tilesets\CastleBGTiles.png" />
             <tiles>
                 <tile id="0">
                     <collision-poly>
@@ -215,8 +216,8 @@
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="0" y="0.15625" />
-                            <point x="0.96875" y="0.15625" />
-                            <point x="0.96875" y="1" />
+                            <point x="0.9375" y="0.15625" />
+                            <point x="0.9375" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
@@ -225,8 +226,8 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
-                            <point x="0.03125" y="1" />
-                            <point x="0.03125" y="0.15625" />
+                            <point x="0.0625" y="1" />
+                            <point x="0.0625" y="0.15625" />
                             <point x="1" y="0.15625" />
                         </collision-poly>
                     </frame>
@@ -235,8 +236,8 @@
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="0" y="0.015625" />
-                            <point x="0.96875" y="0.015625" />
-                            <point x="0.96875" y="0.84375" />
+                            <point x="0.9375" y="0.015625" />
+                            <point x="0.9375" y="0.84375" />
                             <point x="0" y="0.84375" />
                         </collision-poly>
                     </frame>
@@ -244,10 +245,10 @@
                 <animation framecount="1" loop="0" name="JumpRight" pingpong="0" repeatcount="1" repeatto="0" sid="5482316764757395" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0">
                         <collision-poly>
-                            <point x="0.03125" y="0.015625" />
+                            <point x="0.0625" y="0.015625" />
                             <point x="1" y="0.015625" />
                             <point x="1" y="0.84375" />
-                            <point x="0.03125" y="0.84375" />
+                            <point x="0.0625" y="0.84375" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -686,7 +687,7 @@
         </object-type>
         <object-type name="HeartBorder" sid="5992506189187674">
             <plugin id="TiledBg" />
-            <texture original-source="D:\Projects\FemLink\Resources\Sprites\heartoutline.png" />
+            <texture original-source="C:\Projects\FemLink\Resources\Sprites\heartborder.png" />
         </object-type>
         <object-type name="HeartTop" sid="895408320920393">
             <plugin id="TiledBg" />
@@ -708,7 +709,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2634989624240214" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\heart.png" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.5625" original-source="C:\Projects\FemLink\Resources\Sprites\heart.png">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.875" y="0.1875" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.3125" y="0.75" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -734,6 +746,11 @@
         </object-type>
         <object-type name="FaroreItem" sid="8398436785833173">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="517877840116446">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9715259714693477" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\Farore.png" />
@@ -769,6 +786,62 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="TestSprite" sid="8362617705630807">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3024905567894402">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9451150360789412" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TestSprite2" sid="1171680926076822">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4313525872325234">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1607343105900613" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CastleBackground" sid="7566174566315026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3023882364284022" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Backgrounds\Castle.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DungeonGameTiles" sid="1386139567747471">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9636954598733503">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Projects\FemLink\Resources\Tilesets\dungeon tiles.PNG" />
+            <tiles />
         </object-type>
     </object-folder>
     <families />
