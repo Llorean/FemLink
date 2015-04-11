@@ -206,7 +206,7 @@
                     <param id="0" name="Gamepad">0</param>
                     <param id="1" name="Button">0</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="2566414681367415" type="Keyboard">
+                <condition id="2" name="Key is down" sid="2566414681367415" type="Keyboard">
                     <param id="0" name="Key">32 (Space)</param>
                 </condition>
             </conditions>
