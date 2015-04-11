@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UI</name>
+    <events>
+        <event-block sid="3397332962239419">
+            <conditions>
+                <condition id="14" name="On tap" sid="9106834799010055" type="Touch" />
+                <condition id="5" inverted="1" name="Is downloading update" sid="4025374428296222" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="2629108446134576" type="Browser">
+                    <param id="0" name="Mode">4</param>
+                </action>
+                <action id="-15" name="Set visible" sid="403312138946218" type="LeftArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8767332214748134" type="RightArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5608362697449065" type="JumpArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2382049476088659">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6473142132988095" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3183095146098151" type="FrameRate">
+                    <param id="0" name="Text">fps</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5772227103758531">
+            <conditions>
+                <condition id="3" name="On touched object" sid="7639984980343873" type="Touch">
+                    <param id="0" name="Object">FrameRate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Cancel fullscreen" sid="2686497559376094" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="9474238407685719">
+            <conditions>
+                <condition id="5" name="Is downloading update" sid="5548304652745255" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="4555253759130767" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="3200669079420639" type="System">
+                    <param id="0" name="Object to create">UpdateText</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6243590589832178">
+            <conditions>
+                <condition id="6" name="On update ready" sid="288167458961038" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2303891589383113" type="UpdateText">
+                    <param id="0" name="Text">&quot;READY&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="2372535473554884">
+            <conditions>
+                <condition id="3" name="On touched object" sid="669883382865193" type="Touch">
+                    <param id="0" name="Object">UpdateText</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="4204413990114613" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpdateText</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Reload" sid="3092215761924295" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

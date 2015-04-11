@@ -738,6 +738,8 @@
         <event-sheet>Castle.xml</event-sheet>
         <event-sheet>Link.xml</event-sheet>
         <event-sheet>Dungeon.xml</event-sheet>
+        <event-sheet>UI.xml</event-sheet>
+        <event-sheet>Scene.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

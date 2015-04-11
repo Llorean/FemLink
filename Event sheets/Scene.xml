@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Scene</name>
+    <events>
+        <event-block sid="2440569583930352">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1166157526516241" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3029138445767384" type="System">
+                    <param id="0" name="Object to create">LinkSprite</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">1600</param>
+                    <param id="3" name="Y">3072</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6127631933991675">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7643669562528562" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9133549944124126">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="7151017151860949" type="System">
+                            <param id="0" name="Object">SceneDoor</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5283944847505024">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1733132594649717" type="SceneDoor">
+                                    <param id="0" name="Instance variable">Target</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Entrance</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="9935589342054194" type="LinkSprite" />
+                                <action id="-9" name="Destroy" sid="8294432039360402" type="LinkWoodShield" />
+                                <action id="-9" name="Destroy" sid="9482611763136441" type="LinkSword" />
+                                <action id="-3" name="Create object" sid="9742389002059372" type="System">
+                                    <param id="0" name="Object to create">LinkSprite</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="X">SceneDoor.X</param>
+                                    <param id="3" name="Y">SceneDoor.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

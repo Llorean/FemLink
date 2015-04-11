@@ -14,12 +14,12 @@
             <actions>
                 <action id="0" name="Spawn another object" sid="5618468234816169" type="LinkSprite">
                     <param id="0" name="Object">LinkWoodShield</param>
-                    <param id="1" name="Layer">1</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="5122399888080018" type="LinkSprite">
                     <param id="0" name="Object">LinkSword</param>
-                    <param id="1" name="Layer">1</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="4508459972988251" type="LinkWoodShield">
