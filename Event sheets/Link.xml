@@ -3,10 +3,17 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
+        <variable constant="0" name="LinkJump" sid="621929366359501" static="0" type="number">295</variable>
+        <variable constant="0" name="LinkJumpVariance" sid="4833760876256142" static="0" type="number">110</variable>
+        <variable constant="0" name="LinkJumpAccel" sid="4568488791387969" static="0" type="number">350</variable>
+        <variable constant="0" name="LinkJumpDecel" sid="3290663707225171" static="0" type="number">0</variable>
+        <variable constant="0" name="LinkDecel" sid="1661150361814371" static="0" type="number">750</variable>
+        <variable constant="0" name="LinkAccel" sid="5553679624960852" static="0" type="number">800</variable>
         <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">1</variable>
         <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
         <variable constant="0" name="UpPressed" sid="8030079085818844" static="0" type="number">0</variable>
         <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
+        <variable constant="0" name="Entrance" sid="1120813636026238" static="0" type="text"></variable>
         <event-block sid="960604882087377">
             <conditions>
                 <condition id="-18" name="On created" sid="2801020842146855" type="LinkSprite" />
@@ -55,10 +62,10 @@
                     <param id="1" name="Value">((LinkSprite.Platform.VectorX) / abs(LinkSprite.Platform.VectorX)) &lt; 0 ? &quot;Left&quot; : (((LinkSprite.Platform.VectorX) / abs(LinkSprite.Platform.VectorX)) &gt; 0 ? &quot;Right&quot; : LinkSprite.Direction)</param>
                 </action>
                 <action behavior="Platform" id="2" name="Set acceleration" sid="6242651461731604" type="LinkSprite">
-                    <param id="0" name="Acceleration">800</param>
+                    <param id="0" name="Acceleration">LinkAccel</param>
                 </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="8748480070655375" type="LinkSprite">
-                    <param id="0" name="Jump strength">365</param>
+                <action behavior="Platform" disabled="1" id="4" name="Set jump strength" sid="8748480070655375" type="LinkSprite">
+                    <param id="0" name="Jump strength">LinkJump</param>
                 </action>
                 <action id="-9" name="Set value" sid="993871728314511" type="System">
                     <param id="0" name="Variable">DownPressed</param>
@@ -204,7 +211,7 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
-                    <param id="0" name="Jump strength">295+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*110)</param>
+                    <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
                 </action>
                 <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
                     <param id="0" name="Control">2</param>
@@ -229,7 +236,7 @@
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="8568252187015545" type="LinkSprite">
-                    <param id="0" name="Deceleration">750</param>
+                    <param id="0" name="Deceleration">LinkDecel</param>
                 </action>
                 <action id="-10" name="Set value" sid="1550720488506317" type="LinkSprite">
                     <param id="0" name="Instance variable">AniSpeed</param>
@@ -329,10 +336,10 @@
                     <param id="1" name="Value">&quot;Jump&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="7209562516573919" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkSprite.JumpDecel</param>
+                    <param id="0" name="Deceleration">LinkJumpDecel</param>
                 </action>
                 <action behavior="Platform" id="2" name="Set acceleration" sid="6079584844841784" type="LinkSprite">
-                    <param id="0" name="Acceleration">LinkSprite.JumpAccel</param>
+                    <param id="0" name="Acceleration">LinkJumpAccel</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="3809259223305579" type="LinkSprite">
                     <param id="0" name="Instance variable">Landed</param>
@@ -370,10 +377,10 @@
                     <param id="1" name="Value">&quot;Fall&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="8530619298378027" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkSprite.JumpDecel</param>
+                    <param id="0" name="Deceleration">LinkJumpDecel</param>
                 </action>
                 <action behavior="Platform" id="2" name="Set acceleration" sid="947067485414158" type="LinkSprite">
-                    <param id="0" name="Acceleration">LinkSprite.JumpAccel</param>
+                    <param id="0" name="Acceleration">LinkJumpAccel</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="7054336991133286" type="LinkSprite">
                     <param id="0" name="Instance variable">Landed</param>
@@ -402,7 +409,7 @@
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
                 <action behavior="Platform" id="3" name="Set deceleration" sid="7060632732843931" type="LinkSprite">
-                    <param id="0" name="Deceleration">750</param>
+                    <param id="0" name="Deceleration">LinkDecel</param>
                 </action>
                 <action id="-10" name="Set value" sid="9140802644067049" type="LinkSprite">
                     <param id="0" name="Instance variable">AniSpeed</param>
@@ -524,7 +531,7 @@
             </conditions>
             <actions>
                 <action behavior="Platform" id="2" name="Set acceleration" sid="6018661563713496" type="LinkSprite">
-                    <param id="0" name="Acceleration">800</param>
+                    <param id="0" name="Acceleration">LinkAccel</param>
                 </action>
             </actions>
         </event-block>
@@ -566,7 +573,6 @@
                 <action id="-9" name="Destroy" sid="1938267857740546" type="Heart" />
             </actions>
         </event-block>
-        <variable constant="0" name="Entrance" sid="1120813636026238" static="0" type="text">&quot;&quot;</variable>
         <event-block sid="1473210245086865">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="7174735217264661" type="LinkSprite">
@@ -607,6 +613,40 @@
                     <param id="0" name="Instance variable">JustEntered</param>
                     <param id="1" name="Value">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="2645305726574458">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6982177991249156" type="LinkSprite">
+                    <param id="0" name="Object">FaroreItem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6690953320435536" type="System">
+                    <param id="0" name="Variable">LinkAccel</param>
+                    <param id="1" name="Value">1500</param>
+                </action>
+                <action id="-9" name="Set value" sid="9977249655087364" type="System">
+                    <param id="0" name="Variable">LinkDecel</param>
+                    <param id="1" name="Value">1200</param>
+                </action>
+                <action id="-9" name="Set value" sid="7651348523468605" type="System">
+                    <param id="0" name="Variable">LinkJump</param>
+                    <param id="1" name="Value">415</param>
+                </action>
+                <action id="-9" name="Set value" sid="8268459202447805" type="System">
+                    <param id="0" name="Variable">LinkJumpVariance</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8052613165034761" type="System">
+                    <param id="0" name="Variable">LinkJumpAccel</param>
+                    <param id="1" name="Value">1500</param>
+                </action>
+                <action id="-9" name="Set value" sid="9428530085019861" type="System">
+                    <param id="0" name="Variable">LinkJumpDecel</param>
+                    <param id="1" name="Value">1200</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6160800365173617" type="FaroreItem" />
             </actions>
         </event-block>
     </events>

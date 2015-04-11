@@ -23,6 +23,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -39,6 +40,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Castle</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -700,6 +702,9 @@
                 <behavior-type name="Platform" sid="7114888826943441">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="Persist" sid="8403270151688078">
+                    <behavior id="Persist" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2634989624240214" speed="5">
@@ -715,7 +720,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3975896865668613" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\door.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.333333" original-source="C:\Projects\FemLink\Resources\Sprites\door.png">
                         <image-point name="HeartPoint" x="-0.625" y="0.4375" />
                         <collision-poly>
                             <point x="0.375" y="0.0520833" />
@@ -724,6 +729,14 @@
                             <point x="0.375" y="1" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FaroreItem" sid="8398436785833173">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9715259714693477" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\Farore.png" />
                 </animation>
             </animation-folder>
         </object-type>
