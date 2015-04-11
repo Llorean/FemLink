@@ -71,6 +71,7 @@
                         <JumpDecel>0</JumpDecel>
                         <Landed>false</Landed>
                         <AniSpeed>5</AniSpeed>
+                        <JustEntered>true</JustEntered>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

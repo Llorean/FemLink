@@ -566,5 +566,48 @@
                 <action id="-9" name="Destroy" sid="1938267857740546" type="Heart" />
             </actions>
         </event-block>
+        <variable constant="0" name="Entrance" sid="1120813636026238" static="0" type="text">&quot;&quot;</variable>
+        <event-block sid="1473210245086865">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7174735217264661" type="LinkSprite">
+                    <param id="0" name="Object">SceneDoor</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9328199678622637" type="System">
+                    <param id="0" name="Variable">UpPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="7664439179650514" type="LinkSprite" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4186174123996873" type="LinkSprite">
+                    <param id="0" name="Instance variable">JustEntered</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9073575320481953" type="System">
+                    <param id="0" name="Variable">Entrance</param>
+                    <param id="1" name="Value">SceneDoor.Origin</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1341425815125458" type="LinkSprite">
+                    <param id="0" name="Instance variable">JustEntered</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="8016612784276851" type="System">
+                    <param id="0" name="Layout">SceneDoor.Target</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4789431509212417">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="6909503885741832" type="LinkSprite">
+                    <param id="0" name="Object">SceneDoor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4468650560271957" type="LinkSprite">
+                    <param id="0" name="Instance variable">JustEntered</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
