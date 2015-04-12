@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI</name>
     <events>
+        <variable constant="0" name="TouchMode" sid="8404901840841183" static="0" type="number">0</variable>
         <event-block sid="3397332962239419">
             <conditions>
                 <condition id="14" name="On tap" sid="9106834799010055" type="Touch" />
@@ -12,20 +13,9 @@
                 <action id="10" name="Request fullscreen" sid="2629108446134576" type="Browser">
                     <param id="0" name="Mode">4</param>
                 </action>
-                <action id="-15" name="Set visible" sid="403312138946218" type="LeftArrow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="8767332214748134" type="RightArrow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="6834326313157096" type="DownArrow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="1265537296982363" type="UpArrow">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="5608362697449065" type="JumpArrow">
-                    <param id="0" name="Visibility">1</param>
+                <action id="-9" name="Set value" sid="7705436841172875" type="System">
+                    <param id="0" name="Variable">TouchMode</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -90,6 +80,32 @@
             </conditions>
             <actions>
                 <action id="9" name="Reload" sid="3092215761924295" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="8946433118466651">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5492272820590405" type="System">
+                    <param id="0" name="Variable">TouchMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5380448371240616" type="LeftArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3845050336260848" type="RightArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7627918903996889" type="DownArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3021783116652162" type="UpArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7422832273990203" type="JumpArrow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
