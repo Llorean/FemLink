@@ -934,7 +934,10 @@
         <global-instance type="Browser" uid="7" />
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="HyruleCastle.m4a" />
+        <file name="HyruleCastle.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
