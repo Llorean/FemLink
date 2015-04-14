@@ -910,6 +910,15 @@
             <texture original-source="C:\Projects\FemLink\Resources\Tilesets\dungeonbgtiles.PNG" />
             <tiles />
         </object-type>
+        <object-type name="WoodPlatform" sid="9908060457628407">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="3293802419994958">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

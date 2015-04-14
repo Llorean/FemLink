@@ -224,14 +224,40 @@
                             <param id="0" name="Key">32 (Space)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
-                            <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4672610802553172">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9705498243176903" type="System">
+                                    <param id="0" name="Variable">DownPressed</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="3966486208734447" type="LinkSprite" />
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="3643749309892004" type="LinkSprite">
+                                    <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2085225619181375" type="LinkSprite">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6281667621532765">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2587818839228726" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="7466911816240245" type="LinkSprite">
+                                    <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2147833845122554" type="LinkSprite">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7059704516993506">
                     <conditions>
