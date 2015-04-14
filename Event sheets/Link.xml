@@ -620,10 +620,10 @@
                     <param id="3" name="Y">LinkSprite.Y - 5</param>
                 </action>
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="4119989677138204" type="Bomb">
-                    <param id="0" name="Angle">330</param>
+                    <param id="0" name="Angle">LinkSprite.Direction = &quot;Left&quot; ? 210 : 330</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="734052379968815" type="Bomb">
-                    <param id="0" name="Speed">500</param>
+                    <param id="0" name="Speed">450 + abs(LinkSprite.Platform.VectorX)</param>
                 </action>
             </actions>
         </event-block>
