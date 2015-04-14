@@ -98,447 +98,515 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="819164391333958">
+        <event-block sid="8304624590439547">
             <conditions>
-                <condition id="2" name="Key is down" sid="1209243342342426" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="8647278063767825" type="Touch">
-                    <param id="0" name="Object">LeftArrow</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="7083320326881805" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">14</param>
-                </condition>
-                <condition id="5" name="Compare axis" sid="2185332941662798" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">0</param>
-                    <param id="2" name="Comparison">2</param>
-                    <param id="3" name="Value">0</param>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7061765794059861" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="7996912046644641" type="LinkSprite">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="7010856422738574">
-            <conditions>
-                <condition id="2" name="Key is down" sid="1220244165182205" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="94019550966157" type="Touch">
-                    <param id="0" name="Object">RightArrow</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="6009198013063227" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">15</param>
-                </condition>
-                <condition id="5" name="Compare axis" sid="8643160914378551" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">0</param>
-                    <param id="2" name="Comparison">4</param>
-                    <param id="3" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="6520892725976037" type="LinkSprite">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="7460307431076239">
-            <conditions>
-                <condition id="2" name="Key is down" sid="1960191332917978" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="4605948293246812" type="Touch">
-                    <param id="0" name="Object">DownArrow</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="8487755986745782" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">13</param>
-                </condition>
-                <condition id="5" name="Compare axis" sid="4487440306131427" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">1</param>
-                    <param id="2" name="Comparison">4</param>
-                    <param id="3" name="Value">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7339975723868591" type="System">
-                    <param id="0" name="Variable">DownPressed</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="2516089720358567">
-            <conditions>
-                <condition id="2" name="Key is down" sid="8823992104828716" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="2474672321175749" type="Touch">
-                    <param id="0" name="Object">UpArrow</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="3735129537506824" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">12</param>
-                </condition>
-                <condition id="5" name="Compare axis" sid="314761977223188" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Axis">1</param>
-                    <param id="2" name="Comparison">2</param>
-                    <param id="3" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="94794479920302" type="System">
-                    <param id="0" name="Variable">UpPressed</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="5505160704682662">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4742061740599675" type="Keyboard">
-                    <param id="0" name="Key">88 (X)</param>
-                </condition>
-                <condition id="4" name="Is touching object" sid="3914218333899099" type="Touch">
-                    <param id="0" name="Object">JumpArrow</param>
-                </condition>
-                <condition id="3" name="Is button down" sid="7634941998414107" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">0</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="2566414681367415" type="Keyboard">
-                    <param id="0" name="Key">32 (Space)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
-                    <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
-                </action>
-                <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7059704516993506">
-            <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="666836786872606" type="LinkSprite" />
-                <condition behavior="Platform" id="2" name="Is on floor" sid="5093641216740017" type="LinkSprite" />
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9254319057932227" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="6317846507353118" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Walk&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="5507068151665337" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Value">&quot;&quot;</param>
-                </action>
-                <action behavior="Platform" id="3" name="Set deceleration" sid="8568252187015545" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkDecel</param>
-                </action>
-                <action id="-10" name="Set value" sid="1550720488506317" type="LinkSprite">
-                    <param id="0" name="Instance variable">AniSpeed</param>
-                    <param id="1" name="Value">max(abs((LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed)) * 20,10)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="1997841323430899">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="1855683610675596" type="Keyboard">
-                    <param id="0" name="Key">90 (Z)</param>
-                </condition>
-                <condition id="6" name="On button pressed" sid="2820549009721176" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">2</param>
-                </condition>
-                <condition id="0" name="On key pressed" sid="1298369517802259" type="Keyboard">
-                    <param id="0" name="Key">17 (Ctrl)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="6976572996762389" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Value">&quot;Stab&quot;</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="7155622965393882" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="2349316679389542" type="LinkSprite">
-                    <param id="0" name="Instance variable">AniSpeed</param>
-                    <param id="1" name="Value">8</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block sid="2938030384040222">
+                <event-block any="1" sid="819164391333958">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="9191652653721121" type="LinkSprite" />
+                        <condition id="2" name="Key is down" sid="1209243342342426" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="8647278063767825" type="Touch">
+                            <param id="0" name="Object">LeftArrow</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="7083320326881805" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">14</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="2185332941662798" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="2" name="Set acceleration" sid="4030225832095081" type="LinkSprite">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7996912046644641" type="LinkSprite">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="7010856422738574">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1220244165182205" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="94019550966157" type="Touch">
+                            <param id="0" name="Object">RightArrow</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="6009198013063227" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">15</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="8643160914378551" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6520892725976037" type="LinkSprite">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="7460307431076239">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1960191332917978" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="4605948293246812" type="Touch">
+                            <param id="0" name="Object">DownArrow</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="8487755986745782" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">13</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="4487440306131427" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7339975723868591" type="System">
+                            <param id="0" name="Variable">DownPressed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="2516089720358567">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8823992104828716" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="2474672321175749" type="Touch">
+                            <param id="0" name="Object">UpArrow</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="3735129537506824" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">12</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="314761977223188" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="94794479920302" type="System">
+                            <param id="0" name="Variable">UpPressed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="5505160704682662">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4742061740599675" type="Keyboard">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                        <condition id="4" name="Is touching object" sid="3914218333899099" type="Touch">
+                            <param id="0" name="Object">JumpArrow</param>
+                        </condition>
+                        <condition id="3" name="Is button down" sid="7634941998414107" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">0</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="2566414681367415" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="6871115689167041" type="LinkSprite">
+                            <param id="0" name="Jump strength">LinkJump+abs((LinkSprite.Platform.VectorX/(LinkSprite.Platform.MaxSpeed))*LinkJumpVariance)</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4989319876630647" type="LinkSprite">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7059704516993506">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="666836786872606" type="LinkSprite" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="5093641216740017" type="LinkSprite" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9254319057932227" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6317846507353118" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Walk&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5507068151665337" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="8568252187015545" type="LinkSprite">
+                            <param id="0" name="Deceleration">LinkDecel</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1550720488506317" type="LinkSprite">
+                            <param id="0" name="Instance variable">AniSpeed</param>
+                            <param id="1" name="Value">max(abs((LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed)) * 20,10)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="1997841323430899">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="1855683610675596" type="Keyboard">
+                            <param id="0" name="Key">90 (Z)</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="2820549009721176" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">2</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="1298369517802259" type="Keyboard">
+                            <param id="0" name="Key">17 (Ctrl)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6976572996762389" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Value">&quot;Stab&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7155622965393882" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2349316679389542" type="LinkSprite">
+                            <param id="0" name="Instance variable">AniSpeed</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2938030384040222">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="9191652653721121" type="LinkSprite" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="2" name="Set acceleration" sid="4030225832095081" type="LinkSprite">
+                                    <param id="0" name="Acceleration">0</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="6124361215215192" type="LinkSprite">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3076912045417201">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="861879078460449" type="LinkSprite" />
+                        <condition id="2" inverted="1" name="Is playing" sid="5748751065303859" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="886374428564618" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Stand&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7033522409632183">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="6131453956185095" type="LinkSprite" />
+                        <condition id="2" inverted="1" name="Is playing" sid="1697638175414658" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7830574791894767" type="System">
+                            <param id="0" name="Variable">DownPressed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="2659553335899831" type="LinkSprite">
                             <param id="0" name="Acceleration">0</param>
                         </action>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="6124361215215192" type="LinkSprite">
+                        <action behavior="Platform" id="8" name="Set vector X" sid="6698952171677545" type="LinkSprite">
                             <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="972278939070654" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Kneel&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2873720829610503">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="3054533126808511" type="LinkSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6817123867208283" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="7209562516573919" type="LinkSprite">
+                            <param id="0" name="Deceleration">LinkJumpDecel</param>
+                        </action>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="6079584844841784" type="LinkSprite">
+                            <param id="0" name="Acceleration">LinkJumpAccel</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3809259223305579" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3320151820063746" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5523453059684164">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="9029323975811467" type="LinkSprite" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4837703846496671" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Jump&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="824233264923851">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="3494967334099228" type="LinkSprite" />
+                        <condition id="-7" name="Compare instance variable" sid="4081576757593673" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5081336302759668" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Fall&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="8530619298378027" type="LinkSprite">
+                            <param id="0" name="Deceleration">LinkJumpDecel</param>
+                        </action>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="947067485414158" type="LinkSprite">
+                            <param id="0" name="Acceleration">LinkJumpAccel</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7054336991133286" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="6972824466800168">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="5554351203228474" type="LinkSprite" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="3748743815137045" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3823046377138199" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4489177327673689" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;Kneel&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7489054426914447" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="7060632732843931" type="LinkSprite">
+                            <param id="0" name="Deceleration">LinkDecel</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9140802644067049" type="LinkSprite">
+                            <param id="0" name="Instance variable">AniSpeed</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8955600409722428">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="1353491433791179" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;Kneel&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="7078859743292053" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4097374153251803">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="5640733503738512" type="LinkSprite" />
+                        <condition id="-14" name="Compare variable" sid="1084820945951898" type="System">
+                            <param id="0" name="Variable">UpPressed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4475329269557524" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6784092431218885" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;UpStab&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8384230639676001">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="8703442155255534" type="LinkSprite" />
+                        <condition id="-14" name="Compare variable" sid="4117678946416903" type="System">
+                            <param id="0" name="Variable">DownPressed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8432479328833527" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1482147788748294" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;DownStab&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2479985326274761">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="5009716910052455" type="LinkSprite" />
+                        <condition id="-14" name="Compare variable" sid="9372134779968492" type="System">
+                            <param id="0" name="Variable">DownPressed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3570682945362653" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1518676359321488" type="LinkSprite">
+                            <param id="0" name="Instance variable">Movement</param>
+                            <param id="1" name="Value">&quot;DownStab&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="244109755369309">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="4915089848028952" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                        <condition id="4" name="On finished" sid="5902667847690856" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                        <condition id="4" name="On finished" sid="5876512441403194" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;JumpStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5701349177667823" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1404424932245905" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7544594776979356" type="LinkSprite">
+                            <param id="0" name="Instance variable">Landed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="506569743117096">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="3226701167595737" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="9469750715372512" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="6018661563713496" type="LinkSprite">
+                            <param id="0" name="Acceleration">LinkAccel</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3076912045417201">
+        <event-block sid="7960534347930715">
             <conditions>
-                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="861879078460449" type="LinkSprite" />
-                <condition id="2" inverted="1" name="Is playing" sid="5748751065303859" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
+                <condition id="0" name="On key pressed" sid="2700894605884775" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="886374428564618" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Stand&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7033522409632183">
-            <conditions>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="6131453956185095" type="LinkSprite" />
-                <condition id="2" inverted="1" name="Is playing" sid="1697638175414658" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="7830574791894767" type="System">
-                    <param id="0" name="Variable">DownPressed</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="2" name="Set acceleration" sid="2659553335899831" type="LinkSprite">
-                    <param id="0" name="Acceleration">0</param>
-                </action>
-                <action behavior="Platform" id="8" name="Set vector X" sid="6698952171677545" type="LinkSprite">
-                    <param id="0" name="Vector X">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="972278939070654" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Kneel&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2873720829610503">
-            <conditions>
-                <condition behavior="Platform" id="5" name="On jump" sid="3054533126808511" type="LinkSprite" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="6817123867208283" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Jump&quot;</param>
-                </action>
-                <action behavior="Platform" id="3" name="Set deceleration" sid="7209562516573919" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkJumpDecel</param>
-                </action>
-                <action behavior="Platform" id="2" name="Set acceleration" sid="6079584844841784" type="LinkSprite">
-                    <param id="0" name="Acceleration">LinkJumpAccel</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="3809259223305579" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="3320151820063746" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Value">&quot;&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5523453059684164">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="9029323975811467" type="LinkSprite" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="4837703846496671" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Jump&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="824233264923851">
-            <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="3494967334099228" type="LinkSprite" />
-                <condition id="-7" name="Compare instance variable" sid="4081576757593673" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="5081336302759668" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Fall&quot;</param>
-                </action>
-                <action behavior="Platform" id="3" name="Set deceleration" sid="8530619298378027" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkJumpDecel</param>
-                </action>
-                <action behavior="Platform" id="2" name="Set acceleration" sid="947067485414158" type="LinkSprite">
-                    <param id="0" name="Acceleration">LinkJumpAccel</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="7054336991133286" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="6972824466800168">
-            <conditions>
-                <condition behavior="Platform" id="9" name="On landed" sid="5554351203228474" type="LinkSprite" />
-                <condition id="-8" name="Is boolean instance variable set" sid="3748743815137045" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="3823046377138199" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
+                <action id="-13" name="Set boolean" sid="4470351577292452" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-10" name="Set value" sid="4489177327673689" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;Kneel&quot;</param>
+                <action behavior="Platform" id="8" name="Set vector X" sid="6442230704841824" type="LinkSprite">
+                    <param id="0" name="Vector X">-500</param>
                 </action>
-                <action id="-10" name="Set value" sid="7489054426914447" type="LinkSprite">
+                <action behavior="Platform" id="9" name="Set vector Y" sid="8875680707621467" type="LinkSprite">
+                    <param id="0" name="Vector Y">-200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2826741171546939">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4083771417579494" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6934860746653438" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="9639359022177947" type="LinkSprite">
+                    <param id="0" name="Vector X">500</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="3544551196055559" type="LinkSprite">
+                    <param id="0" name="Vector Y">-200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4324910938596253">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="1914956232083251" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2480292335450353" type="LinkSprite">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Value">&quot;Hurt&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="8966028006228112" type="LinkSprite">
                     <param id="0" name="Instance variable">Stab</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action behavior="Platform" id="3" name="Set deceleration" sid="7060632732843931" type="LinkSprite">
-                    <param id="0" name="Deceleration">LinkDecel</param>
-                </action>
-                <action id="-10" name="Set value" sid="9140802644067049" type="LinkSprite">
-                    <param id="0" name="Instance variable">AniSpeed</param>
-                    <param id="1" name="Value">15</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8955600409722428">
-            <conditions>
-                <condition id="4" name="On finished" sid="1353491433791179" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;Kneel&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="7078859743292053" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4097374153251803">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="5640733503738512" type="LinkSprite" />
-                <condition id="-14" name="Compare variable" sid="1084820945951898" type="System">
-                    <param id="0" name="Variable">UpPressed</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="4475329269557524" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="6784092431218885" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;UpStab&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8384230639676001">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="8703442155255534" type="LinkSprite" />
-                <condition id="-14" name="Compare variable" sid="4117678946416903" type="System">
-                    <param id="0" name="Variable">DownPressed</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="8432479328833527" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1482147788748294" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;DownStab&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2479985326274761">
-            <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="5009716910052455" type="LinkSprite" />
-                <condition id="-14" name="Compare variable" sid="9372134779968492" type="System">
-                    <param id="0" name="Variable">DownPressed</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="3570682945362653" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1518676359321488" type="LinkSprite">
-                    <param id="0" name="Instance variable">Movement</param>
-                    <param id="1" name="Value">&quot;DownStab&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="244109755369309">
-            <conditions>
-                <condition id="4" name="On finished" sid="4915089848028952" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-                <condition id="4" name="On finished" sid="5902667847690856" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-                <condition id="4" name="On finished" sid="5876512441403194" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;JumpStab&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-                <condition id="2" name="Is playing" sid="5701349177667823" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1404424932245905" type="LinkSprite">
-                    <param id="0" name="Instance variable">Stab</param>
-                    <param id="1" name="Value">&quot;&quot;</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="7544594776979356" type="LinkSprite">
-                    <param id="0" name="Instance variable">Landed</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="506569743117096">
-            <conditions>
-                <condition id="2" name="Is playing" sid="3226701167595737" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
-                </condition>
-                <condition id="3" name="Compare frame" sid="9469750715372512" type="LinkSprite">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="2" name="Set acceleration" sid="6018661563713496" type="LinkSprite">
-                    <param id="0" name="Acceleration">LinkAccel</param>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="9479204042640839" type="LinkSprite">
+                    <param id="0" name="Deceleration">0</param>
                 </action>
             </actions>
         </event-block>
@@ -658,6 +726,27 @@
                     <param id="1" name="Value">1200</param>
                 </action>
                 <action id="-9" name="Destroy" sid="6160800365173617" type="FaroreItem" />
+            </actions>
+        </event-block>
+        <event-block sid="4953264856017692">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="1644871314103128" type="LinkSprite" />
+                <condition id="-8" name="Is boolean instance variable set" sid="8522017054886387" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9274272237408929" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="2590054041707991" type="LinkSprite">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7941663662846604" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">LinkSprite.Direction=&quot;Right&quot;?&quot;Left&quot;:&quot;Right&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

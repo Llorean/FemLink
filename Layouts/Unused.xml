@@ -72,6 +72,7 @@
                         <Landed>false</Landed>
                         <AniSpeed>5</AniSpeed>
                         <JustEntered>true</JustEntered>
+                        <Hurt>false</Hurt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

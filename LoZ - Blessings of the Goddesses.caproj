@@ -117,6 +117,7 @@
                 <instance-variable name="Landed" sid="8179628900801144" type="boolean" />
                 <instance-variable name="AniSpeed" sid="3121218315861434" type="number" />
                 <instance-variable name="JustEntered" sid="9163850526860027" type="boolean" />
+                <instance-variable name="Hurt" sid="1685546593587829" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9052845725288094">
@@ -469,6 +470,26 @@
                             <point x="0.0625" y="1" />
                             <point x="0.0625" y="0.015625" />
                             <point x="1" y="0.015625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="HurtRight" pingpong="0" repeatcount="1" repeatto="0" sid="4656642413559212" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.078125" />
+                            <point x="0.9375" y="0.078125" />
+                            <point x="0.9375" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="HurtLeft" pingpong="0" repeatcount="1" repeatto="0" sid="2987814055653209" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0.0625" y="1" />
+                            <point x="0.0625" y="0.078125" />
+                            <point x="1" y="0.078125" />
                         </collision-poly>
                     </frame>
                 </animation>
