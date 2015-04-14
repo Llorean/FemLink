@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -23,6 +24,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -919,12 +921,37 @@
             </behaviors>
             <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
         </object-type>
+        <object-type name="BombExplosion" sid="1606775923215843">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Bomb" sid="8019980076305637">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2618144464774044">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5617313351046244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\bomb.PNG">
+                        <collision-poly>
+                            <point x="0" y="0.5" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Castle.xml</layout>
         <layout>Unused.xml</layout>
         <layout>Dungeon.xml</layout>
+        <layout>Test.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Castle.xml</event-sheet>
@@ -932,6 +959,7 @@
         <event-sheet>Dungeon.xml</event-sheet>
         <event-sheet>UI.xml</event-sheet>
         <event-sheet>Scene.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
