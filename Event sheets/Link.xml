@@ -569,6 +569,10 @@
                 <action behavior="Platform" id="9" name="Set vector Y" sid="8875680707621467" type="LinkSprite">
                     <param id="0" name="Vector Y">-200</param>
                 </action>
+                <action id="-10" name="Set value" sid="7750564356818455" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Left&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2826741171546939">
@@ -587,6 +591,10 @@
                 </action>
                 <action behavior="Platform" id="9" name="Set vector Y" sid="3544551196055559" type="LinkSprite">
                     <param id="0" name="Vector Y">-200</param>
+                </action>
+                <action id="-10" name="Set value" sid="7238830954755783" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Right&quot;</param>
                 </action>
             </actions>
         </event-block>
