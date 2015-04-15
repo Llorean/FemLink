@@ -945,6 +945,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BombSmoke" sid="2312276528859499">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

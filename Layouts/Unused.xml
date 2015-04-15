@@ -248,27 +248,66 @@
                         <initial-particle-properties></initial-particle-properties>
                         <speed>150</speed>
                         <size>32</size>
-                        <opacity>100</opacity>
-                        <grow-rate>16</grow-rate>
+                        <opacity>25</opacity>
+                        <grow-rate>20</grow-rate>
                         <x-randomiser>0</x-randomiser>
                         <y-randomiser>0</y-randomiser>
-                        <speed-randomiser->16</speed-randomiser->
+                        <speed-randomiser->150</speed-randomiser->
                         <size-randomiser>16</size-randomiser>
                         <grow-rate-randomiser>160</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
-                        <acceleration>-300</acceleration>
-                        <gravity>325</gravity>
+                        <acceleration>-350</acceleration>
+                        <gravity>150</gravity>
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>800</speed-randomiser>
-                        <opacity-randomiser>0</opacity-randomiser>
+                        <opacity-randomiser>100</opacity-randomiser>
                         <destroy-mode>Fade to invisible</destroy-mode>
                         <timeout>0.25</timeout>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>256</x>
-                        <y>352</y>
+                        <x>192</x>
+                        <y>448</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BombSmoke" uid="56">
+                    <properties>
+                        <rate>50</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>150</speed>
+                        <size>32</size>
+                        <opacity>50</opacity>
+                        <grow-rate>20</grow-rate>
+                        <x-randomiser>0</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
+                        <speed-randomiser->150</speed-randomiser->
+                        <size-randomiser>16</size-randomiser>
+                        <grow-rate-randomiser>160</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-350</acceleration>
+                        <gravity>150</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>800</speed-randomiser>
+                        <opacity-randomiser>100</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.35</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>368</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
