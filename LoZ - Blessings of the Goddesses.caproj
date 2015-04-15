@@ -28,6 +28,7 @@
         <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -948,6 +949,18 @@
         <object-type name="BombSmoke" sid="2312276528859499">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="WoodPlatformMoves" sid="7416236051262381">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="2823185947626167">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="9392588520717151">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
         </object-type>
     </object-folder>
     <families />
