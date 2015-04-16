@@ -345,12 +345,12 @@
                     </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4945636690606149" speed="5">
-                    <frame duration="1" hotspotX="0.73913" hotspotY="0">
+                    <frame duration="1" hotspotX="0.636364" hotspotY="0">
                         <collision-poly>
-                            <point x="0.413043" y="0.15625" />
-                            <point x="1" y="0.15625" />
-                            <point x="1" y="1" />
-                            <point x="0.413043" y="1" />
+                            <point x="0.181818" y="0.15625" />
+                            <point x="0.96875" y="0.15625" />
+                            <point x="0.96875" y="1" />
+                            <point x="0.181818" y="1" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
@@ -651,8 +651,9 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4339859702715579" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                <animation framecount="2" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4339859702715579" speed="5">
+                    <frame duration="1" hotspotX="2.17647" hotspotY="-5" />
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
                 </animation>
                 <animation framecount="1" loop="0" name="KneelStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8606320323329091" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -838,8 +839,8 @@
                 <animation framecount="1" loop="0" name="StandStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="7003760490973315" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
-                <animation framecount="1" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="9092755406493317" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                <animation framecount="1" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="7063196994007593" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0" />
                 </animation>
                 <animation framecount="1" loop="0" name="KneelStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="7773235302064297" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -1096,6 +1097,9 @@
         </object-type>
         <object-type name="Bomb" sid="8019980076305637">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Direction" sid="7357392473468515" type="string" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="2618144464774044">
                     <behavior id="Bullet" />
@@ -1103,7 +1107,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5617313351046244" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\bomb.PNG">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75" original-source="C:\Projects\FemLink\Resources\Sprites\bomb.PNG">
                         <collision-poly>
                             <point x="0" y="0.5" />
                             <point x="1" y="0.5" />
@@ -1158,6 +1162,29 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="FaroreStatue" sid="126134445028541">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1782505730687776" speed="5">
+                    <frame duration="1" hotspotX="0.495575" hotspotY="0.502825" original-source="C:\Projects\FemLink\Resources\Sprites\FaroreStatue.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WoodPlatformMoves2" sid="3828239167169963">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="7327772606601938">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="3750496360566398">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="2625260823987641">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
         </object-type>
     </object-folder>
     <families />
