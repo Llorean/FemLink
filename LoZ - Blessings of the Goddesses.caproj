@@ -1276,6 +1276,34 @@
             </behaviors>
             <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
         </object-type>
+        <object-type name="Octorok" sid="3669531312498818">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="7669103204861851">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="StandLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4684182595521315" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\octorok.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

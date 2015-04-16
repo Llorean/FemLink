@@ -904,6 +904,62 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="7635977618221733">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1707310930206577" type="LinkSword">
+                    <param id="0" name="Object">Octorok</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="5196204814587322">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9935875697330405" type="LinkSprite">
+                            <param id="0" name="Instance variable">Stab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Stab&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="4710242979091098" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;DownStabLeft&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5687016377799843" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;DownStabRight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9122804179759997" type="Octorok" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9706316371080351">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8574169079078834" type="LinkSprite">
+                    <param id="0" name="Object">Octorok</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="3144524446059077" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="9398996784312516" type="LinkSprite">
+                    <param id="0" name="Vector X">Octorok.X &gt; LinkSprite.X? -500 : 500</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="9475596145145118" type="LinkSprite">
+                    <param id="0" name="Vector Y">-200</param>
+                </action>
+                <action id="-10" name="Set value" sid="7616703236830674" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Octorok.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="92702750880502" type="LinkSprite">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.2</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="780513458598495">
             <conditions>
                 <condition id="2" inverted="1" name="Is playing" sid="9020257503473655" type="LinkSprite">
