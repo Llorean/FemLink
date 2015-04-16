@@ -697,6 +697,12 @@
                 <action id="6" name="Set speed" sid="5399779528133823" type="LinkSprite">
                     <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
+                <action id="6" name="Set speed" sid="8654650571953236" type="LinkSword">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
+                <action id="6" name="Set speed" sid="9077070628623014" type="LinkWoodShield">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9313361416830493">

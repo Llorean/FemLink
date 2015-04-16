@@ -265,7 +265,7 @@
                             <point x="0.652174" y="0.015625" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.630435" hotspotY="0">
+                    <frame duration="1" hotspotX="0.652174" hotspotY="0">
                         <collision-poly>
                             <point x="0.304348" y="0.015625" />
                             <point x="0.956522" y="0.015625" />
@@ -575,11 +575,81 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="StandStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5862001587050213" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                <animation framecount="3" loop="0" name="StandStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5862001587050213" speed="5">
+                    <frame duration="1" hotspotX="-1" hotspotY="0.0555556">
+                        <collision-poly>
+                            <point x="0.444444" y="0.222222" />
+                            <point x="0.444444" y="0.111111" />
+                            <point x="0.777778" y="0.111111" />
+                            <point x="0.666667" y="0.5" />
+                            <point x="0.555556" y="0.777778" />
+                            <point x="0.444444" y="0.944444" />
+                            <point x="0.111111" y="0.944444" />
+                            <point x="0.222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="2.23529" hotspotY="-2.57143" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-left.png">
+                        <collision-poly>
+                            <point x="0.117647" y="0.285714" />
+                            <point x="0.470588" y="0.285714" />
+                            <point x="0.941176" y="0.142857" />
+                            <point x="1" y="0.428571" />
+                            <point x="0.941176" y="0.857143" />
+                            <point x="0.470588" y="0.714286" />
+                            <point x="0.117647" y="0.714286" />
+                            <point x="0" y="0.428571" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="3" hotspotX="-1" hotspotY="0.0555556" original-source="C:\Projects\FemLink\Resources\Sprites\sword-left.png">
+                        <collision-poly>
+                            <point x="0.444444" y="0.222222" />
+                            <point x="0.444444" y="0.111111" />
+                            <point x="0.777778" y="0.111111" />
+                            <point x="0.666667" y="0.5" />
+                            <point x="0.555556" y="0.777778" />
+                            <point x="0.444444" y="0.944444" />
+                            <point x="0.111111" y="0.944444" />
+                            <point x="0.222222" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="StandStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="2912776888801268" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                <animation framecount="3" loop="0" name="StandStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="2418582789796019" speed="5">
+                    <frame duration="1" hotspotX="1.88889" hotspotY="0.0555556">
+                        <collision-poly>
+                            <point x="0.777778" y="0.5" />
+                            <point x="0.888889" y="0.944444" />
+                            <point x="0.555556" y="0.944444" />
+                            <point x="0.444444" y="0.777778" />
+                            <point x="0.333333" y="0.5" />
+                            <point x="0.222222" y="0.111111" />
+                            <point x="0.555556" y="0.111111" />
+                            <point x="0.555556" y="0.222222" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="-1.29412" hotspotY="-2.57143">
+                        <collision-poly>
+                            <point x="1" y="0.428571" />
+                            <point x="0.882353" y="0.714286" />
+                            <point x="0.529412" y="0.714286" />
+                            <point x="0.0588235" y="0.857143" />
+                            <point x="0" y="0.428571" />
+                            <point x="0.0588235" y="0.142857" />
+                            <point x="0.529412" y="0.285714" />
+                            <point x="0.882353" y="0.285714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="3" hotspotX="1.88889" hotspotY="0.0555556">
+                        <collision-poly>
+                            <point x="0.777778" y="0.5" />
+                            <point x="0.888889" y="0.944444" />
+                            <point x="0.555556" y="0.944444" />
+                            <point x="0.444444" y="0.777778" />
+                            <point x="0.333333" y="0.5" />
+                            <point x="0.222222" y="0.111111" />
+                            <point x="0.555556" y="0.111111" />
+                            <point x="0.555556" y="0.222222" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4339859702715579" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -961,6 +1031,35 @@
                 </behavior-type>
             </behaviors>
             <texture original-source="C:\Projects\Misc\Sprites\wood16.PNG" />
+        </object-type>
+        <object-type name="PillarCap" sid="9174053999226846">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Bottom" pingpong="0" repeatcount="1" repeatto="0" sid="7892281551404011" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\pillar-bottom.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.28125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.833333" y="0.28125" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Top" pingpong="0" repeatcount="1" repeatto="0" sid="4341063984450552" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\pillar-top.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.888889" y="0.5" />
+                            <point x="0.87037" y="0.78125" />
+                            <point x="0.5" y="1" />
+                            <point x="0.12963" y="0.78125" />
+                            <point x="0.111111" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
