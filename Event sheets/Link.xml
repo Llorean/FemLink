@@ -919,23 +919,36 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Stab&quot;</param>
                         </condition>
-                        <condition id="2" name="Is playing" sid="4710242979091098" type="LinkSprite">
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9122804179759997" type="Octorok" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="7003233517059107">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="3084991535212507" type="LinkSprite">
                             <param id="0" name="Animation">&quot;DownStabLeft&quot;</param>
                         </condition>
-                        <condition id="2" name="Is playing" sid="5687016377799843" type="LinkSprite">
+                        <condition id="2" name="Is playing" sid="7423499857448203" type="LinkSprite">
                             <param id="0" name="Animation">&quot;DownStabRight&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="9122804179759997" type="Octorok" />
+                        <action id="-9" name="Destroy" sid="8404612299607875" type="Octorok" />
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="5449172657620353" type="LinkSprite">
+                            <param id="0" name="Vector Y">-300</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
         <event-block sid="9706316371080351">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8574169079078834" type="LinkSprite">
+                <condition id="1" name="Is overlapping another object" sid="8574169079078834" type="LinkSprite">
                     <param id="0" name="Object">Octorok</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5124585115738309" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
                 </condition>
             </conditions>
             <actions>
