@@ -842,5 +842,111 @@
                 <action id="-9" name="Destroy" sid="5806449271182582" type="Bomb" />
             </actions>
         </event-block>
+        <event-block sid="8280836213448729">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1670946192626999" type="LinkSword">
+                    <param id="0" name="Object">CastleGameTiles</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="802708850387651">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="8995615372526156" type="LinkSword">
+                            <param id="0" name="Animation">&quot;StandStabLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="1913554037305298" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="8231737965445492" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X + 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4037134649845788">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="826903472223588" type="LinkSword">
+                            <param id="0" name="Animation">&quot;JumpStabLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="2233003756327283" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="7928027088006852" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X + 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="423253858156387">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="1238321983559793" type="LinkSword">
+                            <param id="0" name="Animation">&quot;FallStabLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="9455348601953237" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="2335243568908772" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X + 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8461307883526992">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="1571999158528637" type="LinkSword">
+                            <param id="0" name="Animation">&quot;StandStabRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="4421825988430344" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="9303182498583663" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X - 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8107135062167056">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="5135359733362786" type="LinkSword">
+                            <param id="0" name="Animation">&quot;JumpStabRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="1095636081607356" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="8052441687664701" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X - 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4007235465230262">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="9608272798770987" type="LinkSword">
+                            <param id="0" name="Animation">&quot;FallStabRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="699546186566722" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="4375277790445455" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X - 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
