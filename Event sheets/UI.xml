@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI</name>
     <events>
-        <variable constant="0" name="TouchMode" sid="8404901840841183" static="0" type="number">0</variable>
         <event-block sid="3397332962239419">
             <conditions>
                 <condition id="14" name="On tap" sid="9106834799010055" type="Touch" />

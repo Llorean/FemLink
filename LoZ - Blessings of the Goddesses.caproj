@@ -846,44 +846,16 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="2051188029731261" speed="5">
-                    <frame duration="1" hotspotX="0.285714" hotspotY="-1.76923" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-down.png">
-                        <collision-poly>
-                            <point x="0.285714" y="0.076923" />
-                            <point x="0.714285" y="0.076923" />
-                            <point x="0.714286" y="1" />
-                            <point x="0.285714" y="1" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.285714" hotspotY="-1.76923" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-down.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8590673062014034" speed="5">
-                    <frame duration="1" hotspotX="0.571429" hotspotY="-1.76923">
-                        <collision-poly>
-                            <point x="0.714286" y="1" />
-                            <point x="0.285714" y="1" />
-                            <point x="0.285715" y="0.076923" />
-                            <point x="0.714286" y="0.076923" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.571429" hotspotY="-1.76923" />
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="6864440317913131" speed="5">
-                    <frame duration="1" hotspotX="2.28571" hotspotY="0.28">
-                        <collision-poly>
-                            <point x="0.285714" y="0" />
-                            <point x="0.714286" y="0" />
-                            <point x="0.714286" y="0.88" />
-                            <point x="0.285714" y="0.88" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="2.28571" hotspotY="0.28" />
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8069194190973426" speed="5">
-                    <frame duration="1" hotspotX="-1.42857" hotspotY="0.28">
-                        <collision-poly>
-                            <point x="0.714286" y="0.88" />
-                            <point x="0.285714" y="0.88" />
-                            <point x="0.285714" y="0" />
-                            <point x="0.714286" y="0" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="-1.42857" hotspotY="0.28" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1407,7 +1379,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="6" loop="0" name="HurtLeft" pingpong="0" repeatcount="3" repeatto="0" sid="1539629625805341" speed="30">
+                <animation framecount="6" loop="0" name="HurtLeft" pingpong="0" repeatcount="4" repeatto="0" sid="1539629625805341" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
@@ -1461,7 +1433,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
-                <animation framecount="6" loop="0" name="HurtRight" pingpong="0" repeatcount="3" repeatto="0" sid="6547855737894045" speed="30">
+                <animation framecount="6" loop="0" name="HurtRight" pingpong="0" repeatcount="4" repeatto="0" sid="6547855737894045" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -1523,7 +1495,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\bat.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
-                <animation framecount="12" loop="0" name="FlyHurt" pingpong="0" repeatcount="1" repeatto="0" sid="354089086622022" speed="30">
+                <animation framecount="12" loop="0" name="FlyHurt" pingpong="0" repeatcount="2" repeatto="0" sid="354089086622022" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -1537,7 +1509,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
-                <animation framecount="3" loop="0" name="RestHurt" pingpong="0" repeatcount="4" repeatto="0" sid="3929507710769161" speed="30">
+                <animation framecount="3" loop="0" name="RestHurt" pingpong="0" repeatcount="8" repeatto="0" sid="3929507710769161" speed="30">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0" />
@@ -1568,7 +1540,6 @@
         <layout>Castle.xml</layout>
         <layout>Unused.xml</layout>
         <layout>Dungeon.xml</layout>
-        <layout>Test.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Castle.xml</event-sheet>
@@ -1576,7 +1547,10 @@
         <event-sheet>Dungeon.xml</event-sheet>
         <event-sheet>UI.xml</event-sheet>
         <event-sheet>Scene.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Bat.xml</event-sheet>
+        <event-sheet>Octorok.xml</event-sheet>
+        <event-sheet>Enemies.xml</event-sheet>
+        <event-sheet>Globals.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

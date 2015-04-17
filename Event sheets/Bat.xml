@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bat</name>
+    <events>
+        <include>Enemies</include>
+        <event-block sid="19424524073919">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7760673732271953" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="10" name="Set angle of gravity" sid="4851609490659947" type="Bat">
+                    <param id="0" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9309711257861733">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8066434065199652" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2994716297545708">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5954942092847816" type="Bat">
+                            <param id="0" name="Instance variable">Hurt</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7451197271730986" type="Bat" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4544583993220992" type="Bat">
+                            <param id="0" name="Animation">&quot;Rest&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4264361874535963">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="4710180456775244" type="Bat" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="3224449868460034" type="Bat">
+                                    <param id="0" name="Instance variable">Offset</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1215091978463521">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5582168633121897" type="Bat">
+                            <param id="0" name="Instance variable">Hurt</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7152650997068427">
+                            <conditions>
+                                <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="9791497165516024" type="Bat" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6511697340796207" type="Bat">
+                                    <param id="0" name="Animation">&quot;FlyHurt&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="5" name="Set gravity" sid="9810820950100923" type="Bat">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6375967520912128" type="Bat">
+                                    <param id="0" name="Instance variable">XTmp</param>
+                                    <param id="1" name="Value">Bat.Platform.VectorX &lt;&gt; 0 ? Bat.Platform.VectorX  : Bat.XTmp</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="119087938981236" type="Bat">
+                                    <param id="0" name="Instance variable">YTmp</param>
+                                    <param id="1" name="Value">Bat.Platform.VectorY &lt;&gt; 0 ? Bat.Platform.VectorY : Bat.YTmp</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="3498625908795891" type="Bat">
+                                    <param id="0" name="Vector Y">0</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="6644110179009803" type="Bat">
+                                    <param id="0" name="Vector X">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6424800747489958">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="833961484384947" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="212133559731748" type="Bat">
+                                    <param id="0" name="Animation">&quot;RestHurt&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4369818275733489">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="7517300453223041" type="Bat">
+                            <param id="0" name="Animation">&quot;FlyHurt&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="5" name="Set gravity" sid="4272086408904779" type="Bat">
+                            <param id="0" name="Gravity">1500</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="2252477827626113" type="Bat">
+                            <param id="0" name="Vector Y">Bat.YTmp</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="8808447214726147" type="Bat">
+                            <param id="0" name="Vector X">Bat.XTmp</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1839535590214553" type="Bat">
+                            <param id="0" name="Instance variable">XTmp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9944184234867029" type="Bat">
+                            <param id="0" name="Instance variable">YTmp</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5198322546612512" type="Bat">
+                            <param id="0" name="Instance variable">Hurt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8586939426657295" type="Bat">
+                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9489933646028842">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="3713302353783928" type="Bat">
+                            <param id="0" name="Animation">&quot;RestHurt&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2007957121423973" type="Bat">
+                            <param id="0" name="Instance variable">Hurt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6637713068062847" type="Bat">
+                            <param id="0" name="Animation">&quot;Rest&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7863939416595274">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9195973020718757" type="Bat">
+                            <param id="0" name="Instance variable">Offset</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Bat.Rate</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="7801639146698232" type="Bat">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">LinkSprite.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="3256081331195865" type="Bat">
+                            <param id="0" name="Instance variable">Offset</param>
+                            <param id="1" name="Value">Bat.Rate</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="6129723115797854" type="Bat">
+                            <param id="0" name="Vector Y">(-1) * sqrt(LinkSprite.Y - Bat.Y) * 55</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2820275859935212" type="Bat">
+                            <param id="0" name="Animation">&quot;Fly&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="7700135924306086" type="Bat">
+                            <param id="0" name="Vector X">LinkSprite.X - Bat.X &gt; 0 ? -100 : 100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1340060081589655">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="1850961245033507" type="Bat" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="2973007769181836" type="Bat">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

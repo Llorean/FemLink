@@ -3,19 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Link</name>
     <events>
-        <variable constant="0" name="Paused" sid="969646026250499" static="0" type="number">0</variable>
-        <variable constant="0" name="LinkJumpSustain" sid="2309712421259004" static="0" type="number">85</variable>
-        <variable constant="0" name="LinkJump" sid="621929366359501" static="0" type="number">295</variable>
-        <variable constant="0" name="LinkJumpVariance" sid="4833760876256142" static="0" type="number">110</variable>
-        <variable constant="0" name="LinkJumpAccel" sid="4568488791387969" static="0" type="number">350</variable>
-        <variable constant="0" name="LinkJumpDecel" sid="3290663707225171" static="0" type="number">0</variable>
-        <variable constant="0" name="LinkDecel" sid="1661150361814371" static="0" type="number">750</variable>
-        <variable constant="0" name="LinkAccel" sid="5553679624960852" static="0" type="number">800</variable>
-        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">12</variable>
-        <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
-        <variable constant="0" name="UpPressed" sid="8030079085818844" static="0" type="number">0</variable>
-        <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
-        <variable constant="0" name="Entrance" sid="1120813636026238" static="0" type="text"></variable>
         <event-block sid="960604882087377">
             <conditions>
                 <condition id="-18" name="On created" sid="2801020842146855" type="LinkSprite" />
@@ -930,12 +917,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="5449172657620353" type="LinkSprite">
+                            <param id="0" name="Vector Y">Enemies.Health &gt; 0 ? -300 : LinkSprite.Platform.VectorY</param>
+                        </action>
                         <action id="-12" name="Subtract from" sid="8404612299607875" type="Enemies">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="5449172657620353" type="LinkSprite">
-                            <param id="0" name="Vector Y">-300</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="1415520405793237" type="Enemies">
                             <param id="0" name="Instance variable">Hurt</param>
@@ -953,12 +940,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="7513015548854304" type="LinkSprite">
+                            <param id="0" name="Vector Y">Enemies.Health &gt; 0 ? 100 : LinkSprite.Platform.VectorY</param>
+                        </action>
                         <action id="-12" name="Subtract from" sid="1940906971950431" type="Enemies">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="7513015548854304" type="LinkSprite">
-                            <param id="0" name="Vector Y">100</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="4530985022936884" type="Enemies">
                             <param id="0" name="Instance variable">Hurt</param>
