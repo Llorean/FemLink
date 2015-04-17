@@ -90,7 +90,7 @@
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
-            <texture original-source="C:\Projects\Misc\Tilesets\CastleGameTiles.png" />
+            <texture original-source="C:\Projects\FemLink\Resources\Tilesets\CastleGameTiles.png" />
             <tiles />
         </object-type>
         <object-type name="CastleBGTiles" sid="2924325693202287">
@@ -446,22 +446,32 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4302095671223656" speed="5">
+                <animation framecount="1" loop="0" name="DownStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="1618066328799065" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0">
-                        <collision-poly>
-                            <point x="0" y="0.015625" />
-                            <point x="0.9375" y="0.015625" />
-                            <point x="0.9375" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="2195281341065375" speed="5">
-                    <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0.0625" y="1" />
                             <point x="0.0625" y="0.015625" />
+                            <point x="1" y="0.015625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4302095671223656" speed="5">
+                    <frame duration="1" hotspotX="0.441176" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.015625" />
+                            <point x="0.882353" y="0.015625" />
+                            <point x="0.882353" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8225753022015155" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0.117647" y="1" />
+                            <point x="0.117647" y="0.015625" />
                             <point x="1" y="0.015625" />
                         </collision-poly>
                     </frame>
@@ -534,16 +544,6 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="DownStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="1618066328799065" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0.0625" y="1" />
-                            <point x="0.0625" y="0.015625" />
-                            <point x="1" y="0.015625" />
-                        </collision-poly>
-                    </frame>
-                </animation>
             </animation-folder>
         </object-type>
         <object-type name="LinkSword" sid="4923557293690689">
@@ -555,12 +555,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="530247904150254" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-up.png">
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.366667" y="0" />
-                            <point x="0.366667" y="0.21875" />
-                            <point x="0" y="0.21875" />
+                            <point x="1" y="0.21875" />
+                            <point x="0.633333" y="0.21875" />
+                            <point x="0.633333" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -865,6 +865,26 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="1696995609738251" speed="5">
+                    <frame duration="1" hotspotX="2.28571" hotspotY="0.142857" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-up.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.714286" y="0" />
+                            <point x="0.714286" y="0.857143" />
+                            <point x="0" y="0.857143" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8069194190973426" speed="5">
+                    <frame duration="1" hotspotX="-1.42857" hotspotY="0.142857">
+                        <collision-poly>
+                            <point x="1" y="0.857143" />
+                            <point x="0.285714" y="0.857143" />
+                            <point x="0.285714" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="LinkWoodShield" sid="2814894179375692">
@@ -1009,6 +1029,12 @@
                             <point x="0.875" y="0.578125" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="9976127003021009" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8085334133405415" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>

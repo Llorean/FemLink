@@ -121,6 +121,9 @@
             <conditions>
                 <condition behavior="Platform" id="6" name="On fall" sid="736016329532105" type="Octorok" />
                 <condition id="-3" name="Is on-screen" sid="9437257511247835" type="Octorok" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4749094989784556" type="Octorok">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="4214507024668759" type="System">
@@ -133,7 +136,7 @@
                     <param id="0" name="Angle">Octorok.Direction = &quot;Left&quot; ? 180 : 0</param>
                 </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="1159824744781641" type="OctoRock">
-                    <param id="0" name="Speed">150</param>
+                    <param id="0" name="Speed">200</param>
                 </action>
                 <action id="-10" name="Set value" sid="169602586985094" type="OctoRock">
                     <param id="0" name="Instance variable">Direction</param>

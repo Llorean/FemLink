@@ -957,6 +957,29 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block any="1" sid="107751329439449">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="8413459567404419" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;UpStabLeft&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="4504185960176063" type="LinkSprite">
+                            <param id="0" name="Animation">&quot;UpStabRight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="1940906971950431" type="Octorok">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="7513015548854304" type="LinkSprite">
+                            <param id="0" name="Vector Y">100</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4530985022936884" type="Octorok">
+                            <param id="0" name="Instance variable">Hurt</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="9706316371080351">
