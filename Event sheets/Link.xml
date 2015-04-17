@@ -1005,7 +1005,7 @@
                 <condition id="-22" name="Else" sid="5497072579534966" type="System" />
                 <condition id="9" name="Is overlapping at offset" sid="6737705129077691" type="OctoRock">
                     <param id="0" name="Object">LinkSprite</param>
-                    <param id="1" name="Offset X">OctoRock.Direction = &quot;Left&quot; ? 8 : -8</param>
+                    <param id="1" name="Offset X">LinkSprite.X &lt; OctoRock.X ? 8 : -8</param>
                     <param id="2" name="Offset Y">0</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9063696501716907" type="LinkSprite">
