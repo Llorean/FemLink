@@ -7,7 +7,7 @@
         <event-block sid="3397332962239419">
             <conditions>
                 <condition id="14" name="On tap" sid="9106834799010055" type="Touch" />
-                <condition id="5" inverted="1" name="Is downloading update" sid="4025374428296222" type="Browser" />
+                <condition disabled="1" id="5" inverted="1" name="Is downloading update" sid="4025374428296222" type="Browser" />
             </conditions>
             <actions>
                 <action id="10" name="Request fullscreen" sid="2629108446134576" type="Browser">
@@ -41,7 +41,7 @@
                 <action id="11" name="Cancel fullscreen" sid="2686497559376094" type="Browser" />
             </actions>
         </event-block>
-        <event-block sid="9474238407685719">
+        <event-block disabled="1" sid="9474238407685719">
             <conditions>
                 <condition id="5" name="Is downloading update" sid="5548304652745255" type="Browser" />
             </conditions>
@@ -57,7 +57,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6243590589832178">
+        <event-block disabled="1" sid="6243590589832178">
             <conditions>
                 <condition id="6" name="On update ready" sid="288167458961038" type="Browser" />
             </conditions>
@@ -67,7 +67,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="2372535473554884">
+        <event-block any="1" disabled="1" sid="2372535473554884">
             <conditions>
                 <condition id="3" name="On touched object" sid="669883382865193" type="Touch">
                     <param id="0" name="Object">UpdateText</param>

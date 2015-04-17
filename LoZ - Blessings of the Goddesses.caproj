@@ -846,42 +846,42 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="2051188029731261" speed="5">
-                    <frame duration="1" hotspotX="0.285714" hotspotY="-1.91667" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-down.png">
+                    <frame duration="1" hotspotX="0.285714" hotspotY="-1.76923" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-down.png">
                         <collision-poly>
-                            <point x="0.285714" y="0.0833333" />
-                            <point x="0.714285" y="0.0833333" />
+                            <point x="0.285714" y="0.076923" />
+                            <point x="0.714285" y="0.076923" />
                             <point x="0.714286" y="1" />
                             <point x="0.285714" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="DownStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8590673062014034" speed="5">
-                    <frame duration="1" hotspotX="0.571429" hotspotY="-1.91667">
+                    <frame duration="1" hotspotX="0.571429" hotspotY="-1.76923">
                         <collision-poly>
                             <point x="0.714286" y="1" />
                             <point x="0.285714" y="1" />
-                            <point x="0.285715" y="0.0833333" />
-                            <point x="0.714286" y="0.0833333" />
+                            <point x="0.285715" y="0.076923" />
+                            <point x="0.714286" y="0.076923" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="1696995609738251" speed="5">
-                    <frame duration="1" hotspotX="2.28571" hotspotY="0.142857" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-up.png">
+                    <frame duration="1" hotspotX="2.28571" hotspotY="0.217391" original-source="C:\Projects\FemLink\Resources\Sprites\sword-stab-up.png">
                         <collision-poly>
-                            <point x="0" y="0" />
+                            <point x="0.285714" y="0" />
                             <point x="0.714286" y="0" />
-                            <point x="0.714286" y="0.857143" />
-                            <point x="0" y="0.857143" />
+                            <point x="0.714286" y="0.869565" />
+                            <point x="0.285714" y="0.869565" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="UpStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="8069194190973426" speed="5">
-                    <frame duration="1" hotspotX="-1.42857" hotspotY="0.142857">
+                    <frame duration="1" hotspotX="-1.42857" hotspotY="0.217391">
                         <collision-poly>
-                            <point x="1" y="0.857143" />
-                            <point x="0.285714" y="0.857143" />
+                            <point x="0.714286" y="0.869565" />
+                            <point x="0.285714" y="0.869565" />
                             <point x="0.285714" y="0" />
-                            <point x="1" y="0" />
+                            <point x="0.714286" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1381,8 +1381,6 @@
             <instance-variables>
                 <instance-variable name="Offset" sid="9806026776425788" type="number" />
                 <instance-variable name="Rate" sid="2416817555662876" type="number" />
-                <instance-variable name="Hurt" sid="7869885843419082" type="boolean" />
-                <instance-variable name="Health" sid="6463206173336197" type="number" />
                 <instance-variable name="Direction" sid="3881354134798743" type="string" />
             </instance-variables>
             <behaviors>
@@ -1504,8 +1502,33 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite" sid="7150550065406933">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4341365937868536" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
+            <members>
+                <member>CastleGameTiles</member>
+                <member>DungeonGameTiles</member>
+            </members>
+        </family>
+        <family name="Enemies" plugin-id="Sprite" sid="5740274950007775">
+            <members>
+                <member>Octorok</member>
+                <member>Sprite</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Health" sid="120363348187406" type="number" />
+                <instance-variable name="Hurt" sid="4109376174065124" type="boolean" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
         <layout>Castle.xml</layout>
         <layout>Unused.xml</layout>

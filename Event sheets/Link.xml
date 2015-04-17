@@ -11,7 +11,7 @@
         <variable constant="0" name="LinkJumpDecel" sid="3290663707225171" static="0" type="number">0</variable>
         <variable constant="0" name="LinkDecel" sid="1661150361814371" static="0" type="number">750</variable>
         <variable constant="0" name="LinkAccel" sid="5553679624960852" static="0" type="number">800</variable>
-        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">1</variable>
+        <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">12</variable>
         <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
         <variable constant="0" name="UpPressed" sid="8030079085818844" static="0" type="number">0</variable>
         <variable constant="0" name="DownPressed" sid="1086297668852281" static="0" type="number">0</variable>
@@ -89,10 +89,10 @@
                     <param id="0" name="Width">16 * Containers</param>
                 </action>
                 <action id="-5" name="Set width" sid="5530658632412351" type="HeartTop">
-                    <param id="0" name="Width">8 * floor(CurrentHealth / 2)</param>
+                    <param id="0" name="Width">8 * floor(CurrentHealth/ 2)</param>
                 </action>
                 <action id="-5" name="Set width" sid="3382187573843774" type="HeartBottom">
-                    <param id="0" name="Width">8 * ceil(CurrentHealth / 2)</param>
+                    <param id="0" name="Width">8 * ceil(CurrentHealth/ 2)</param>
                 </action>
                 <action behavior="Platform" id="14" name="Set jump sustain" sid="530415314828537" type="LinkSprite">
                     <param id="0" name="Jump sustain">LinkJumpSustain</param>
@@ -103,7 +103,12 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="7314759704587209" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-9" name="Set value" sid="123059311494284" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">max(CurrentHealth,0)</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="2754727288473749">
                     <conditions>
@@ -785,7 +790,7 @@
         <event-block sid="8280836213448729">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1670946192626999" type="LinkSword">
-                    <param id="0" name="Object">CastleGameTiles</param>
+                    <param id="0" name="Object">SolidWalls</param>
                 </condition>
             </conditions>
             <actions />
@@ -886,31 +891,12 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="8107580255381116">
-                    <conditions>
-                        <condition id="2" name="Is playing" sid="7602121187368464" type="LinkSword">
-                            <param id="0" name="Animation">&quot;DownStabLeft&quot;</param>
-                        </condition>
-                        <condition id="3" name="Compare frame" sid="9689570372410705" type="LinkSprite">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="823444328929798" type="System">
-                            <param id="0" name="Object to create">BombExplosion</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">LinkSword.X</param>
-                            <param id="3" name="Y">LinkSword.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="7635977618221733">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="1707310930206577" type="LinkSword">
-                    <param id="0" name="Object">Octorok</param>
+                    <param id="0" name="Object">Enemies</param>
                 </condition>
             </conditions>
             <actions />
@@ -924,11 +910,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="9122804179759997" type="Octorok">
+                        <action id="-12" name="Subtract from" sid="9122804179759997" type="Enemies">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="3750831413386681" type="Octorok">
+                        <action id="-13" name="Set boolean" sid="3750831413386681" type="Enemies">
                             <param id="0" name="Instance variable">Hurt</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -944,14 +930,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="8404612299607875" type="Octorok">
+                        <action id="-12" name="Subtract from" sid="8404612299607875" type="Enemies">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="5449172657620353" type="LinkSprite">
                             <param id="0" name="Vector Y">-300</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="1415520405793237" type="Octorok">
+                        <action id="-13" name="Set boolean" sid="1415520405793237" type="Enemies">
                             <param id="0" name="Instance variable">Hurt</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -967,14 +953,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="1940906971950431" type="Octorok">
+                        <action id="-12" name="Subtract from" sid="1940906971950431" type="Enemies">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="7513015548854304" type="LinkSprite">
                             <param id="0" name="Vector Y">100</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="4530985022936884" type="Octorok">
+                        <action id="-13" name="Set boolean" sid="4530985022936884" type="Enemies">
                             <param id="0" name="Instance variable">Hurt</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -985,12 +971,12 @@
         <event-block sid="9706316371080351">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="8574169079078834" type="LinkSprite">
-                    <param id="0" name="Object">Octorok</param>
+                    <param id="0" name="Object">Enemies</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5124585115738309" type="LinkSprite">
                     <param id="0" name="Instance variable">Hurt</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2586728794225961" type="Octorok">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2586728794225961" type="Enemies">
                     <param id="0" name="Instance variable">Hurt</param>
                 </condition>
             </conditions>
@@ -1000,19 +986,23 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="9398996784312516" type="LinkSprite">
-                    <param id="0" name="Vector X">Octorok.X &gt; LinkSprite.X? -500 : 500</param>
+                    <param id="0" name="Vector X">Enemies.X &gt; LinkSprite.X? -500 : 500</param>
                 </action>
                 <action behavior="Platform" id="9" name="Set vector Y" sid="9475596145145118" type="LinkSprite">
                     <param id="0" name="Vector Y">-200</param>
                 </action>
                 <action id="-10" name="Set value" sid="7616703236830674" type="LinkSprite">
                     <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">Octorok.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
+                    <param id="1" name="Value">Enemies.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="92702750880502" type="LinkSprite">
                     <param id="0" name="Magnitude">20</param>
                     <param id="1" name="Duration">0.2</param>
                     <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="4083255876252889" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">2</param>
                 </action>
             </actions>
         </event-block>
@@ -1051,7 +1041,7 @@
                 </action>
                 <action id="-10" name="Set value" sid="3045389065220168" type="LinkSprite">
                     <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">Octorok.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
+                    <param id="1" name="Value">Enemies.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="4138806834437782" type="LinkSprite">
                     <param id="0" name="Magnitude">20</param>
@@ -1059,6 +1049,10 @@
                     <param id="2" name="Mode">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="2759952146902422" type="OctoRock" />
+                <action id="-11" name="Subtract from" sid="6409911391534919" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="780513458598495">
@@ -1156,7 +1150,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="6690953320435536" type="System">
                     <param id="0" name="Variable">LinkAccel</param>
-                    <param id="1" name="Value">1500</param>
+                    <param id="1" name="Value">1200</param>
                 </action>
                 <action id="-9" name="Set value" sid="9977249655087364" type="System">
                     <param id="0" name="Variable">LinkDecel</param>
@@ -1209,7 +1203,7 @@
         <event-block sid="2357417762836772">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="4775581099716775" type="Bomb">
-                    <param id="0" name="Object">CastleGameTiles</param>
+                    <param id="0" name="Object">SolidWalls</param>
                 </condition>
             </conditions>
             <actions>

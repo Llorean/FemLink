@@ -1022,10 +1022,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1</Health>
+                        <Hurt>false</Hurt>
                         <Offset>0</Offset>
                         <Rate>2</Rate>
-                        <Hurt>false</Hurt>
-                        <Health>2</Health>
                         <Direction>Left</Direction>
                     </instance-variables>
                     <behavior-instances>
@@ -1067,10 +1067,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1</Health>
+                        <Hurt>false</Hurt>
                         <Offset>1</Offset>
                         <Rate>2</Rate>
-                        <Hurt>false</Hurt>
-                        <Health>2</Health>
                         <Direction>Left</Direction>
                     </instance-variables>
                     <behavior-instances>
@@ -1112,10 +1112,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1</Health>
+                        <Hurt>false</Hurt>
                         <Offset>0</Offset>
                         <Rate>3</Rate>
-                        <Hurt>false</Hurt>
-                        <Health>2</Health>
                         <Direction>Left</Direction>
                     </instance-variables>
                     <behavior-instances>
@@ -1157,10 +1157,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1</Health>
+                        <Hurt>false</Hurt>
                         <Offset>0</Offset>
                         <Rate>3</Rate>
-                        <Hurt>false</Hurt>
-                        <Health>2</Health>
                         <Direction>Right</Direction>
                     </instance-variables>
                     <behavior-instances>
@@ -1202,10 +1202,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Health>1</Health>
+                        <Hurt>false</Hurt>
                         <Offset>0</Offset>
                         <Rate>2</Rate>
-                        <Hurt>false</Hurt>
-                        <Health>2</Health>
                         <Direction>Left</Direction>
                     </instance-variables>
                     <behavior-instances>
