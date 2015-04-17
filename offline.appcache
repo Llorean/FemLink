@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1429236995
+#1429249005
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -39,6 +39,7 @@ images/octorok-sheet0.png
 images/octorok-sheet1.png
 images/octorock-sheet0.png
 images/bbutton-sheet0.png
+images/sprite-sheet0.png
 media/hyrulecastle.m4a
 media/hyrulecastle.ogg
 icon-16.png
