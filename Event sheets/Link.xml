@@ -921,7 +921,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="9122804179759997" type="Octorok" />
+                        <action id="-12" name="Subtract from" sid="9122804179759997" type="Octorok">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3750831413386681" type="Octorok">
+                            <param id="0" name="Instance variable">Hurt</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block any="1" sid="7003233517059107">
@@ -934,9 +941,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8404612299607875" type="Octorok" />
+                        <action id="-12" name="Subtract from" sid="8404612299607875" type="Octorok">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="5449172657620353" type="LinkSprite">
                             <param id="0" name="Vector Y">-300</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="1415520405793237" type="Octorok">
+                            <param id="0" name="Instance variable">Hurt</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -948,6 +962,9 @@
                     <param id="0" name="Object">Octorok</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5124585115738309" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2586728794225961" type="Octorok">
                     <param id="0" name="Instance variable">Hurt</param>
                 </condition>
             </conditions>
@@ -971,6 +988,51 @@
                     <param id="1" name="Duration">0.2</param>
                     <param id="2" name="Mode">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="4769231578932883">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8611821800802181" type="OctoRock">
+                    <param id="0" name="Object">LinkWoodShield</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5298484613531074" type="OctoRock" />
+            </actions>
+        </event-block>
+        <event-block sid="6193161553237652">
+            <conditions>
+                <condition id="-22" name="Else" sid="5497072579534966" type="System" />
+                <condition id="9" name="Is overlapping at offset" sid="6737705129077691" type="OctoRock">
+                    <param id="0" name="Object">LinkSprite</param>
+                    <param id="1" name="Offset X">OctoRock.Direction = &quot;Left&quot; ? 8 : -8</param>
+                    <param id="2" name="Offset Y">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9063696501716907" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="2196165337125861" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="5180884117653382" type="LinkSprite">
+                    <param id="0" name="Vector X">OctoRock.X &gt; LinkSprite.X? -500 : 500</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="2401824240999978" type="LinkSprite">
+                    <param id="0" name="Vector Y">-200</param>
+                </action>
+                <action id="-10" name="Set value" sid="3045389065220168" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Octorok.X &gt; LinkSprite.X? &quot;Left&quot; : &quot;Right&quot;</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="4138806834437782" type="LinkSprite">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.2</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2759952146902422" type="OctoRock" />
             </actions>
         </event-block>
         <event-block sid="780513458598495">

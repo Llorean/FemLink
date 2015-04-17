@@ -24,19 +24,36 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2077352369236078">
+        <event-block sid="4529270084229087">
             <conditions>
-                <condition id="-11" name="For Each" sid="5917925936134412" type="System">
-                    <param id="0" name="Object">Octorok</param>
-                </condition>
+                <condition id="-2" name="On start of layout" sid="6368624316073162" type="System" />
             </conditions>
             <actions>
-                <action id="-11" name="Add to" sid="7125709365760773" type="Octorok">
-                    <param id="0" name="Instance variable">Offset</param>
-                    <param id="1" name="Value">dt</param>
+                <action id="4" name="Set animation" sid="2470273678302407" type="Octorok">
+                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Octorok.Direction</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="2077352369236078">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4227898925608993" type="System" />
+            </conditions>
+            <actions />
             <sub-events>
+                <event-block sid="7527620745941674">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3977261177554116" type="Octorok">
+                            <param id="0" name="Instance variable">Hurt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="7125709365760773" type="Octorok">
+                            <param id="0" name="Instance variable">Offset</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="7815548117002094">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6918378496244113" type="Octorok">
@@ -56,6 +73,73 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3539905267023429">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="4566702022751774" type="Octorok">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1375100999578867" type="Octorok">
+                    <param id="0" name="Animation">&quot;Hurt&quot; &amp; Octorok.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4937751018152521">
+            <conditions>
+                <condition id="4" name="On finished" sid="8117363284718131" type="Octorok">
+                    <param id="0" name="Animation">&quot;Hurt&quot;&amp;Octorok.Direction</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2313562990103782" type="Octorok">
+                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Octorok.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9583421646395703" type="Octorok">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4964244128490881">
+            <conditions>
+                <condition id="5" name="On any finished" sid="7236002994655726" type="Octorok" />
+                <condition id="-7" name="Compare instance variable" sid="9251254812798833" type="Octorok">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="908099832709823" type="Octorok" />
+            </actions>
+        </event-block>
+        <event-block sid="2124497088814228">
+            <conditions>
+                <condition behavior="Platform" id="6" name="On fall" sid="736016329532105" type="Octorok" />
+                <condition id="-3" name="Is on-screen" sid="9437257511247835" type="Octorok" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="4214507024668759" type="System">
+                    <param id="0" name="Object to create">OctoRock</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Octorok.Direction = &quot;Left&quot; ? Octorok.X-5 : Octorok.X+5</param>
+                    <param id="3" name="Y">Octorok.Y+18</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4624554231487445" type="OctoRock">
+                    <param id="0" name="Angle">Octorok.Direction = &quot;Left&quot; ? 180 : 0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="1159824744781641" type="OctoRock">
+                    <param id="0" name="Speed">150</param>
+                </action>
+                <action id="-10" name="Set value" sid="169602586985094" type="OctoRock">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">Octorok.Direction</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
