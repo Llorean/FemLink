@@ -336,6 +336,9 @@
                                 <condition id="0" name="On key pressed" sid="8038595833064435" type="Keyboard">
                                     <param id="0" name="Key">17 (Ctrl)</param>
                                 </condition>
+                                <condition id="3" name="On touched object" sid="5618939324080797" type="Touch">
+                                    <param id="0" name="Object">BButton</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="9937080486801589" type="LinkSprite">

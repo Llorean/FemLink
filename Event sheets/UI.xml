@@ -106,6 +106,9 @@
                 <action id="-15" name="Set visible" sid="7422832273990203" type="JumpArrow">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="4320896529456433" type="BButton">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
