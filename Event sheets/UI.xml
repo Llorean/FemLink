@@ -230,8 +230,18 @@
                             <param id="0" name="Group name">&quot;Controls&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action id="-12" name="Set group active" sid="4409775010476097" type="System">
+                            <param id="0" name="Group name">&quot;MenuControls&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
                         <action id="-13" name="Set time scale" sid="2956328985833639" type="System">
                             <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4634280018886464" type="System">
+                            <param id="0" name="Object to create">Pointer</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="X">408</param>
+                            <param id="3" name="Y">24</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -300,9 +310,17 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8304460654424903" type="TextBox" />
+                        <action id="-9" name="Set value" sid="9056559866065559" type="System">
+                            <param id="0" name="Variable">Item</param>
+                            <param id="1" name="Value">Items.At(((Pointer.Y - 24) / 20))</param>
+                        </action>
                         <action id="-9" name="Set value" sid="2145243017438346" type="System">
                             <param id="0" name="Variable">Menu</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5521083551601283" type="System">
+                            <param id="0" name="Group name">&quot;MenuControls&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                         <action id="-12" name="Set group active" sid="9098877940541369" type="System">
                             <param id="0" name="Group name">&quot;Controls&quot;</param>
@@ -311,6 +329,7 @@
                         <action id="-13" name="Set time scale" sid="1395998842403943" type="System">
                             <param id="0" name="Time scale">1</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="1168289890786565" type="Pointer" />
                     </actions>
                     <sub-events>
                         <event-block sid="4686836396490564">
@@ -393,7 +412,47 @@
                     <param id="0" name="X">0</param>
                     <param id="1" name="Value">&quot;Shield&quot;</param>
                 </action>
+                <action id="-12" name="Set group active" sid="6464501617646623" type="System">
+                    <param id="0" name="Group name">&quot;MenuControls&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
             </actions>
         </event-block>
+        <event-group description="" sid="9833507689691259" title="MenuControls">
+            <sub-events>
+                <event-block sid="2580694661705692">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4920645416483872" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="1545446956879352" type="Pointer">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">24</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="1436121869867753" type="Pointer">
+                            <param id="0" name="Y">Pointer.Y - 20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="984370674510832">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6017123523084864" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="2412875501636249" type="Pointer">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">24 + 20 * (Items.Width - 1)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="2151219980453087" type="Pointer">
+                            <param id="0" name="Y">Pointer.Y + 20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Globals</name>
     <events>
+        <variable constant="0" name="Item" sid="1179970450505304" static="0" type="text">Sword</variable>
         <variable constant="0" name="Menu" sid="1007940456823304" static="0" type="number">0</variable>
         <variable constant="0" name="TextBox" sid="9561832797274496" static="0" type="number">0</variable>
         <variable constant="0" name="TouchMode" sid="8404901840841183" static="0" type="number">0</variable>

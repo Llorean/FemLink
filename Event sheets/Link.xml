@@ -620,6 +620,11 @@
                         <condition id="0" name="On key pressed" sid="3699844017990188" type="Keyboard">
                             <param id="0" name="Key">65 (A)</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="329737246774438" type="System">
+                            <param id="0" name="Variable">Item</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Bombs&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="5670646586061131" type="System">
@@ -726,6 +731,7 @@
                 <condition id="1" name="Is overlapping another object" sid="1670946192626999" type="LinkSword">
                     <param id="0" name="Object">SolidWalls</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="23495035857436" type="LinkSword" />
             </conditions>
             <actions />
             <sub-events>
@@ -946,6 +952,7 @@
                 <condition id="1" name="Is overlapping another object" sid="8611821800802181" type="OctoRock">
                     <param id="0" name="Object">LinkWoodShield</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="7382664456846541" type="LinkWoodShield" />
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5298484613531074" type="OctoRock" />
@@ -1233,6 +1240,29 @@
                     <param id="0" name="Variable">CurrentHealth</param>
                     <param id="1" name="Value">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="1676984092213326">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3031191345563115" type="LinkSprite">
+                    <param id="0" name="Object">Bombs</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3918799222145952" type="Function">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}200{###}200{###}300{###}&quot;You got Bombs!&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="3766294795099587" type="Items">
+                    <param id="0" name="Width">Items.Width + 1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="531529859041151" type="Items">
+                    <param id="0" name="X">Items.Width - 1</param>
+                    <param id="1" name="Value">&quot;Bombs&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4063903177471372" type="Bombs" />
             </actions>
         </event-block>
     </events>

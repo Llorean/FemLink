@@ -1546,6 +1546,36 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Pointer" sid="4353563204049484">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8249986730429816" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bombs" sid="5033568364195329">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="151162424651668">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5550267498351332" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\bombs.PNG">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.8125" y="0.1875" />
+                            <point x="1" y="0.5" />
+                            <point x="0.875" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1875" y="0.8125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
