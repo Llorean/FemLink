@@ -1164,6 +1164,10 @@
                     <param id="1" name="Value">1200</param>
                 </action>
                 <action id="-9" name="Destroy" sid="6160800365173617" type="FaroreItem" />
+                <action id="0" name="Call function" sid="6922377060731609" type="Dialog">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}200{###}200{###}300{###}&quot;You got Farore&apos;s Boots!&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4953264856017692">

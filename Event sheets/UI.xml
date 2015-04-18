@@ -110,5 +110,41 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="4601019449196457">
+            <conditions>
+                <condition id="0" name="On function" sid="7709018489162776" type="Dialog">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="1058842950388789" type="System">
+                    <param id="0" name="Object to create">TextBox</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">Dialog.Param(0)</param>
+                    <param id="3" name="Y">Dialog.Param(1)</param>
+                </action>
+                <action id="-5" name="Set width" sid="6397400503943249" type="TextBox">
+                    <param id="0" name="Width">Dialog.Param(2) - Dialog.Param(0)</param>
+                </action>
+                <action id="-6" name="Set height" sid="747259752210344" type="TextBox">
+                    <param id="0" name="Height">Dialog.Param(3) - Dialog.Param(1)</param>
+                </action>
+                <action id="-3" name="Create object" sid="5703415244266822" type="System">
+                    <param id="0" name="Object to create">TextDialog</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">Dialog.Param(0) + 6</param>
+                    <param id="3" name="Y">Dialog.Param(1) + 6</param>
+                </action>
+                <action id="-5" name="Set width" sid="81927757988047" type="TextDialog">
+                    <param id="0" name="Width">(Dialog.Param(2) - Dialog.Param(0)) - 12</param>
+                </action>
+                <action id="-6" name="Set height" sid="2282066820773474" type="TextDialog">
+                    <param id="0" name="Height">(Dialog.Param(3) - Dialog.Param(1)) - 12</param>
+                </action>
+                <action id="0" name="Set text" sid="7555292969753232" type="TextDialog">
+                    <param id="0" name="Text">Dialog.Param(4)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

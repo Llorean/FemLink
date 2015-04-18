@@ -12,8 +12,10 @@
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -1516,6 +1518,16 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TextBox" sid="5516802990228819">
+            <plugin id="NinePatch" />
+            <texture original-source="D:\Projects\FemLink\Resources\Sprites\textbox.png" />
+        </object-type>
+        <object-type name="Dialog" sid="9921746707407679">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="TextDialog" sid="6414116147753589">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -1581,6 +1593,7 @@
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="7" />
+        <global-instance type="Dialog" uid="74" />
     </global-instances>
     <sounds-folder />
     <music-folder>
