@@ -13,12 +13,6 @@
                 <condition id="-2" name="On start of layout" sid="7789792770113962" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="434313698316116" type="Audio">
-                    <param id="0" name="Audio file">HyruleCastle</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;bgm&quot;</param>
-                </action>
                 <action id="23" name="Seek to" sid="1439942075726722" type="Audio">
                     <param id="0" name="Tag">&quot;bgm&quot;</param>
                     <param id="1" name="Position">12</param>

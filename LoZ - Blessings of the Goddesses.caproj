@@ -1679,11 +1679,17 @@
         <global-instance type="Browser" uid="7" />
         <global-instance type="Function" uid="74" />
     </global-instances>
-    <sounds-folder />
-    <music-folder>
-        <file name="HyruleCastle.m4a" />
-        <file name="HyruleCastle.ogg" />
-    </music-folder>
+    <sounds-folder>
+        <file name="EnemyHurt.m4a" />
+        <file name="EnemyHurt.ogg" />
+        <file name="Heart.m4a" />
+        <file name="Heart.ogg" />
+        <file name="LinkHurt.m4a" />
+        <file name="LinkHurt.ogg" />
+        <file name="ShieldTink.m4a" />
+        <file name="ShieldTink.ogg" />
+    </sounds-folder>
+    <music-folder />
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
