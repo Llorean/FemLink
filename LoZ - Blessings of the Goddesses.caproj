@@ -548,7 +548,7 @@
                     </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="StandBombLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5828412749693321" speed="15">
-                    <frame duration="5" hotspotX="0.326087" hotspotY="0">
+                    <frame duration="3" hotspotX="0.326087" hotspotY="0">
                         <collision-poly>
                             <point x="0.652174" y="1" />
                             <point x="0" y="1" />
@@ -566,7 +566,7 @@
                     </frame>
                 </animation>
                 <animation framecount="2" loop="0" name="StandBombRight" pingpong="0" repeatcount="1" repeatto="0" sid="5643249221625952" speed="15">
-                    <frame duration="5" hotspotX="0.652174" hotspotY="0">
+                    <frame duration="3" hotspotX="0.652174" hotspotY="0">
                         <collision-poly>
                             <point x="0.347826" y="0.015625" />
                             <point x="1" y="0.015625" />
@@ -1690,6 +1690,8 @@
         <file name="ShieldTink.ogg" />
         <file name="Stab.m4a" />
         <file name="Stab.ogg" />
+        <file name="BombExplode.m4a" />
+        <file name="BombExplode.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

@@ -1340,6 +1340,16 @@
                     <param id="2" name="X">Bomb.X</param>
                     <param id="3" name="Y">Bomb.Y+4</param>
                 </action>
+                <action id="25" name="Play at object" sid="8230644172657129" type="Audio">
+                    <param id="0" name="Audio file">BombExplode</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">Explosion</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="5347265063182466" type="System">
                     <param id="0" name="Seconds">0.25</param>
                 </action>
@@ -1355,7 +1365,7 @@
             <actions>
                 <action id="-12" name="Subtract from" sid="3528711348447355" type="Enemies">
                     <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">2</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="785404874399489" type="Enemies">
                     <param id="0" name="Instance variable">Hurt</param>
@@ -1404,7 +1414,7 @@
                 </action>
                 <action id="-11" name="Subtract from" sid="4387415022369665" type="System">
                     <param id="0" name="Variable">CurrentHealth</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">8</param>
                 </action>
                 <action id="25" name="Play at object" sid="6651523414370724" type="Audio">
                     <param id="0" name="Audio file">LinkHurt</param>
