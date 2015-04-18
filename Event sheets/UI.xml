@@ -330,6 +330,16 @@
                             <param id="0" name="Time scale">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="1168289890786565" type="Pointer" />
+                        <action id="-9" name="Set value" sid="2008209813650391" type="System">
+                            <param id="0" name="Variable">Attack</param>
+                            <param id="1" name="Value">&quot;Stab&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9273523169715983" type="LinkSword">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1750249112898469" type="LinkWoodShield">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4686836396490564">
@@ -349,7 +359,7 @@
         <event-block sid="8415665638666943">
             <conditions>
                 <condition id="0" name="On key pressed" sid="2123703572416671" type="Keyboard">
-                    <param id="0" name="Key">81 (Q)</param>
+                    <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
@@ -358,36 +368,6 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="6427670441719102">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="5353039863636932" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7987505180239916">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="3923746324985216" type="LinkSword" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="8498015533771913" type="LinkSword">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="617020807780506">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="3591441725211932" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="2994325297340032" type="LinkSword">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="9923843892190238">
             <conditions>

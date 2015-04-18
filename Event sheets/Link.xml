@@ -35,6 +35,25 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="810047120199902">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1937148803519664" type="System">
+                            <param id="0" name="Variable">Attack</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;Stab&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9029079274232455" type="LinkSword">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1950225279804993" type="LinkWoodShield">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="8836819638596115">
             <conditions>
@@ -335,7 +354,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="9937080486801589" type="LinkSprite">
                                     <param id="0" name="Instance variable">Stab</param>
-                                    <param id="1" name="Value">&quot;Stab&quot;</param>
+                                    <param id="1" name="Value">Attack</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="533142664223994" type="LinkSprite">
                                     <param id="0" name="Instance variable">Landed</param>
@@ -585,6 +604,9 @@
                                 <condition id="2" name="Is playing" sid="9745055639005014" type="LinkSprite">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                 </condition>
+                                <condition id="4" name="On finished" sid="791718571292594" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;StandBomb&quot;&amp;LinkSprite.Direction</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="1852961631842591" type="LinkSprite">
@@ -594,6 +616,39 @@
                                 <action id="-13" name="Set boolean" sid="1091122672393287" type="LinkSprite">
                                     <param id="0" name="Instance variable">Landed</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6321082129836857">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="5925637092671911" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;StandBomb&quot;&amp;LinkSprite.Direction</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9671720814616079" type="LinkSprite">
+                                    <param id="0" name="Instance variable">Stab</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6444868266085996" type="LinkSprite">
+                                    <param id="0" name="Instance variable">Landed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="7525340689063701" type="System">
+                                    <param id="0" name="Object to create">Bomb</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="X">LinkSprite.X</param>
+                                    <param id="3" name="Y">LinkSprite.Y - 5</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="372800915144117" type="Bomb">
+                                    <param id="0" name="Angle">LinkSprite.Direction = &quot;Left&quot; ? 210 : 330</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="8199830091507535" type="Bomb">
+                                    <param id="0" name="Speed">450 + abs(LinkSprite.Platform.VectorX)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8495734043980792" type="Bomb">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">LinkSprite.Direction</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -615,38 +670,21 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4762372239944205">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="3699844017990188" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="329737246774438" type="System">
-                            <param id="0" name="Variable">Item</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Bombs&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="5670646586061131" type="System">
-                            <param id="0" name="Object to create">Bomb</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">LinkSprite.X</param>
-                            <param id="3" name="Y">LinkSprite.Y - 5</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8825222433494224" type="Bomb">
-                            <param id="0" name="Angle">LinkSprite.Direction = &quot;Left&quot; ? 210 : 330</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="1693147045148021" type="Bomb">
-                            <param id="0" name="Speed">450 + abs(LinkSprite.Platform.VectorX)</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4901824389581872" type="Bomb">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Value">LinkSprite.Direction</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9212281693912387">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6116828509431178" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2174615543517105" type="System">
+                    <param id="0" name="Variable">ItemSwap</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="1742996009149824">
             <conditions>
                 <condition id="0" name="On key pressed" sid="1793108326076287" type="Keyboard">
@@ -997,6 +1035,26 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9951417854870373">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7236055077483693" type="System">
+                    <param id="0" name="Variable">Attack</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Bomb&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1597659547258292" type="LinkSprite">
+                    <param id="0" name="Instance variable">Movement</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;Stand&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6021341812814124" type="LinkSprite">
+                    <param id="0" name="Instance variable">Stab</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="780513458598495">
             <conditions>
                 <condition id="2" inverted="1" name="Is playing" sid="9020257503473655" type="LinkSprite">
@@ -1260,10 +1318,172 @@
                 </action>
                 <action id="2" name="Set at X" sid="531529859041151" type="Items">
                     <param id="0" name="X">Items.Width - 1</param>
-                    <param id="1" name="Value">&quot;Bombs&quot;</param>
+                    <param id="1" name="Value">&quot;Bomb&quot;</param>
                 </action>
                 <action id="-9" name="Destroy" sid="4063903177471372" type="Bombs" />
             </actions>
+        </event-block>
+        <event-block sid="8473362368159818">
+            <conditions>
+                <condition id="5" name="On any finished" sid="3275296712282387" type="LinkSprite" />
+                <condition id="-14" name="Compare variable" sid="4366113417614585" type="System">
+                    <param id="0" name="Variable">ItemSwap</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9942795964066622" type="System">
+                    <param id="0" name="Variable">ItemSwap</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6152422652239675">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="4161632798808465" type="LinkSword" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4791294452883007" type="LinkSword">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3888686726304048" type="LinkWoodShield">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6372506528663362" type="System">
+                            <param id="0" name="Variable">Attack</param>
+                            <param id="1" name="Value">Item</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1641604299695099">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2675508366292419" type="System">
+                                    <param id="0" name="Variable">Attack</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Sword&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3622379619935216" type="System">
+                                    <param id="0" name="Variable">Attack</param>
+                                    <param id="1" name="Value">&quot;Stab&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5469257671533109" type="LinkSword">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7543449628926198" type="LinkWoodShield">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4231389797082879">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7067998820357" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="250880438245734" type="LinkSword">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8250331844495931" type="LinkWoodShield">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8552869903771138" type="System">
+                            <param id="0" name="Variable">Attack</param>
+                            <param id="1" name="Value">&quot;Stab&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="9278887260554331">
+            <conditions>
+                <condition id="2" name="Is playing" sid="6196387031713857" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;Stand&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="8657387392305849" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;Walk&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4459113738803872">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4410535946632254" type="System">
+                            <param id="0" name="Variable">ItemSwap</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1695550110239171" type="System">
+                            <param id="0" name="Variable">ItemSwap</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7709773354863631">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="3148151882639798" type="LinkSword" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="6159746844985211" type="LinkSword">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5972254007064829" type="LinkWoodShield">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8036936094967536" type="System">
+                                    <param id="0" name="Variable">Attack</param>
+                                    <param id="1" name="Value">Item</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3046651898953966">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9580342577739191" type="System">
+                                            <param id="0" name="Variable">Attack</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Sword&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="4683866113026449" type="System">
+                                            <param id="0" name="Variable">Attack</param>
+                                            <param id="1" name="Value">&quot;Stab&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2169131108852795" type="LinkSword">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8620961819466974" type="LinkWoodShield">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5052503582302963">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5904068372774201" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="8302191221565199" type="LinkSword">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7864000124216013" type="LinkWoodShield">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6394988784037659" type="System">
+                                    <param id="0" name="Variable">Attack</param>
+                                    <param id="1" name="Value">&quot;Stab&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

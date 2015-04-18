@@ -547,6 +547,42 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="2" loop="0" name="StandBombLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5828412749693321" speed="15">
+                    <frame duration="5" hotspotX="0.326087" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.652174" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.015625" />
+                            <point x="0.652174" y="0.015625" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.630435" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.304348" y="0.015625" />
+                            <point x="0.956522" y="0.015625" />
+                            <point x="0.956522" y="1" />
+                            <point x="0.304348" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="StandBombRight" pingpong="0" repeatcount="1" repeatto="0" sid="5643249221625952" speed="15">
+                    <frame duration="5" hotspotX="0.652174" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.347826" y="0.015625" />
+                            <point x="1" y="0.015625" />
+                            <point x="1" y="1" />
+                            <point x="0.347826" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.347826" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.695652" y="1" />
+                            <point x="0.0434783" y="1" />
+                            <point x="0.0434783" y="0.015625" />
+                            <point x="0.695652" y="0.015625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="LinkSword" sid="4923557293690689">
