@@ -1688,6 +1688,8 @@
         <file name="LinkHurt.ogg" />
         <file name="ShieldTink.m4a" />
         <file name="ShieldTink.ogg" />
+        <file name="Stab.m4a" />
+        <file name="Stab.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
