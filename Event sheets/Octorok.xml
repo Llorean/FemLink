@@ -92,6 +92,9 @@
             <conditions>
                 <condition behavior="Platform" id="6" name="On fall" sid="3498722982084183" type="Octorok" />
                 <condition id="-3" name="Is on-screen" sid="9728376779966359" type="Octorok" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6361953539544229" type="Octorok">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="2725831107051257" type="System">
