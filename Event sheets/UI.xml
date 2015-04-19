@@ -434,5 +434,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9677083998034367">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="668290744098785" type="System" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="4100895419735757" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="8163430305423475" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
