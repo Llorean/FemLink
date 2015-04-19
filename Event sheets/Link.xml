@@ -333,6 +333,11 @@
                                             <param id="0" name="Side">0</param>
                                         </condition>
                                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="6043611941599808" type="LinkSprite" />
+                                        <condition id="-14" name="Compare variable" sid="6069922769980015" type="System">
+                                            <param id="0" name="Variable">WallJump</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="6550372278065088" type="LinkSprite">
@@ -350,6 +355,11 @@
                                             <param id="0" name="Side">1</param>
                                         </condition>
                                         <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="6540513931634586" type="LinkSprite" />
+                                        <condition id="-14" name="Compare variable" sid="8399238853975428" type="System">
+                                            <param id="0" name="Variable">WallJump</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="9" name="Set vector Y" sid="836328538360827" type="LinkSprite">
