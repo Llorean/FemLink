@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Globals</name>
     <events>
+        <variable constant="0" name="StabSoundPlayed" sid="4330052218197754" static="0" type="number">0</variable>
         <variable constant="0" name="ItemSwap" sid="4708445886807858" static="0" type="number">0</variable>
         <variable constant="0" name="Attack" sid="6703889292124514" static="0" type="text">Stab</variable>
         <variable constant="0" name="Item" sid="1179970450505304" static="0" type="text">Sword</variable>

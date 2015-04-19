@@ -598,14 +598,14 @@
                                 <condition id="4" name="On finished" sid="599823610734903" type="LinkSprite">
                                     <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
                                 </condition>
-                                <condition id="4" name="On finished" sid="5121175458349629" type="LinkSprite">
-                                    <param id="0" name="Animation">&quot;JumpStab&quot;&amp;LinkSprite.Direction</param>
-                                </condition>
                                 <condition id="2" name="Is playing" sid="9745055639005014" type="LinkSprite">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                 </condition>
-                                <condition id="4" name="On finished" sid="791718571292594" type="LinkSprite">
-                                    <param id="0" name="Animation">&quot;StandBomb&quot;&amp;LinkSprite.Direction</param>
+                                <condition id="4" name="On finished" sid="3249016039509747" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;FallStab&quot;&amp;LinkSprite.Direction</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="4379005297559032" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;JumpStab&quot;&amp;LinkSprite.Direction</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1122,52 +1122,174 @@
         </event-block>
         <event-block sid="4707466377994045">
             <conditions>
-                <condition id="2" inverted="1" name="Is playing" sid="1494788123403865" type="LinkSprite">
+                <condition id="2" name="Is playing" sid="1494788123403865" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;StandStab&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="5138866819097576" type="LinkSprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9931115818105349" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="247282490053543" type="Audio">
+                    <param id="0" name="Audio file">Stab</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-5</param>
+                    <param id="3" name="Object">LinkSword</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="9806178295446912" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6793420942885984">
+            <conditions>
+                <condition id="2" name="Is playing" sid="6019638014868403" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;KneelStab&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="1786533869564951" type="LinkSprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9774622224289894" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="4432931959813642" type="Audio">
+                    <param id="0" name="Audio file">Stab</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-5</param>
+                    <param id="3" name="Object">LinkSword</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="4918892447734293" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4242697678513227">
+            <conditions>
+                <condition id="2" name="Is playing" sid="6104429902223242" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;FallStab&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="3096400794476246" type="LinkSprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1170563156670352" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="6613639965665732" type="Audio">
+                    <param id="0" name="Audio file">Stab</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-5</param>
+                    <param id="3" name="Object">LinkSword</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="7941031099662687" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5833087467424883">
+            <conditions>
+                <condition id="2" name="Is playing" sid="9677959872668062" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;JumpStab&quot;&amp;LinkSprite.Direction</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="2571015285527647" type="LinkSprite">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5181920864465703" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="290145568072895" type="Audio">
+                    <param id="0" name="Audio file">Stab</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-5</param>
+                    <param id="3" name="Object">LinkSword</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="7218508486501787" type="System">
+                    <param id="0" name="Variable">StabSoundPlayed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2566848397099991">
+            <conditions>
+                <condition id="2" inverted="1" name="Is playing" sid="3048109953174186" type="LinkSprite">
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="6381965801526348" type="LinkSprite">
+                <action id="4" name="Set animation" sid="5339193918821945" type="LinkSprite">
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="2525722725544205" type="LinkSword">
+                <action id="4" name="Set animation" sid="7527903297132911" type="LinkSword">
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="199993923745631" type="LinkWoodShield">
+                <action id="4" name="Set animation" sid="2985768340244187" type="LinkWoodShield">
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="6" name="Set speed" sid="7354913339016083" type="LinkSprite">
+                <action id="6" name="Set speed" sid="7553693252988287" type="LinkSprite">
                     <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
-                <action id="6" name="Set speed" sid="9645487770511782" type="LinkSword">
+                <action id="6" name="Set speed" sid="6054565914201943" type="LinkSword">
                     <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
-                <action id="6" name="Set speed" sid="723776935808186" type="LinkWoodShield">
+                <action id="6" name="Set speed" sid="9127462899518387" type="LinkWoodShield">
                     <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="3908957136706645">
+                <event-block sid="9253063825207647">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4442381187979792" type="LinkSprite">
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="1729670371920348" type="LinkSprite">
                             <param id="0" name="Instance variable">Stab</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Stab&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="25" name="Play at object" sid="247282490053543" type="Audio">
-                            <param id="0" name="Audio file">Stab</param>
-                            <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">-5</param>
-                            <param id="3" name="Object">LinkSword</param>
-                            <param id="4" name="Inner angle">360</param>
-                            <param id="5" name="Outer angle">360</param>
-                            <param id="6" name="Outer gain">0</param>
-                            <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                        <action id="-9" name="Set value" sid="4899567922649242" type="System">
+                            <param id="0" name="Variable">StabSoundPlayed</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
