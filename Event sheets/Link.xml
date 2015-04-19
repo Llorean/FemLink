@@ -309,6 +309,59 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block any="1" sid="1764338834290762">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7548388783645956" type="Keyboard">
+                                    <param id="0" name="Key">88 (X)</param>
+                                </condition>
+                                <condition id="17" name="On tap object" sid="6103743171938257" type="Touch">
+                                    <param id="0" name="Object">JumpArrow</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="9646787048635796" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="2774826141385209" type="Keyboard">
+                                    <param id="0" name="Key">32 (Space)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7805282767547861">
+                                    <conditions>
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="56349171169049" type="LinkSprite">
+                                            <param id="0" name="Side">0</param>
+                                        </condition>
+                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="6043611941599808" type="LinkSprite" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="6550372278065088" type="LinkSprite">
+                                            <param id="0" name="Vector Y">-1 * (LinkJump + LinkJumpSustain)</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="1792967861810438" type="LinkSprite">
+                                            <param id="0" name="Vector X">400</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8797155242476981">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2316520071273996" type="System" />
+                                        <condition behavior="Platform" id="10" name="Is by wall" sid="4463933476135615" type="LinkSprite">
+                                            <param id="0" name="Side">1</param>
+                                        </condition>
+                                        <condition behavior="Platform" id="2" inverted="1" name="Is on floor" sid="6540513931634586" type="LinkSprite" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="9" name="Set vector Y" sid="836328538360827" type="LinkSprite">
+                                            <param id="0" name="Vector Y">-1 * (LinkJump + LinkJumpSustain)</param>
+                                        </action>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="7848951539791253" type="LinkSprite">
+                                            <param id="0" name="Vector X">-400</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="5485953773048521">
                             <conditions>
                                 <condition behavior="Platform" id="0" name="Is moving" sid="3514273141389138" type="LinkSprite" />
