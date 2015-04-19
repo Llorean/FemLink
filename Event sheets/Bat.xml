@@ -69,11 +69,11 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="6375967520912128" type="Bat">
                                     <param id="0" name="Instance variable">XTmp</param>
-                                    <param id="1" name="Value">Bat.Platform.VectorX &lt;&gt; 0 ? Bat.Platform.VectorX  : Bat.XTmp</param>
+                                    <param id="1" name="Value">Self.Platform.VectorX &lt;&gt; 0 ? Self.Platform.VectorX  : Self.XTmp</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="119087938981236" type="Bat">
                                     <param id="0" name="Instance variable">YTmp</param>
-                                    <param id="1" name="Value">Bat.Platform.VectorY &lt;&gt; 0 ? Bat.Platform.VectorY : Bat.YTmp</param>
+                                    <param id="1" name="Value">Self.Platform.VectorY &lt;&gt; 0 ? Self.Platform.VectorY : Self.YTmp</param>
                                 </action>
                                 <action behavior="Platform" id="9" name="Set vector Y" sid="3498625908795891" type="Bat">
                                     <param id="0" name="Vector Y">0</param>
@@ -107,10 +107,10 @@
                             <param id="0" name="Gravity">1500</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="2252477827626113" type="Bat">
-                            <param id="0" name="Vector Y">Bat.YTmp</param>
+                            <param id="0" name="Vector Y">Self.YTmp</param>
                         </action>
                         <action behavior="Platform" id="8" name="Set vector X" sid="8808447214726147" type="Bat">
-                            <param id="0" name="Vector X">Bat.XTmp</param>
+                            <param id="0" name="Vector X">Self.XTmp</param>
                         </action>
                         <action id="-10" name="Set value" sid="1839535590214553" type="Bat">
                             <param id="0" name="Instance variable">XTmp</param>
@@ -165,14 +165,14 @@
                             <param id="1" name="Value">Bat.Rate</param>
                         </action>
                         <action behavior="Platform" id="9" name="Set vector Y" sid="6129723115797854" type="Bat">
-                            <param id="0" name="Vector Y">(-1) * sqrt(LinkSprite.Y - Bat.Y) * 55</param>
+                            <param id="0" name="Vector Y">(-1) * sqrt(LinkSprite.Y - Self.Y) * 55</param>
                         </action>
                         <action id="4" name="Set animation" sid="2820275859935212" type="Bat">
                             <param id="0" name="Animation">&quot;Fly&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action behavior="Platform" id="8" name="Set vector X" sid="7700135924306086" type="Bat">
-                            <param id="0" name="Vector X">LinkSprite.X - Bat.X &gt; 0 ? -100 : 100</param>
+                            <param id="0" name="Vector X">LinkSprite.X - Self.X &gt; 0 ? -100 : 100</param>
                         </action>
                     </actions>
                 </event-block>

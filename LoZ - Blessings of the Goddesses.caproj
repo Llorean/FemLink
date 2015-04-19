@@ -1393,6 +1393,7 @@
                 <instance-variable name="Offset" sid="9806026776425788" type="number" />
                 <instance-variable name="Rate" sid="2416817555662876" type="number" />
                 <instance-variable name="Direction" sid="3881354134798743" type="string" />
+                <instance-variable name="Moving" sid="158770095345643" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="7669103204861851">

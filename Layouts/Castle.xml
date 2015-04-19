@@ -1028,6 +1028,7 @@
                         <Offset>0</Offset>
                         <Rate>2</Rate>
                         <Direction>Left</Direction>
+                        <Moving>false</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1074,6 +1075,7 @@
                         <Offset>1</Offset>
                         <Rate>2</Rate>
                         <Direction>Left</Direction>
+                        <Moving>false</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1120,6 +1122,7 @@
                         <Offset>0</Offset>
                         <Rate>3</Rate>
                         <Direction>Left</Direction>
+                        <Moving>false</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1166,6 +1169,7 @@
                         <Offset>0</Offset>
                         <Rate>3</Rate>
                         <Direction>Right</Direction>
+                        <Moving>false</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1212,6 +1216,7 @@
                         <Offset>0</Offset>
                         <Rate>2</Rate>
                         <Direction>Left</Direction>
+                        <Moving>true</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

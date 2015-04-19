@@ -10,53 +10,97 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3661035756542414" type="Octorok">
-                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Octorok.Direction</param>
+                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Self.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="3403164171025144" type="Octorok">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">2</param>
                 </action>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="7687758509366023" type="Octorok">
+                    <param id="0" name="Deceleration">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="4444398921747701">
+        <event-block sid="6688943557988059">
             <conditions>
-                <condition id="-1" name="Every tick" sid="9332707291326933" type="System" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9834831350559595" type="Octorok">
+                    <param id="0" name="Instance variable">Hurt</param>
+                </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-11" name="Add to" sid="3199004199100654" type="Octorok">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="6688943557988059">
+                <event-block sid="7278366947190388">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9834831350559595" type="Octorok">
-                            <param id="0" name="Instance variable">Hurt</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2462367310249382" type="Octorok">
+                            <param id="0" name="Instance variable">Moving</param>
                         </condition>
+                        <condition id="-3" name="Is on-screen" sid="9087291516819197" type="Octorok" />
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="3199004199100654" type="Octorok">
-                            <param id="0" name="Instance variable">Offset</param>
-                            <param id="1" name="Value">dt</param>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="9034026196127924" type="Octorok">
+                            <param id="0" name="Vector X">Self.Direction = &quot;Left&quot; ? -50 : 50</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9935766922680409" type="Octorok">
+                            <param id="0" name="Animation">&quot;Stand&quot; &amp; Self.Direction</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="3656538317822487">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6955766715401383" type="Octorok">
-                            <param id="0" name="Instance variable">Offset</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">Octorok.Rate</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="3038475776605391" type="Octorok">
-                            <param id="0" name="Instance variable">Offset</param>
-                            <param id="1" name="Value">Octorok.Rate</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="331212976886741" type="Octorok">
-                            <param id="0" name="Vector Y">-300</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="5547146500162366">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="125414498534591" type="Octorok">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">LinkSprite.X - 32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3050103976541129" type="Octorok">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4399608882308145">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8531194307262265" type="Octorok">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">LinkSprite.X + 32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1688778687423654" type="Octorok">
+                                    <param id="0" name="Instance variable">Direction</param>
+                                    <param id="1" name="Value">&quot;Left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="3656538317822487">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6955766715401383" type="Octorok">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Octorok.Rate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="3038475776605391" type="Octorok">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Value">Octorok.Rate</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="331212976886741" type="Octorok">
+                    <param id="0" name="Vector Y">-300</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="6599872125020556">
             <conditions>
@@ -66,8 +110,11 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="7581167366239528" type="Octorok">
-                    <param id="0" name="Animation">&quot;Hurt&quot; &amp; Octorok.Direction</param>
+                    <param id="0" name="Animation">&quot;Hurt&quot; &amp; Self.Direction</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="3821246955654703" type="Octorok">
+                    <param id="0" name="Vector X">0</param>
                 </action>
             </actions>
         </event-block>
@@ -79,7 +126,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="6135791758747064" type="Octorok">
-                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Octorok.Direction</param>
+                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Self.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="1098212398022082" type="Octorok">

@@ -335,6 +335,7 @@
                         <Offset>0</Offset>
                         <Rate>2</Rate>
                         <Direction>Left</Direction>
+                        <Moving>false</Moving>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

@@ -8,16 +8,5 @@
         <include>UI</include>
         <include>Link</include>
         <include>Scene</include>
-        <event-block disabled="1" sid="8046863268783436">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7789792770113962" type="System" />
-            </conditions>
-            <actions>
-                <action id="23" name="Seek to" sid="1439942075726722" type="Audio">
-                    <param id="0" name="Tag">&quot;bgm&quot;</param>
-                    <param id="1" name="Position">12</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
