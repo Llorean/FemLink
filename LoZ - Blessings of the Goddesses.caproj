@@ -1613,6 +1613,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Spider" sid="7016934822373867">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Moving" sid="4219138459481648" type="boolean" />
+                <instance-variable name="Direction" sid="4424227398881587" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Ceiling" pingpong="0" repeatcount="1" repeatto="0" sid="3366742674590254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="Climb" pingpong="0" repeatcount="1" repeatto="0" sid="3406921685896882" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -1625,6 +1654,7 @@
             <members>
                 <member>Bat</member>
                 <member>Octorok</member>
+                <member>Spider</member>
             </members>
             <instance-variables>
                 <instance-variable name="Health" sid="120363348187406" type="number" />
@@ -1648,6 +1678,7 @@
         <event-sheet>Octorok.xml</event-sheet>
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>Globals.xml</event-sheet>
+        <event-sheet>Spider.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

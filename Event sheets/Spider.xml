@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Spider</name>
+    <events>
+        <event-block sid="6298122793020016">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="179258730195372" type="Spider">
+                    <param id="0" name="Instance variable">Moving</param>
+                </condition>
+                <condition id="-3" name="Is on-screen" sid="6732474293219161" type="Spider" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="587430278865138" type="Spider">
+                    <param id="0" name="X">Self.Direction = &quot;Left&quot; ? Self.X - (100 * dt) : Self.X + (100 * dt)</param>
+                </action>
+                <action id="4" name="Set animation" sid="9476797055121629" type="Spider">
+                    <param id="0" name="Animation">&quot;Stand&quot; &amp; Self.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5055435274368492">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="236513480054418" type="Spider">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">LinkSprite.X - 32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1045600564394132" type="Spider">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Right&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9157987392467447">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="6979007277448788" type="Spider">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">LinkSprite.X + 32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2275527814871262" type="Spider">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Left&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
