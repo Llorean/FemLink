@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Spider</name>
     <events>
+        <include>Enemies</include>
         <event-block sid="7741584149083705">
             <conditions>
                 <condition id="-18" name="On created" sid="7861748606879058" type="Spider" />
@@ -11,12 +12,6 @@
                 <action id="-10" name="Set value" sid="3044604766680615" type="Spider">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Still&quot;</param>
-                </action>
-                <action disabled="1" id="-3" name="Create object" sid="1566355158194144" type="System">
-                    <param id="0" name="Object to create">SpiderString</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="X">Spider.X+2</param>
-                    <param id="3" name="Y">Spider.Y-16</param>
                 </action>
                 <action id="-3" name="Set position" sid="2751877159359584" type="SpiderString">
                     <param id="0" name="X">Spider.X + 2</param>
