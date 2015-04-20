@@ -1619,7 +1619,12 @@
                 <instance-variable name="Moving" sid="4219138459481648" type="boolean" />
                 <instance-variable name="Direction" sid="4424227398881587" type="string" />
                 <instance-variable name="Timer" sid="9621373148575099" type="number" />
+                <instance-variable name="OrigY" sid="3937820623787496" type="number" />
             </instance-variables>
+            <container>
+                <type>Spider</type>
+                <type>SpiderString</type>
+            </container>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Ceiling" pingpong="0" repeatcount="1" repeatto="0" sid="3366742674590254" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
@@ -1712,6 +1717,19 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="SpiderString" sid="8843051702428801">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Pin" sid="9873938638736476">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Spider</type>
+                <type>SpiderString</type>
+            </container>
+            <texture />
         </object-type>
     </object-folder>
     <families>

@@ -12,6 +12,30 @@
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Still&quot;</param>
                 </action>
+                <action disabled="1" id="-3" name="Create object" sid="1566355158194144" type="System">
+                    <param id="0" name="Object to create">SpiderString</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Spider.X+2</param>
+                    <param id="3" name="Y">Spider.Y-16</param>
+                </action>
+                <action id="-3" name="Set position" sid="2751877159359584" type="SpiderString">
+                    <param id="0" name="X">Spider.X + 2</param>
+                    <param id="1" name="Y">Spider.Y - 16</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2981491993325118" type="SpiderString">
+                    <param id="0" name="Pin to">Spider</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="7018500582086112" type="SpiderString">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-6" name="Set height" sid="5355296755905345" type="SpiderString">
+                    <param id="0" name="Height">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="4367772925704428" type="Spider">
+                    <param id="0" name="Instance variable">OrigY</param>
+                    <param id="1" name="Value">Self.Y</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="2602372785225694">
@@ -29,65 +53,81 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="6298122793020016">
+        <event-block sid="4787520886760046">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="179258730195372" type="Spider">
-                    <param id="0" name="Instance variable">Moving</param>
-                </condition>
-                <condition id="-3" name="Is on-screen" sid="6732474293219161" type="Spider" />
-                <condition id="2" name="Is playing" sid="735994278083314" type="Spider">
-                    <param id="0" name="Animation">&quot;Ceiling&quot;</param>
+                <condition id="-11" name="For Each" sid="4836395642173549" type="System">
+                    <param id="0" name="Object">Spider</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="587430278865138" type="Spider">
-                    <param id="0" name="X">Self.Direction = &quot;Left&quot; ? Self.X - (100 * dt) : Self.X + (100 * dt)</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
-                <event-block any="1" sid="3965378135573777">
+                <event-block sid="6298122793020016">
                     <conditions>
-                        <condition id="0" name="Compare tile at" sid="6631478326468258" type="SolidWalls">
-                            <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopLeft&quot;))</param>
-                            <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopLeft&quot;))</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Tile">-1</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="179258730195372" type="Spider">
+                            <param id="0" name="Instance variable">Moving</param>
                         </condition>
-                        <condition id="0" name="On collision with another object" sid="4968002005945824" type="Spider">
-                            <param id="0" name="Object">SolidWalls</param>
+                        <condition id="-3" name="Is on-screen" sid="6732474293219161" type="Spider" />
+                        <condition id="2" name="Is playing" sid="735994278083314" type="Spider">
+                            <param id="0" name="Animation">&quot;Ceiling&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="3777274405392455" type="Spider">
-                            <param id="0" name="Instance variable">Moving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-1" name="Set X" sid="3692901694272067" type="Spider">
-                            <param id="0" name="X">Self.X + 100 * dt</param>
+                        <action id="-1" name="Set X" sid="587430278865138" type="Spider">
+                            <param id="0" name="X">Self.Direction = &quot;Left&quot; ? Self.X - (100 * dt) : Self.X + (100 * dt)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block any="1" sid="3187693454511183">
-                    <conditions>
-                        <condition id="0" name="Compare tile at" sid="379832053207698" type="SolidWalls">
-                            <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopRight&quot;))</param>
-                            <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopRight&quot;))</param>
-                            <param id="2" name="Comparison">0</param>
-                            <param id="3" name="Tile">-1</param>
-                        </condition>
-                        <condition id="0" name="On collision with another object" sid="8128599467157119" type="Spider">
-                            <param id="0" name="Object">SolidWalls</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="536348061836058" type="Spider">
-                            <param id="0" name="Instance variable">Moving</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-1" name="Set X" sid="1318680512071624" type="Spider">
-                            <param id="0" name="X">Self.X - 100 * dt</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="3965378135573777">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="6631478326468258" type="SolidWalls">
+                                    <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopLeft&quot;))</param>
+                                    <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopLeft&quot;))</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Tile">-1</param>
+                                </condition>
+                                <condition id="0" name="Compare tile at" sid="2185693557574669" type="SolidWalls">
+                                    <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopLeft&quot;))</param>
+                                    <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopLeft&quot;))+1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3777274405392455" type="Spider">
+                                    <param id="0" name="Instance variable">Moving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="3692901694272067" type="Spider">
+                                    <param id="0" name="X">Self.X + 100 * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="3187693454511183">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="379832053207698" type="SolidWalls">
+                                    <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopRight&quot;))</param>
+                                    <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopRight&quot;))</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Tile">-1</param>
+                                </condition>
+                                <condition id="0" name="Compare tile at" sid="5056782718745057" type="SolidWalls">
+                                    <param id="0" name="Tile X">Self.PositionToTileX(Spider.ImagePointX(&quot;TopRight&quot;))</param>
+                                    <param id="1" name="Tile Y">Self.PositionToTileY(Spider.ImagePointY(&quot;TopRight&quot;))+1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="536348061836058" type="Spider">
+                                    <param id="0" name="Instance variable">Moving</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="1318680512071624" type="Spider">
+                                    <param id="0" name="X">Self.X - 100 * dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -191,26 +231,36 @@
                 <action id="-2" name="Set Y" sid="9524302947824653" type="Spider">
                     <param id="0" name="Y">Self.Y - (dt * 100)</param>
                 </action>
+                <action id="-6" name="Set height" sid="2264273955594156" type="SpiderString">
+                    <param id="0" name="Height">Self.Height - (dt * 100)</param>
+                </action>
             </actions>
-            <sub-events>
-                <event-block any="1" sid="4104055646428344">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="4882144777384073" type="Spider">
-                            <param id="0" name="Object">SolidWalls</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8344068351996894" type="Spider">
-                            <param id="0" name="Animation">&quot;Ceiling&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="4627244727426226" type="Spider">
-                            <param id="0" name="Instance variable">Moving</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+        </event-block>
+        <event-block sid="4104055646428344">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4882144777384073" type="Spider">
+                    <param id="0" name="Object">SolidWalls</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="6314284507177377" type="Spider">
+                    <param id="0" name="Animation">&quot;ClimbUp&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8344068351996894" type="Spider">
+                    <param id="0" name="Animation">&quot;Ceiling&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4627244727426226" type="Spider">
+                    <param id="0" name="Instance variable">Moving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-6" name="Set height" sid="4124494947181133" type="SpiderString">
+                    <param id="0" name="Height">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="3837276829649718" type="Spider">
+                    <param id="0" name="Y">Self.OrigY</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="5747009682236276">
             <conditions>
@@ -221,6 +271,9 @@
             <actions>
                 <action id="-2" name="Set Y" sid="4348756456686604" type="Spider">
                     <param id="0" name="Y">Self.Y + (dt * 100)</param>
+                </action>
+                <action id="-6" name="Set height" sid="6260303938549078" type="SpiderString">
+                    <param id="0" name="Height">Self.Height + (dt * 100)</param>
                 </action>
             </actions>
             <sub-events>
