@@ -1618,6 +1618,7 @@
             <instance-variables>
                 <instance-variable name="Moving" sid="4219138459481648" type="boolean" />
                 <instance-variable name="Direction" sid="4424227398881587" type="string" />
+                <instance-variable name="Timer" sid="9621373148575099" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Ceiling" pingpong="0" repeatcount="1" repeatto="0" sid="3366742674590254" speed="5">
@@ -1634,10 +1635,80 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
                         <image-point name="TopRight" x="1.03125" y="-0.03125" />
                         <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\spider.png">
                         <image-point name="TopRight" x="1.03125" y="-0.03125" />
                         <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="ClimbUp" pingpong="0" repeatcount="1" repeatto="0" sid="9943237321612879" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="CeilingHurt" pingpong="0" repeatcount="4" repeatto="0" sid="3335689784543084" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="ClimbHurt" pingpong="0" repeatcount="4" repeatto="0" sid="5022444891820887" speed="30">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="TopRight" x="1.03125" y="-0.03125" />
+                        <image-point name="TopLeft" x="-0.03125" y="-0.03125" />
+                        <image-point name="Bottom" x="0.5" y="1.03125" />
                     </frame>
                 </animation>
             </animation-folder>
