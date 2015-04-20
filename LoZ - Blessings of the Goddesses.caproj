@@ -124,6 +124,7 @@
                 <instance-variable name="AniSpeed" sid="3121218315861434" type="number" />
                 <instance-variable name="JustEntered" sid="9163850526860027" type="boolean" />
                 <instance-variable name="Hurt" sid="1685546593587829" type="boolean" />
+                <instance-variable name="CanBeHurt" sid="5364983117584537" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="9052845725288094">

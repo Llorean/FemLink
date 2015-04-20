@@ -1065,11 +1065,14 @@
                 <condition id="1" name="Is overlapping another object" sid="8574169079078834" type="LinkSprite">
                     <param id="0" name="Object">Enemies</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5124585115738309" type="LinkSprite">
+                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="5124585115738309" type="LinkSprite">
                     <param id="0" name="Instance variable">Hurt</param>
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2586728794225961" type="Enemies">
                     <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="7223184611816098" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
                 </condition>
             </conditions>
             <actions>
@@ -1106,6 +1109,10 @@
                     <param id="6" name="Outer gain">0</param>
                     <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="8359418841679231" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4769231578932883">
@@ -1137,8 +1144,11 @@
                     <param id="1" name="Offset X">LinkSprite.X &lt; OctoRock.X ? 8 : -8</param>
                     <param id="2" name="Offset Y">0</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9063696501716907" type="LinkSprite">
+                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="9063696501716907" type="LinkSprite">
                     <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2591236411544832" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
                 </condition>
             </conditions>
             <actions>
@@ -1175,6 +1185,10 @@
                     <param id="5" name="Outer angle">360</param>
                     <param id="6" name="Outer gain">0</param>
                     <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6107541574036723" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -1498,16 +1512,29 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" sid="9274272237408929" type="LinkSprite">
-                    <param id="0" name="Instance variable">Hurt</param>
-                    <param id="1" name="Value">0</param>
-                </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="2590054041707991" type="LinkSprite">
                     <param id="0" name="Vector X">0</param>
                 </action>
                 <action id="-10" name="Set value" sid="7941663662846604" type="LinkSprite">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">LinkSprite.Direction=&quot;Right&quot;?&quot;Left&quot;:&quot;Right&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9274272237408929" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="9961032838601963" type="LinkSprite">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-16" name="Wait" sid="564272379871715" type="System">
+                    <param id="0" name="Seconds">0.67</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="3583387921329179" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="1123703066682532" type="LinkSprite">
+                    <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>
@@ -1588,8 +1615,11 @@
                 <condition id="0" name="On collision with another object" sid="6283433138678439" type="LinkSprite">
                     <param id="0" name="Object">Explosion</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3991312067965902" type="LinkSprite">
+                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="3991312067965902" type="LinkSprite">
                     <param id="0" name="Instance variable">Hurt</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2483728589379005" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
                 </condition>
             </conditions>
             <actions>
@@ -1625,6 +1655,10 @@
                     <param id="5" name="Outer angle">360</param>
                     <param id="6" name="Outer gain">360</param>
                     <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="2093781206611445" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
