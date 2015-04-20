@@ -6,5 +6,7 @@
         <include>Scene</include>
         <include>UI</include>
         <include>Link</include>
+        <include>Bat</include>
+        <include>Spider</include>
     </events>
 </c2eventsheet>

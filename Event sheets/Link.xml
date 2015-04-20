@@ -601,6 +601,11 @@
                                     <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="1493369232471453" type="LinkSword" />
+                                <condition id="-14" name="Compare variable" sid="4358566149825846" type="System">
+                                    <param id="0" name="Variable">CanUpStab</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="4497071521402559" type="LinkSprite">
@@ -623,6 +628,11 @@
                                     <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="1355431930103681" type="LinkSword" />
+                                <condition id="-14" name="Compare variable" sid="1002751140240604" type="System">
+                                    <param id="0" name="Variable">CanDownStab</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="4112446548883284" type="LinkSprite">
@@ -645,6 +655,11 @@
                                     <param id="2" name="Value">&quot;&quot;</param>
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="8587224175687839" type="LinkSword" />
+                                <condition id="-14" name="Compare variable" sid="9993997269176632" type="System">
+                                    <param id="0" name="Variable">CanDownStab</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="1472150200411554" type="LinkSprite">

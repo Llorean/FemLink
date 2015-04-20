@@ -185,6 +185,10 @@
                 <condition id="2" name="Is playing" sid="5937000699760046" type="Spider">
                     <param id="0" name="Animation">&quot;Ceiling&quot;</param>
                 </condition>
+                <condition id="-2" name="Compare Y" sid="3759211868981087" type="Spider">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">LinkSprite.Y</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Add to" sid="8666655494129064" type="Spider">
