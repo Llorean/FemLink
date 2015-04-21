@@ -18,11 +18,20 @@
                     <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="3270562437305249" type="LinkSprite">
+                    <param id="0" name="Object">FBoots</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="4508459972988251" type="LinkWoodShield">
                     <param id="0" name="Pin to">LinkSprite</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="4637458601764858" type="LinkSword">
+                    <param id="0" name="Pin to">LinkSprite</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6998224291634643" type="FBoots">
                     <param id="0" name="Pin to">LinkSprite</param>
                     <param id="1" name="Mode">0</param>
                 </action>
@@ -34,8 +43,15 @@
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="9311304301281219" type="FBoots">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="10" name="Set master volume" sid="8133667233417256" type="Audio">
                     <param id="0" name="dB">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5852608307006033" type="FBoots">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -53,6 +69,18 @@
                         </action>
                         <action id="-15" name="Set visible" sid="1950225279804993" type="LinkWoodShield">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9598059752595568">
+                    <conditions>
+                        <condition id="5" name="Contains value" sid="3444176787576138" type="PassiveItems">
+                            <param id="0" name="Value">&quot;Farore&apos;s Boots&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4589439241710064" type="FBoots">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -82,9 +110,6 @@
                 <action id="-9" name="Set value" sid="8546932927987834" type="System">
                     <param id="0" name="Variable">UpPressed</param>
                     <param id="1" name="Value">0</param>
-                </action>
-                <action id="6" name="Set speed" sid="5105507031081222" type="LinkSprite">
-                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
                 </action>
                 <action id="-10" name="Set value" sid="8563740693713287" type="LinkSprite">
                     <param id="0" name="Instance variable">AniSpeed</param>
@@ -431,9 +456,9 @@
                                 <action behavior="Platform" id="3" name="Set deceleration" sid="926572447277362" type="LinkSprite">
                                     <param id="0" name="Deceleration">LinkDecel</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="1121595376146047" type="LinkSprite">
+                                <action id="-10" name="Set value" sid="2224889620210124" type="LinkSprite">
                                     <param id="0" name="Instance variable">AniSpeed</param>
-                                    <param id="1" name="Value">max(abs((LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed)) * 18,5)</param>
+                                    <param id="1" name="Value">(LinkSprite.Platform.Speed/LinkSprite.Platform.MaxSpeed)* 18</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1405,14 +1430,9 @@
                     <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="6" name="Set speed" sid="7553693252988287" type="LinkSprite">
-                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
-                </action>
-                <action id="6" name="Set speed" sid="6054565914201943" type="LinkSword">
-                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
-                </action>
-                <action id="6" name="Set speed" sid="9127462899518387" type="LinkWoodShield">
-                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                <action id="4" name="Set animation" sid="6280597380320968" type="FBoots">
+                    <param id="0" name="Animation">LinkSprite.Movement&amp;LinkSprite.Stab&amp;LinkSprite.Direction</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -1517,6 +1537,29 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="352532157446376" type="FaroreItem" />
+                <action id="-15" name="Set visible" sid="6827620389887322" type="FBoots">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5889385245130687">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1581386184641777" type="Bombs">
+                    <param id="0" name="Instance variable">get</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1619004116556913" type="System">
+                    <param id="0" name="Variable">TextBox</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="7501003349490236" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4240539128662249" type="Bombs" />
             </actions>
         </event-block>
         <event-block sid="2645305726574458">
@@ -1558,7 +1601,14 @@
                     <param id="0" name="Variable">LinkJumpDecel</param>
                     <param id="1" name="Value">1200</param>
                 </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="6334453324822495" type="LinkSprite">
+                    <param id="0" name="Vector X">0</param>
+                </action>
                 <action id="4" name="Set animation" sid="6874369671408635" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="8400013578761954" type="FBoots">
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1572,7 +1622,7 @@
                 </action>
                 <action id="-3" name="Set position" sid="2603570326570972" type="FaroreItem">
                     <param id="0" name="X">LinkSprite.X+1</param>
-                    <param id="1" name="Y">LinkSprite.Y-32</param>
+                    <param id="1" name="Y">LinkSprite.Y-34</param>
                 </action>
                 <action id="0" name="Call function" sid="6922377060731609" type="Function">
                     <param id="0" name="Name">&quot;TextBox&quot;</param>
@@ -1586,6 +1636,55 @@
                 <action id="2" name="Set at X" sid="9492440890143058" type="PassiveItems">
                     <param id="0" name="X">PassiveItems.Width - 1</param>
                     <param id="1" name="Value">&quot;Farore&apos;s Boots&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9166269350592924">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5886251547395784" type="LinkSprite">
+                    <param id="0" name="Object">Bombs</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="1673272416390125" type="LinkSprite" />
+                <condition id="2" inverted="1" name="Is playing" sid="3720377023094434" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1261937768061141" type="Bombs">
+                    <param id="0" name="Instance variable">get</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="9702261191263908" type="Bombs">
+                    <param id="0" name="X">LinkSprite.X</param>
+                    <param id="1" name="Y">LinkSprite.Y-10</param>
+                </action>
+                <action behavior="Platform" id="8" name="Set vector X" sid="5894315426689061" type="LinkSprite">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="535616602794953" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1644703412206064" type="FBoots">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="2370433465115209" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="4997993795351377" type="Function">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}200{###}200{###}300{###}&quot;You got Bombs!&quot;</param>
+                </action>
+                <action id="1" name="Set size" sid="7914934132420731" type="Items">
+                    <param id="0" name="Width">Items.Width + 1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="2" name="Set at X" sid="1373069515367918" type="Items">
+                    <param id="0" name="X">Items.Width - 1</param>
+                    <param id="1" name="Value">&quot;Bomb&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -1742,29 +1841,6 @@
                     <param id="0" name="Instance variable">CanBeHurt</param>
                     <param id="1" name="Value">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="1676984092213326">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="3031191345563115" type="LinkSprite">
-                    <param id="0" name="Object">Bombs</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="3918799222145952" type="Function">
-                    <param id="0" name="Name">&quot;TextBox&quot;</param>
-                    <param id="1" name="Parameter {n}">4{###}200{###}200{###}300{###}&quot;You got Bombs!&quot;</param>
-                </action>
-                <action id="1" name="Set size" sid="3766294795099587" type="Items">
-                    <param id="0" name="Width">Items.Width + 1</param>
-                    <param id="1" name="Height">1</param>
-                    <param id="2" name="Depth">1</param>
-                </action>
-                <action id="2" name="Set at X" sid="531529859041151" type="Items">
-                    <param id="0" name="X">Items.Width - 1</param>
-                    <param id="1" name="Value">&quot;Bomb&quot;</param>
-                </action>
-                <action id="-9" name="Destroy" sid="4063903177471372" type="Bombs" />
             </actions>
         </event-block>
         <event-block sid="8473362368159818">
@@ -1928,6 +2004,25 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="5755929052778346">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5435298867739754" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" sid="6396199488101945" type="FBoots">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
+                <action id="6" name="Set speed" sid="9467142636715399" type="LinkSword">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
+                <action id="6" name="Set speed" sid="695300819865205" type="LinkWoodShield">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
+                <action id="6" name="Set speed" sid="4074491296696353" type="LinkSprite">
+                    <param id="0" name="Speed">LinkSprite.AniSpeed</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
