@@ -584,6 +584,16 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="ItemGet" pingpong="0" repeatcount="1" repeatto="0" sid="6321511149753934" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.0153846" original-source="C:\Projects\FemLink\Resources\Sprites\link-itemget.PNG">
+                        <collision-poly>
+                            <point x="0.0625" y="0" />
+                            <point x="0.9375" y="0" />
+                            <point x="0.9375" y="1" />
+                            <point x="0.0625" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="LinkSword" sid="4923557293690689">
@@ -1163,6 +1173,9 @@
         </object-type>
         <object-type name="FaroreItem" sid="8398436785833173">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="get" sid="3614305491834804" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Persist" sid="517877840116446">
                     <behavior id="Persist" />
