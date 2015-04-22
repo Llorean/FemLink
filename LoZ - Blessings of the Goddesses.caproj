@@ -47,7 +47,7 @@
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Castle</first-layout>
+    <first-layout>Title</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -2374,6 +2374,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Title" sid="3291694596058016">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952726196049971" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\title.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -2400,6 +2408,7 @@
         <layout>Castle.xml</layout>
         <layout>Unused.xml</layout>
         <layout>Dungeon.xml</layout>
+        <layout>Title.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Castle.xml</event-sheet>
@@ -2413,6 +2422,7 @@
         <event-sheet>Globals.xml</event-sheet>
         <event-sheet>Spider.xml</event-sheet>
         <event-sheet>Spike.xml</event-sheet>
+        <event-sheet>Title.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
