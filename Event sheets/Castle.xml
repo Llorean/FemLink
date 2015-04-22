@@ -26,7 +26,7 @@
                 </action>
                 <action id="0" name="Call function" sid="892571598616983" type="Function">
                     <param id="0" name="Name">&quot;TextBox&quot;</param>
-                    <param id="1" name="Parameter {n}">50{###}50{###}590{###}310{###}&quot;Welcome to Blessings of the Goddesses!&#x0D;&#x0A;Use the arrow keys to move.&#x0D;&#x0A;You can jump with the X key or Spacebar.&#x0D;&#x0A;Z or Control attacks.&#x0D;&#x0A;A toggles the item menu.&#x0D;&#x0A;W switches between your sword and the item you chose in the menu.&quot;</param>
+                    <param id="1" name="Parameter {n}">50{###}50{###}590{###}310{###}&quot;Welcome to Blessings of the Goddesses!&#x0D;&#x0A;Use the arrow keys to move.&#x0D;&#x0A;You can jump with the X key or Spacebar.&#x0D;&#x0A;Z or Control attacks.&#x0D;&#x0A;A toggles the item menu.&#x0D;&#x0A;S switches between your sword and the item you chose in the menu.&quot;</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="5406164552472994" type="System">
                     <param id="0" name="Tag">&quot;textDone&quot;</param>
