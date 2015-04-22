@@ -203,7 +203,7 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">0</param>
                                     <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">0</param>
+                                    <param id="3" name="Value">-20</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -228,7 +228,7 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">0</param>
                                     <param id="2" name="Comparison">4</param>
-                                    <param id="3" name="Value">0</param>
+                                    <param id="3" name="Value">20</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -279,7 +279,7 @@
                                     <param id="0" name="Gamepad">0</param>
                                     <param id="1" name="Axis">1</param>
                                     <param id="2" name="Comparison">2</param>
-                                    <param id="3" name="Value">0</param>
+                                    <param id="3" name="Value">-50</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -826,10 +826,14 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9212281693912387">
+                        <event-block any="1" sid="9212281693912387">
                             <conditions>
                                 <condition id="0" name="On key pressed" sid="6116828509431178" type="Keyboard">
                                     <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="1785022085818699" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">8</param>
                                 </condition>
                             </conditions>
                             <actions>

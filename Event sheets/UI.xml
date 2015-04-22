@@ -342,10 +342,14 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="8415665638666943">
+        <event-block any="1" sid="8415665638666943">
             <conditions>
                 <condition id="0" name="On key pressed" sid="2123703572416671" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="2989958467705041" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
                 </condition>
             </conditions>
             <actions>
@@ -357,7 +361,12 @@
         </event-block>
         <event-block sid="9923843892190238">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="3094930923455703" type="System" />
+                <condition id="-2" name="On start of layout" sid="3094930923455703" type="System" />
+                <condition id="-14" name="Compare variable" sid="7099421016496635" type="System">
+                    <param id="0" name="Variable">NewGame</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="1" name="Set size" sid="839030377655957" type="Items">
@@ -386,37 +395,71 @@
         </event-block>
         <event-group description="" sid="9833507689691259" title="MenuControls">
             <sub-events>
-                <event-block sid="2580694661705692">
+                <event-block any="1" sid="2580694661705692">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="4920645416483872" type="Keyboard">
                             <param id="0" name="Key">38 (Up arrow)</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="1545446956879352" type="Pointer">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">24</param>
+                        <condition id="6" name="On button pressed" sid="5252882973945385" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">12</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="2636609079396354" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-50</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="1436121869867753" type="Pointer">
-                            <param id="0" name="Y">Pointer.Y - 20</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2592713322576286">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1545446956879352" type="Pointer">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">24</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="1436121869867753" type="Pointer">
+                                    <param id="0" name="Y">Pointer.Y - 20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="984370674510832">
+                <event-block any="1" sid="984370674510832">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="6017123523084864" type="Keyboard">
                             <param id="0" name="Key">40 (Down arrow)</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="2412875501636249" type="Pointer">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">24 + 20 * (Items.Width - 1)</param>
+                        <condition id="6" name="On button pressed" sid="325606183847131" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">13</param>
+                        </condition>
+                        <condition id="5" name="Compare axis" sid="6127320895782254" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Set Y" sid="2151219980453087" type="Pointer">
-                            <param id="0" name="Y">Pointer.Y + 20</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3380587731254103">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="2412875501636249" type="Pointer">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">24 + 20 * (Items.Width - 1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2151219980453087" type="Pointer">
+                                    <param id="0" name="Y">Pointer.Y + 20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -449,16 +492,6 @@
                 <action id="-7" name="Set size" sid="6401452213487868" type="Shade">
                     <param id="0" name="Width">640</param>
                     <param id="1" name="Height">360</param>
-                </action>
-                <action id="-3" name="Create object" sid="4837084427788663" type="System">
-                    <param id="0" name="Object to create">DialogChar</param>
-                    <param id="1" name="Layer">&quot;UI&quot;</param>
-                    <param id="2" name="X">Function.Param(2) = &quot;Left&quot; ? 72 :576</param>
-                    <param id="3" name="Y">179</param>
-                </action>
-                <action id="4" name="Set animation" sid="1546522543628957" type="DialogChar">
-                    <param id="0" name="Animation">Function.Param(1)&amp;Function.Param(2)</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="8455311982796678" type="System">
                     <param id="0" name="Object to create">TextBox</param>
@@ -504,7 +537,6 @@
                 <action id="-9" name="Destroy" sid="93524410051204" type="TextDialog" />
                 <action id="-9" name="Destroy" sid="1930798033575555" type="TextBox" />
                 <action id="-9" name="Destroy" sid="5826298653337644" type="Shade" />
-                <action id="-9" name="Destroy" sid="7862532770462662" type="DialogChar" />
                 <action id="-13" name="Set time scale" sid="599156677502913" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>

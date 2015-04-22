@@ -3,9 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Title</name>
     <events>
-        <event-block sid="3734457052575656">
+        <event-block any="1" sid="3734457052575656">
             <conditions>
                 <condition id="1" name="On any key pressed" sid="5667890604324451" type="Keyboard" />
+                <condition id="8" name="On any button pressed" sid="3512036044983146" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action disabled="1" id="10" name="Request fullscreen" sid="2341185291742662" type="Browser">

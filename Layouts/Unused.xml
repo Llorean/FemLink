@@ -758,7 +758,7 @@
                         <opacity>0.800000012</opacity>
                     </world>
                 </instance>
-                <instance type="DialogChar" uid="107">
+                <instance type="DialogZelda" uid="107">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -771,10 +771,10 @@
                         <x>1016</x>
                         <y>424</y>
                         <z>0</z>
-                        <width>34</width>
-                        <height>66</height>
+                        <width>19</width>
+                        <height>63</height>
                         <depth>0</depth>
-                        <hotspotX>0.529411793</hotspotX>
+                        <hotspotX>0.526315808</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -803,6 +803,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DialogLink" uid="123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1032</x>
+                        <y>320</y>
+                        <z>0</z>
+                        <width>34</width>
+                        <height>66</height>
+                        <depth>0</depth>
+                        <hotspotX>0.529411793</hotspotX>
+                        <hotspotY>0.984848499</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
