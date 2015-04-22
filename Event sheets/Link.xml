@@ -131,9 +131,6 @@
                 <action id="-5" name="Set width" sid="3382187573843774" type="HeartBottom">
                     <param id="0" name="Width">8 * ceil(CurrentHealth/ 2)</param>
                 </action>
-                <action behavior="Platform" id="14" name="Set jump sustain" sid="530415314828537" type="LinkSprite">
-                    <param id="0" name="Jump sustain">LinkJumpSustain</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="3383942261835233">
@@ -1606,6 +1603,9 @@
                 <action id="-9" name="Set value" sid="9428530085019861" type="System">
                     <param id="0" name="Variable">LinkJumpDecel</param>
                     <param id="1" name="Value">1200</param>
+                </action>
+                <action behavior="Platform" id="14" name="Set jump sustain" sid="6534636316333777" type="LinkSprite">
+                    <param id="0" name="Jump sustain">LinkJumpSustain</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="6334453324822495" type="LinkSprite">
                     <param id="0" name="Vector X">0</param>

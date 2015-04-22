@@ -19,5 +19,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="5315260687898813">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2555927382633591" type="System" />
+            </conditions>
+            <actions>
+                <action id="24" name="Play at position" sid="4301935194615721" type="Audio">
+                    <param id="0" name="Audio file">Silence</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="X">320</param>
+                    <param id="4" name="Y">180</param>
+                    <param id="5" name="Angle">0</param>
+                    <param id="6" name="Inner angle">360</param>
+                    <param id="7" name="Outer angle">360</param>
+                    <param id="8" name="Outer gain">0</param>
+                    <param id="9" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

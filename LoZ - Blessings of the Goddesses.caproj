@@ -1288,7 +1288,17 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9715259714693477" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\Farore.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\fboots\fboots-damage-left.PNG">
+                        <collision-poly>
+                            <point x="0.1875" y="0.28125" />
+                            <point x="0.84375" y="0.28125" />
+                            <point x="0.84375" y="0.75" />
+                            <point x="0.1875" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="6942114515068039" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2422,6 +2432,11 @@
                 <instance-variable name="active" sid="9137645289167412" type="boolean" />
             </instance-variables>
         </family>
+        <family name="Hazard" plugin-id="Sprite" sid="5855660209356302">
+            <members>
+                <member>Spike</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Castle.xml</layout>
@@ -2487,6 +2502,8 @@
         <file name="Stab.ogg" />
         <file name="BombExplode.m4a" />
         <file name="BombExplode.ogg" />
+        <file name="Silence.m4a" />
+        <file name="Silence.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

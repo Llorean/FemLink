@@ -148,6 +148,10 @@
                     <param id="0" name="Group name">&quot;Controls&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-12" name="Set group active" sid="347184738964297" type="System">
+                    <param id="0" name="Group name">&quot;Controls2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action id="-13" name="Set time scale" sid="76046769377051" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
@@ -156,6 +160,10 @@
                 </action>
                 <action id="-12" name="Set group active" sid="1702983873929326" type="System">
                     <param id="0" name="Group name">&quot;Controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="1818998361236255" type="System">
+                    <param id="0" name="Group name">&quot;Controls2&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="9613414685255384" type="TextDialog" />
@@ -342,23 +350,27 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block any="1" sid="8415665638666943">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="2123703572416671" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-                <condition id="6" name="On button pressed" sid="2989958467705041" type="Gamepad">
-                    <param id="0" name="Gamepad">0</param>
-                    <param id="1" name="Button">9</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="5771905231499617" type="Function">
-                    <param id="0" name="Name">&quot;Menu&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="5539261391625966" title="Controls2">
+            <sub-events>
+                <event-block any="1" sid="8415665638666943">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="2123703572416671" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                        <condition id="6" name="On button pressed" sid="2989958467705041" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5771905231499617" type="Function">
+                            <param id="0" name="Name">&quot;Menu&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="9923843892190238">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3094930923455703" type="System" />
@@ -524,6 +536,10 @@
                     <param id="0" name="Group name">&quot;Controls&quot;</param>
                     <param id="1" name="State">0</param>
                 </action>
+                <action id="-12" name="Set group active" sid="7946523581573676" type="System">
+                    <param id="0" name="Group name">&quot;Controls2&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
                 <action id="-13" name="Set time scale" sid="2158883653874325" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
@@ -532,6 +548,10 @@
                 </action>
                 <action id="-12" name="Set group active" sid="1522724639371781" type="System">
                     <param id="0" name="Group name">&quot;Controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="8490677867113731" type="System">
+                    <param id="0" name="Group name">&quot;Controls2&quot;</param>
                     <param id="1" name="State">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="93524410051204" type="TextDialog" />

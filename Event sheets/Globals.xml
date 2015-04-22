@@ -20,7 +20,7 @@
         <variable constant="0" name="LinkJumpVariance" sid="4833760876256142" static="0" type="number">110</variable>
         <variable constant="0" name="LinkJumpAccel" sid="4568488791387969" static="0" type="number">350</variable>
         <variable constant="0" name="LinkJumpDecel" sid="3290663707225171" static="0" type="number">0</variable>
-        <variable constant="0" name="LinkDecel" sid="1661150361814371" static="0" type="number">750</variable>
+        <variable constant="0" name="LinkDecel" sid="1661150361814371" static="0" type="number">1000</variable>
         <variable constant="0" name="LinkAccel" sid="5553679624960852" static="0" type="number">800</variable>
         <variable constant="0" name="CurrentHealth" sid="9625755692916059" static="0" type="number">12</variable>
         <variable constant="0" name="Containers" sid="2374830937491896" static="0" type="number">3</variable>
