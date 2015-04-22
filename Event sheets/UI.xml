@@ -144,10 +144,6 @@
                 <action id="0" name="Set text" sid="7555292969753232" type="TextDialog">
                     <param id="0" name="Text">Function.Param(4)</param>
                 </action>
-                <action id="-9" name="Set value" sid="8578257392775834" type="System">
-                    <param id="0" name="Variable">TextBox</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="-12" name="Set group active" sid="8924704417398414" type="System">
                     <param id="0" name="Group name">&quot;Controls&quot;</param>
                     <param id="1" name="State">0</param>
@@ -155,43 +151,33 @@
                 <action id="-13" name="Set time scale" sid="76046769377051" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
+                <action id="-41" name="Wait for signal" sid="404977796529385" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="1702983873929326" type="System">
+                    <param id="0" name="Group name">&quot;Controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9613414685255384" type="TextDialog" />
+                <action id="-9" name="Destroy" sid="9258621255881222" type="TextBox" />
+                <action id="-13" name="Set time scale" sid="6203093823174056" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="6126798130186199">
+        <event-block any="1" sid="2199686407745343">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="1902268111547598" type="System">
-                    <param id="0" name="Variable">TextBox</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                <condition id="8" name="On any button pressed" sid="1045374579981574" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
                 </condition>
+                <condition id="1" name="On any key pressed" sid="9770824888207674" type="Keyboard" />
+                <condition id="0" name="On any touch start" sid="1569969938588888" type="Touch" />
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block any="1" sid="6964536165154955">
-                    <conditions>
-                        <condition id="8" name="On any button pressed" sid="4059110735629352" type="Gamepad">
-                            <param id="0" name="Gamepad">0</param>
-                        </condition>
-                        <condition id="1" name="On any key pressed" sid="3587746298611938" type="Keyboard" />
-                        <condition id="0" name="On any touch start" sid="3497425362270359" type="Touch" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6442015063470934" type="System">
-                            <param id="0" name="Variable">TextBox</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="1130157371989018" type="System">
-                            <param id="0" name="Group name">&quot;Controls&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3783407957369454" type="TextDialog" />
-                        <action id="-9" name="Destroy" sid="4382015939049707" type="TextBox" />
-                        <action id="-13" name="Set time scale" sid="9538366568291343" type="System">
-                            <param id="0" name="Time scale">1.0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-42" name="Signal" sid="8315439185740785" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="7235677249863363">
             <conditions>
@@ -444,6 +430,83 @@
                 </action>
                 <action id="0" name="Set cursor style" sid="8163430305423475" type="Mouse">
                     <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1767262420106562">
+            <conditions>
+                <condition id="0" name="On function" sid="9372418659499321" type="Function">
+                    <param id="0" name="Name">&quot;Dialog&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3763376615769854" type="System">
+                    <param id="0" name="Object to create">Shade</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="6401452213487868" type="Shade">
+                    <param id="0" name="Width">640</param>
+                    <param id="1" name="Height">360</param>
+                </action>
+                <action id="-3" name="Create object" sid="4837084427788663" type="System">
+                    <param id="0" name="Object to create">DialogChar</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">Function.Param(2) = &quot;Left&quot; ? 72 :576</param>
+                    <param id="3" name="Y">179</param>
+                </action>
+                <action id="4" name="Set animation" sid="1546522543628957" type="DialogChar">
+                    <param id="0" name="Animation">Function.Param(1)&amp;Function.Param(2)</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="8455311982796678" type="System">
+                    <param id="0" name="Object to create">TextBox</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">8</param>
+                    <param id="3" name="Y">180</param>
+                </action>
+                <action id="-5" name="Set width" sid="4898813349276345" type="TextBox">
+                    <param id="0" name="Width">624</param>
+                </action>
+                <action id="-6" name="Set height" sid="783961619701262" type="TextBox">
+                    <param id="0" name="Height">172</param>
+                </action>
+                <action id="-3" name="Create object" sid="2116416594028499" type="System">
+                    <param id="0" name="Object to create">TextDialog</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">16</param>
+                    <param id="3" name="Y">188</param>
+                </action>
+                <action id="-5" name="Set width" sid="9121941062373922" type="TextDialog">
+                    <param id="0" name="Width">616</param>
+                </action>
+                <action id="-6" name="Set height" sid="4630236533350002" type="TextDialog">
+                    <param id="0" name="Height">164</param>
+                </action>
+                <action id="0" name="Set text" sid="2980862106870691" type="TextDialog">
+                    <param id="0" name="Text">Function.Param(0)</param>
+                </action>
+                <action id="-12" name="Set group active" sid="6864933890530452" type="System">
+                    <param id="0" name="Group name">&quot;Controls&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="2158883653874325" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="1964638228420504" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="1522724639371781" type="System">
+                    <param id="0" name="Group name">&quot;Controls&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="93524410051204" type="TextDialog" />
+                <action id="-9" name="Destroy" sid="1930798033575555" type="TextBox" />
+                <action id="-9" name="Destroy" sid="5826298653337644" type="Shade" />
+                <action id="-9" name="Destroy" sid="7862532770462662" type="DialogChar" />
+                <action id="-13" name="Set time scale" sid="599156677502913" type="System">
+                    <param id="0" name="Time scale">1.0</param>
                 </action>
             </actions>
         </event-block>

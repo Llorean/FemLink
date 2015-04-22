@@ -272,7 +272,7 @@
                 <instance type="SceneDoor" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Castle</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -911,9 +911,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <get>0</get>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                     </behavior-instances>

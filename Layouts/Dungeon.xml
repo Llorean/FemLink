@@ -122,7 +122,7 @@
                 <instance type="SceneDoor" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Dungeon</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -152,9 +152,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <get>0</get>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                     </behavior-instances>
@@ -202,9 +199,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <get>0</get>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                     </behavior-instances>
@@ -1014,9 +1008,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <get>0</get>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Persist" />
                     </behavior-instances>

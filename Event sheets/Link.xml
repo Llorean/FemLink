@@ -53,6 +53,9 @@
                 <action id="-15" name="Set visible" sid="5852608307006033" type="FBoots">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="26" name="Set listener object" sid="8756308564849609" type="Audio">
+                    <param id="0" name="Object">LinkSprite</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="810047120199902">
@@ -1519,49 +1522,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6729123383063959">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="9482588270328275" type="FaroreItem">
-                    <param id="0" name="Instance variable">get</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="2674694836393395" type="System">
-                    <param id="0" name="Variable">TextBox</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="7596357460841389" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="352532157446376" type="FaroreItem" />
-                <action id="-15" name="Set visible" sid="6827620389887322" type="FBoots">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5889385245130687">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="1581386184641777" type="Bombs">
-                    <param id="0" name="Instance variable">get</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="1619004116556913" type="System">
-                    <param id="0" name="Variable">TextBox</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="7501003349490236" type="LinkSprite">
-                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="4240539128662249" type="Bombs" />
-            </actions>
-        </event-block>
         <event-block sid="2645305726574458">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6982177991249156" type="LinkSprite">
@@ -1608,6 +1568,14 @@
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="9659957999361231" type="LinkSword">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9418890086183246" type="LinkWoodShield">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="4" name="Set animation" sid="8400013578761954" type="FBoots">
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                     <param id="1" name="From">1</param>
@@ -1615,10 +1583,6 @@
                 <action id="-10" name="Set value" sid="9535463280470952" type="LinkSprite">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="5269299455771893" type="FaroreItem">
-                    <param id="0" name="Instance variable">get</param>
-                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="2603570326570972" type="FaroreItem">
                     <param id="0" name="X">LinkSprite.X+1</param>
@@ -1637,6 +1601,29 @@
                     <param id="0" name="X">PassiveItems.Width - 1</param>
                     <param id="1" name="Value">&quot;Farore&apos;s Boots&quot;</param>
                 </action>
+                <action id="-41" name="Wait for signal" sid="1460398613390126" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5743287727538017" type="FaroreItem" />
+                <action id="-15" name="Set visible" sid="2177603641528047" type="FBoots">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="541722141581135" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1154091892254173" type="LinkSword">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7165163895930425" type="LinkWoodShield">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5599010820783241" type="FBoots">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9166269350592924">
@@ -1650,10 +1637,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="1261937768061141" type="Bombs">
-                    <param id="0" name="Instance variable">get</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="-3" name="Set position" sid="9702261191263908" type="Bombs">
                     <param id="0" name="X">LinkSprite.X</param>
                     <param id="1" name="Y">LinkSprite.Y-10</param>
@@ -1662,6 +1645,14 @@
                     <param id="0" name="Vector X">0</param>
                 </action>
                 <action id="4" name="Set animation" sid="535616602794953" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5378320597194685" type="LinkSword">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7742416204938751" type="LinkWoodShield">
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -1685,6 +1676,26 @@
                 <action id="2" name="Set at X" sid="1373069515367918" type="Items">
                     <param id="0" name="X">Items.Width - 1</param>
                     <param id="1" name="Value">&quot;Bomb&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="5051795547226716" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="512153677526605" type="Bombs" />
+                <action id="4" name="Set animation" sid="5933973533133846" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4078296664275077" type="LinkSword">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4393185302803237" type="LinkWoodShield">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9078207229486574" type="FBoots">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
