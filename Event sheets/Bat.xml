@@ -112,27 +112,38 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">Bat.Rate</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="8462476458675106" type="Bat">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">LinkSprite.Y</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="3363636668059889" type="Bat">
                             <param id="0" name="Instance variable">Offset</param>
                             <param id="1" name="Value">Bat.Rate</param>
                         </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="8683617652736466" type="Bat">
-                            <param id="0" name="Vector Y">(-1) * sqrt(LinkSprite.Y - Self.Y) * 55</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="4682577110953229" type="Bat">
-                            <param id="0" name="Animation">&quot;Fly&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="8" name="Set vector X" sid="6344827309894616" type="Bat">
-                            <param id="0" name="Vector X">LinkSprite.X - Self.X &gt; 0 ? -100 : 100</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="6233195237979315">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="8462476458675106" type="Bat">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">LinkSprite.Y</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="8218178480358045" type="Bat">
+                                    <param id="0" name="Animation">&quot;Rest&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="8683617652736466" type="Bat">
+                                    <param id="0" name="Vector Y">(-1) * sqrt(LinkSprite.Y - Self.Y) * 55</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4682577110953229" type="Bat">
+                                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Platform" id="8" name="Set vector X" sid="6344827309894616" type="Bat">
+                                    <param id="0" name="Vector X">LinkSprite.X - Self.X &gt; 0 ? -100 : 100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="9508379873621568">
                     <conditions>
