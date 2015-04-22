@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Spike</name>
+    <events>
+        <event-block sid="4004837709954038">
+            <conditions>
+                <condition id="-11" name="For Each" sid="1279833754933073" type="System">
+                    <param id="0" name="Object">Spike</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="4059217614918889" type="Spike">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9913848983192569">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4544199811470498" type="Spike">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Self.Rate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="8622103147271892" type="Spike">
+                    <param id="0" name="Instance variable">Offset</param>
+                    <param id="1" name="Value">Self.Rate</param>
+                </action>
+                <action id="-14" name="Toggle boolean" sid="5906989129008735" type="Spike">
+                    <param id="0" name="Instance variable">Out</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6105065156098163">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="1268765976015673" type="Spike">
+                    <param id="0" name="Instance variable">Out</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="321510188267582" type="Spike">
+                    <param id="0" name="Animation">&quot;Out&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1871638668355181">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6556996716455409" type="Spike">
+                    <param id="0" name="Instance variable">Out</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1083153245284972" type="Spike">
+                    <param id="0" name="Animation">&quot;In&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

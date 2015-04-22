@@ -1192,6 +1192,48 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="2633527027465417">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4572743331801251" type="LinkSprite">
+                    <param id="0" name="Object">Spike</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4685254520987509" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4460822559617894" type="Spike">
+                    <param id="0" name="Instance variable">Out</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9223393121764891" type="LinkSprite">
+                    <param id="0" name="Instance variable">Hurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="2173009785140197" type="LinkSprite">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.2</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="904167249160257" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="25" name="Play at object" sid="8147749749290224" type="Audio">
+                    <param id="0" name="Audio file">LinkHurt</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">0</param>
+                    <param id="3" name="Object">LinkSprite</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="211464782037711" type="LinkSprite">
+                    <param id="0" name="Instance variable">CanBeHurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="4769231578932883">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="8611821800802181" type="OctoRock">

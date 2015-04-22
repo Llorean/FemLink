@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Dungeon</name>
     <events>
+        <include>Spike</include>
         <include>Scene</include>
         <include>UI</include>
         <include>Link</include>

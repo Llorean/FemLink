@@ -36,14 +36,21 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="8097811457453108">
+                        <event-block any="1" sid="8097811457453108">
                             <conditions>
                                 <condition id="-3" name="Is on-screen" sid="9821887713548833" type="Bat" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="3480293253152234" type="Bat">
+                                    <param id="0" name="Instance variable">active</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-11" name="Add to" sid="1380740573426662" type="Bat">
                                     <param id="0" name="Instance variable">Offset</param>
                                     <param id="1" name="Value">dt</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6053879377402243" type="Bat">
+                                    <param id="0" name="Instance variable">active</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>

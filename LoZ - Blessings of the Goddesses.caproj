@@ -2358,6 +2358,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Spike" sid="4822513159541387">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Out" sid="294634831454842" type="boolean" />
+                <instance-variable name="Offset" sid="6380665995920095" type="number" />
+                <instance-variable name="Rate" sid="9060643869615478" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Out" pingpong="0" repeatcount="1" repeatto="0" sid="2447302575531418" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="In" pingpong="0" repeatcount="1" repeatto="0" sid="55388371020332" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -2376,6 +2392,7 @@
                 <instance-variable name="Health" sid="120363348187406" type="number" />
                 <instance-variable name="Hurt" sid="4109376174065124" type="boolean" />
                 <instance-variable name="Score" sid="5379228486502206" type="number" />
+                <instance-variable name="active" sid="9137645289167412" type="boolean" />
             </instance-variables>
         </family>
     </families>
@@ -2395,6 +2412,7 @@
         <event-sheet>Enemies.xml</event-sheet>
         <event-sheet>Globals.xml</event-sheet>
         <event-sheet>Spider.xml</event-sheet>
+        <event-sheet>Spike.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
