@@ -771,11 +771,11 @@
                         <x>1016</x>
                         <y>424</y>
                         <z>0</z>
-                        <width>19</width>
-                        <height>63</height>
+                        <width>23</width>
+                        <height>65</height>
                         <depth>0</depth>
-                        <hotspotX>0.526315808</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.521739125</hotspotX>
+                        <hotspotY>0.984615386</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -52,7 +52,7 @@
                     <param id="3" name="Y">180</param>
                 </action>
                 <action id="4" name="Set animation" sid="4094285170752429" type="DialogZelda">
-                    <param id="0" name="Animation">&quot;ZeldaLeft&quot;</param>
+                    <param id="0" name="Animation">&quot;ZeldaRight&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="3946467420605119" type="System">
@@ -62,7 +62,7 @@
                     <param id="3" name="Y">180</param>
                 </action>
                 <action id="4" name="Set animation" sid="8411247154010175" type="DialogLink">
-                    <param id="0" name="Animation">&quot;LinkKneel&quot;</param>
+                    <param id="0" name="Animation">&quot;LinkKneelLeft&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="4541479867315632" type="System">
@@ -80,8 +80,8 @@
                     <param id="2" name="X">288</param>
                     <param id="3" name="Y">180</param>
                 </action>
-                <action id="4" name="Set animation" sid="6039988770719647" type="DialogZelda">
-                    <param id="0" name="Animation">&quot;ZeldaLeft&quot;</param>
+                <action id="4" name="Set animation" sid="2817328418082035" type="DialogZelda">
+                    <param id="0" name="Animation">&quot;ZeldaRight&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="388600695611273" type="System">
@@ -91,7 +91,7 @@
                     <param id="3" name="Y">180</param>
                 </action>
                 <action id="4" name="Set animation" sid="7648277978715317" type="DialogLink">
-                    <param id="0" name="Animation">&quot;LinkKneel&quot;</param>
+                    <param id="0" name="Animation">&quot;LinkGetSword&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="7754317931471167" type="System">
@@ -109,8 +109,8 @@
                     <param id="2" name="X">288</param>
                     <param id="3" name="Y">180</param>
                 </action>
-                <action id="4" name="Set animation" sid="4012461957222209" type="DialogZelda">
-                    <param id="0" name="Animation">&quot;ZeldaLeft&quot;</param>
+                <action id="4" name="Set animation" sid="7665129561140388" type="DialogZelda">
+                    <param id="0" name="Animation">&quot;ZeldaRight&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="6861872716646513" type="System">
@@ -120,7 +120,7 @@
                     <param id="3" name="Y">180</param>
                 </action>
                 <action id="4" name="Set animation" sid="5883759760004419" type="DialogLink">
-                    <param id="0" name="Animation">&quot;LinkRight&quot;</param>
+                    <param id="0" name="Animation">&quot;LinkLeft&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="3692607461671128" type="System">
@@ -138,8 +138,8 @@
                     <param id="2" name="X">288</param>
                     <param id="3" name="Y">180</param>
                 </action>
-                <action id="4" name="Set animation" sid="9987657885010095" type="DialogZelda">
-                    <param id="0" name="Animation">&quot;ZeldaLeft&quot;</param>
+                <action id="4" name="Set animation" sid="3299068329230699" type="DialogZelda">
+                    <param id="0" name="Animation">&quot;ZeldaRight&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="3190554998655713" type="System">
@@ -149,7 +149,7 @@
                     <param id="3" name="Y">180</param>
                 </action>
                 <action id="4" name="Set animation" sid="2855957457154793" type="DialogLink">
-                    <param id="0" name="Animation">&quot;LinkRight&quot;</param>
+                    <param id="0" name="Animation">&quot;LinkLeft&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-41" name="Wait for signal" sid="9486653335596901" type="System">

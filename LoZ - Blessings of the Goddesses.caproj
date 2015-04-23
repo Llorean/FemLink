@@ -2338,17 +2338,20 @@
         <object-type name="DialogZelda" sid="8776753581427177">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="ZeldaLeft" pingpong="0" repeatcount="1" repeatto="0" sid="7689681917310356" speed="5">
-                    <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\zelda.PNG">
+                <animation framecount="1" loop="0" name="ZeldaRight" pingpong="0" repeatcount="1" repeatto="0" sid="7689681917310356" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.984615" original-source="C:\Projects\FemLink\Resources\Sprites\NPC\zelda-right.PNG" />
+                </animation>
+                <animation framecount="1" loop="0" name="ZeldaForward" pingpong="0" repeatcount="1" repeatto="0" sid="8535827521506052" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.984615">
                         <collision-poly>
-                            <point x="0.210526" y="0.0634921" />
-                            <point x="0.473684" y="0" />
-                            <point x="0.789474" y="0.0634921" />
-                            <point x="0.947368" y="0.492063" />
-                            <point x="0.947368" y="0.984127" />
-                            <point x="0.473684" y="1" />
-                            <point x="0.0526316" y="0.984127" />
-                            <point x="0.0526316" y="0.492063" />
+                            <point x="0.238095" y="0.0769231" />
+                            <point x="0.47619" y="0.0153846" />
+                            <point x="0.761905" y="0.0769231" />
+                            <point x="0.904762" y="0.492307" />
+                            <point x="0.904762" y="0.969231" />
+                            <point x="0.47619" y="0.984615" />
+                            <point x="0.0952381" y="0.969231" />
+                            <point x="0.0952381" y="0.492307" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2381,7 +2384,7 @@
         <object-type name="DialogLink" sid="6059161481983165">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="LinkRight" pingpong="0" repeatcount="1" repeatto="0" sid="4102000502118724" speed="5">
+                <animation framecount="1" loop="0" name="LinkLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4102000502118724" speed="5">
                     <frame duration="1" hotspotX="0.529412" hotspotY="0.984848" original-source="C:\Projects\FemLink\Resources\Sprites\link-stand-left.PNG">
                         <collision-poly>
                             <point x="0.294118" y="0.121212" />
@@ -2395,19 +2398,33 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="LinkKneel" pingpong="0" repeatcount="1" repeatto="0" sid="8777697172475537" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\link-crouch-left.PNG">
+                <animation framecount="1" loop="0" name="LinkKneelLeft" pingpong="0" repeatcount="1" repeatto="0" sid="8777697172475537" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.982143" original-source="C:\Projects\FemLink\Resources\Sprites\link-crouch-left.PNG">
                         <collision-poly>
-                            <point x="0.214286" y="0.111111" />
-                            <point x="0.5" y="0" />
-                            <point x="0.821429" y="0.0925926" />
-                            <point x="0.714286" y="0.5" />
-                            <point x="0.892857" y="0.944444" />
-                            <point x="0.5" y="0.888889" />
-                            <point x="0" y="1" />
-                            <point x="0.321429" y="0.5" />
+                            <point x="0.233334" y="0.125" />
+                            <point x="0.5" y="0.0178571" />
+                            <point x="0.8" y="0.107143" />
+                            <point x="0.7" y="0.5" />
+                            <point x="0.866667" y="0.928571" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.0333333" y="0.982143" />
+                            <point x="0.333334" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="LinkGetSword" pingpong="0" repeatcount="1" repeatto="0" sid="9767480910002552" speed="5">
+                    <frame duration="1" hotspotX="0.548387" hotspotY="0.99" original-source="C:\Projects\FemLink\Resources\Sprites\Link\link-itemget 2H.PNG">
+                        <collision-poly>
+                            <point x="0.129032" y="0.18" />
+                            <point x="0.935484" y="0.18" />
+                            <point x="0.709677" y="0.49" />
+                            <point x="0.774194" y="0.76" />
+                            <point x="0.516129" y="0.57" />
+                            <point x="0.290323" y="0.76" />
+                            <point x="0.354839" y="0.49" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\Items\swordsheild-32.PNG" />
                 </animation>
             </animation-folder>
         </object-type>
