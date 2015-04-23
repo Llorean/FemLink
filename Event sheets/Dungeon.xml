@@ -9,5 +9,25 @@
         <include>Link</include>
         <include>Bat</include>
         <include>Spider</include>
+        <event-block sid="9238747099765387">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5465168983883333" type="System" />
+                <condition id="-14" name="Compare variable" sid="728860851290546" type="System">
+                    <param id="0" name="Variable">FirstTimeDungeon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="840946660955354" type="System">
+                    <param id="0" name="Variable">FirstTimeDungeon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="9155519484169906" type="Function">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">200{###}200{###}440{###}300{###}&quot;Hyrule Castle Dungeon&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
