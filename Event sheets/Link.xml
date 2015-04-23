@@ -1840,8 +1840,8 @@
                 <condition id="0" name="On collision with another object" sid="9309262695873617" type="Bomb">
                     <param id="0" name="Object">Enemies</param>
                 </condition>
-                <condition id="0" name="On collision with another object" sid="1748069644938046" type="Bomb">
-                    <param id="0" name="Object">Bombable</param>
+                <condition id="0" name="On collision with another object" sid="4035814880991201" type="Bomb">
+                    <param id="0" name="Object">SolidObject</param>
                 </condition>
             </conditions>
             <actions>

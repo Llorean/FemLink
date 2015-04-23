@@ -157,6 +157,35 @@
                 </action>
                 <action id="-9" name="Destroy" sid="7447503285427619" type="DialogZelda" />
                 <action id="-9" name="Destroy" sid="2660713202513241" type="DialogLink" />
+                <action id="0" name="Call function" sid="5761350634501298" type="Function">
+                    <param id="0" name="Name">&quot;Dialog&quot;</param>
+                    <param id="1" name="Parameter {n}"> &quot;Before you go, there are some bombs in one of the castle storage rooms. I&apos;m quite certain they&apos;ll help you in your quest.&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="853469638363999" type="System">
+                    <param id="0" name="Object to create">DialogZelda</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">288</param>
+                    <param id="3" name="Y">180</param>
+                </action>
+                <action id="4" name="Set animation" sid="5149059596296803" type="DialogZelda">
+                    <param id="0" name="Animation">&quot;ZeldaRight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="6245648458246014" type="System">
+                    <param id="0" name="Object to create">DialogLink</param>
+                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                    <param id="2" name="X">352</param>
+                    <param id="3" name="Y">180</param>
+                </action>
+                <action id="4" name="Set animation" sid="2899754518304369" type="DialogLink">
+                    <param id="0" name="Animation">&quot;LinkLeft&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="6724487035779275" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9981265693035368" type="DialogZelda" />
+                <action id="-9" name="Destroy" sid="6405727115464606" type="DialogLink" />
             </actions>
         </event-block>
     </events>

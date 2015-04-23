@@ -2525,6 +2525,14 @@
                 <member>Spike</member>
             </members>
         </family>
+        <family name="SolidObject" plugin-id="Sprite" sid="5647496318986119">
+            <members>
+                <member>Bombable</member>
+                <member>CrateLg</member>
+                <member>CrateMed</member>
+                <member>CrateSm</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Castle.xml</layout>
