@@ -1787,6 +1787,9 @@
                 <condition id="0" name="On collision with another object" sid="9309262695873617" type="Bomb">
                     <param id="0" name="Object">Enemies</param>
                 </condition>
+                <condition id="0" name="On collision with another object" sid="1748069644938046" type="Bomb">
+                    <param id="0" name="Object">Bombable</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="8357143429700811" type="System">

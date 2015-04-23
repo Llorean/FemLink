@@ -56,5 +56,15 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="3451552051202437">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="664959036761579" type="Bombable">
+                    <param id="0" name="Object">Explosion</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3580624267642386" type="Bombable" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

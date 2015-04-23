@@ -2411,6 +2411,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Bombable" sid="5682742639540655">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8918599165554542">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Persist" sid="7953019920552226">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="DungeonWallClean" pingpong="0" repeatcount="1" repeatto="0" sid="1553411334921703" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Tilesets\dungeon tiles.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
