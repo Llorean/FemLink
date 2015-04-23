@@ -992,6 +992,22 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4356022913651453">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="7301527891093257" type="LinkSword">
+                            <param id="0" name="Animation">&quot;KneelStabLeft&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="7357657583125549" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="1395862445855564" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X + (120 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="8461307883526992">
                     <conditions>
                         <condition id="2" name="Is playing" sid="1571999158528637" type="LinkSword">
@@ -1036,6 +1052,22 @@
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="6128121006566856" type="LinkSprite">
+                            <param id="0" name="X">LinkSprite.X - (120 * dt)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9618964206530621">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="8811097886029813" type="LinkSword">
+                            <param id="0" name="Animation">&quot;KneelStabRight&quot;</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="7963151503403001" type="LinkSprite">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="6436126832316273" type="LinkSprite">
                             <param id="0" name="X">LinkSprite.X - (120 * dt)</param>
                         </action>
                     </actions>
