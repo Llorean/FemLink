@@ -761,7 +761,7 @@
                 </animation>
                 <animation framecount="2" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4339859702715579" speed="5">
                     <frame duration="1" hotspotX="2.17647" hotspotY="-5" />
-                    <frame duration="1" hotspotX="1" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0" />
                 </animation>
                 <animation framecount="2" loop="0" name="KneelStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="499594242565414" speed="5">
                     <frame duration="1" hotspotX="-1.23529" hotspotY="-5">
@@ -772,7 +772,7 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0" hotspotY="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -1064,7 +1064,15 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="7063196994007593" speed="5">
+                <animation framecount="2" loop="0" name="KneelStabLeft" pingpong="0" repeatcount="1" repeatto="0" sid="7063196994007593" speed="5">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0.484375" />
+                            <point x="0.125" y="0.484375" />
+                            <point x="0.125" y="0.921875" />
+                            <point x="0" y="0.921875" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.46875" hotspotY="0">
                         <collision-poly>
                             <point x="0" y="0.484375" />
@@ -1074,7 +1082,15 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="KneelStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="7341924385444764" speed="5">
+                <animation framecount="2" loop="0" name="KneelStabRight" pingpong="0" repeatcount="1" repeatto="0" sid="7341924385444764" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="0.921875" />
+                            <point x="0.875" y="0.921875" />
+                            <point x="0.875" y="0.484375" />
+                            <point x="1" y="0.484375" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0">
                         <collision-poly>
                             <point x="1" y="0.921875" />
@@ -2441,6 +2457,45 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="DungeonWallClean" pingpong="0" repeatcount="1" repeatto="0" sid="1553411334921703" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Tilesets\dungeon tiles.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrateSm" sid="811010104287865">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1436228416815668">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368531627592618" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Scenery\castle-deco-crate-32.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrateMed" sid="1376073715989627">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8821392518054241">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9520791463379321" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Scenery\castle-deco-crate-64.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CrateLg" sid="6941939406195896">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6959248832160152">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8615272198534986" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Scenery\castle-deco-crate-96.PNG" />
                 </animation>
             </animation-folder>
         </object-type>
