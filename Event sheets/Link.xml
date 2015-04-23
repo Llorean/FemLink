@@ -56,6 +56,18 @@
                 <action id="26" name="Set listener object" sid="8756308564849609" type="Audio">
                     <param id="0" name="Object">LinkSprite</param>
                 </action>
+                <action behavior="Platform" id="2" name="Set acceleration" sid="3966501478844714" type="LinkSprite">
+                    <param id="0" name="Acceleration">LinkAccel</param>
+                </action>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="2733077628817686" type="LinkSprite">
+                    <param id="0" name="Deceleration">LinkDecel</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="2099098259798288" type="LinkSprite">
+                    <param id="0" name="Jump strength">LinkJump</param>
+                </action>
+                <action behavior="Platform" id="14" name="Set jump sustain" sid="8229979796801914" type="LinkSprite">
+                    <param id="0" name="Jump sustain">LinkJumpSustain</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="810047120199902">
@@ -1604,7 +1616,16 @@
                     <param id="0" name="Variable">LinkJumpDecel</param>
                     <param id="1" name="Value">1200</param>
                 </action>
-                <action behavior="Platform" id="14" name="Set jump sustain" sid="6534636316333777" type="LinkSprite">
+                <action behavior="Platform" id="2" name="Set acceleration" sid="1172394589091721" type="LinkSprite">
+                    <param id="0" name="Acceleration">LinkAccel</param>
+                </action>
+                <action behavior="Platform" id="3" name="Set deceleration" sid="1269628727682097" type="LinkSprite">
+                    <param id="0" name="Deceleration">LinkDecel</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="1631300594502748" type="LinkSprite">
+                    <param id="0" name="Jump strength">LinkJump</param>
+                </action>
+                <action behavior="Platform" id="14" name="Set jump sustain" sid="8612740089255485" type="LinkSprite">
                     <param id="0" name="Jump sustain">LinkJumpSustain</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="6334453324822495" type="LinkSprite">
