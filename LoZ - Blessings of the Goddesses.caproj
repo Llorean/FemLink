@@ -1304,7 +1304,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9715259714693477" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\fboots\fboots-damage-left.PNG" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\fboots\fboots-damage-left.PNG" />
                 </animation>
             </animation-folder>
         </object-type>
