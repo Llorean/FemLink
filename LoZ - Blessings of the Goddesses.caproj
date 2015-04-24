@@ -2515,6 +2515,19 @@
             <texture original-source="C:\Projects\FemLink\Resources\Tilesets\dungeon tiles.PNG" />
             <tiles />
         </object-type>
+        <object-type name="Zelda" sid="5730044948653591">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="4660891516366488">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="5050844680962473" speed="5">
+                    <frame duration="1" hotspotX="0.150943" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\NPC\zelda-right.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">

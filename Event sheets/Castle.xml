@@ -186,7 +186,63 @@
                 </action>
                 <action id="-9" name="Destroy" sid="9981265693035368" type="DialogZelda" />
                 <action id="-9" name="Destroy" sid="6405727115464606" type="DialogLink" />
+                <action id="-15" name="Set visible" sid="2574126949174441" type="Zelda">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="8068693598739098">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="845089045618635" type="LinkSprite">
+                    <param id="0" name="Object">Zelda</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9565969834029013" type="System">
+                    <param id="0" name="Variable">UpPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4792271507365182">
+                    <conditions>
+                        <condition id="5" name="Contains value" sid="557609242504418" type="PassiveItems">
+                            <param id="0" name="Value">&quot;Farore&apos;s Boots&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7915538855366518" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Congratulations on completing the demo. Unfortunately this is all there was time to lay out, but check back soon for more areas and more items as we expand this further!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3075129008096086">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5575563197767355" type="System" />
+                        <condition id="5" name="Contains value" sid="3288765179947475" type="Items">
+                            <param id="0" name="Value">&quot;Bomb&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="958449588615067" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Ah, good, you&apos;ve found the bombs. They&apos;ll serve you well in retrieving Farore&apos;s Boots from the dungeon. Her boots will prove quite helpful in receiving the true blessings of the goddesses. Bring them to me when you&apos;ve found them.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9008596407292443">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9674409707203264" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6417586422949117" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Bombs will serve you well in any adventure.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
