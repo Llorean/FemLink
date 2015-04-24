@@ -1745,7 +1745,10 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5550267498351332" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\bomb-16.PNG" />
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Items\chest-closed.PNG" />
+                </animation>
+                <animation framecount="1" loop="0" name="Bombs" pingpong="0" repeatcount="1" repeatto="0" sid="6936908373844188" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2496,6 +2499,14 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8615272198534986" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Scenery\castle-deco-crate-96.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="3270771589435253">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3991402042144954" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Items\chest-open.png" />
                 </animation>
             </animation-folder>
         </object-type>

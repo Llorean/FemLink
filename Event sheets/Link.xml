@@ -1687,11 +1687,20 @@
                 <condition id="2" inverted="1" name="Is playing" sid="3720377023094434" type="LinkSprite">
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="5515077047573242" type="System">
+                    <param id="0" name="Variable">UpPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="9702261191263908" type="Bombs">
                     <param id="0" name="X">LinkSprite.X</param>
                     <param id="1" name="Y">LinkSprite.Y-10</param>
+                </action>
+                <action id="4" name="Set animation" sid="2026369186440797" type="Bombs">
+                    <param id="0" name="Animation">&quot;Bombs&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="5894315426689061" type="LinkSprite">
                     <param id="0" name="Vector X">0</param>
