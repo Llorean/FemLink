@@ -596,7 +596,7 @@
                         <y>96</y>
                         <z>0</z>
                         <width>48</width>
-                        <height>48</height>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -946,7 +946,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="371">
+                <instance type="Chest" uid="371">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -960,7 +960,7 @@
                         <y>120</y>
                         <z>0</z>
                         <width>48</width>
-                        <height>32</height>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>

@@ -211,7 +211,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="370">
+                <instance type="Chest" uid="370">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -221,11 +221,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2056</x>
+                        <x>2048</x>
                         <y>2624</y>
                         <z>0</z>
                         <width>48</width>
-                        <height>32</height>
+                        <height>25</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -959,11 +959,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2056</x>
+                        <x>2048</x>
                         <y>2624</y>
                         <z>0</z>
                         <width>48</width>
-                        <height>48</height>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>

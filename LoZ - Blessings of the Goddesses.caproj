@@ -2502,13 +2502,18 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="3270771589435253">
+        <object-type name="Chest" sid="3270771589435253">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3991402042144954" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Items\chest-open.png" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="DungeonSecret" sid="9657031798205934">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Projects\FemLink\Resources\Tilesets\dungeon tiles.PNG" />
+            <tiles />
         </object-type>
     </object-folder>
     <families>
