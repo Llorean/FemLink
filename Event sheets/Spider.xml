@@ -242,11 +242,12 @@
         </event-block>
         <event-block sid="4104055646428344">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="4882144777384073" type="Spider">
-                    <param id="0" name="Object">SolidWalls</param>
-                </condition>
                 <condition id="2" name="Is playing" sid="6314284507177377" type="Spider">
                     <param id="0" name="Animation">&quot;ClimbUp&quot;</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="7923601596424409" type="Spider">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Y co-ordinate">Self.OrigY</param>
                 </condition>
             </conditions>
             <actions>
@@ -299,17 +300,23 @@
         </event-block>
         <event-block sid="165053529738722">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8740029621492584" type="Spider">
-                    <param id="0" name="Object">SolidWalls</param>
-                </condition>
                 <condition id="2" name="Is playing" sid="2664118498258171" type="Spider">
                     <param id="0" name="Animation">&quot;Climb&quot;</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="1854779181852246" type="Spider">
+                    <param id="0" name="Object">SolidWalls</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="9114612462167023" type="Spider">
                     <param id="0" name="Animation">&quot;ClimbUp&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="3717737529430947" type="Spider">
+                    <param id="0" name="Y">Self.Y - (dt * 200)</param>
+                </action>
+                <action id="-6" name="Set height" sid="6330372257566225" type="SpiderString">
+                    <param id="0" name="Height">Self.Height - (dt * 200)</param>
                 </action>
             </actions>
         </event-block>

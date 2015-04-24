@@ -2099,5 +2099,77 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3180229563278223">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2717866003555227" type="LinkSprite">
+                    <param id="0" name="Object">HeartContainer</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="7404061804703631" type="LinkSprite" />
+                <condition id="2" inverted="1" name="Is playing" sid="3058374611273156" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="8" name="Set vector X" sid="134835997383592" type="LinkSprite">
+                    <param id="0" name="Vector X">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="349094173873299" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1788477337839999" type="LinkSword">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4217587875050611" type="LinkWoodShield">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="110941026625846" type="FBoots">
+                    <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="4743462570663394" type="LinkSprite">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="5218747677238536" type="HeartContainer">
+                    <param id="0" name="X">LinkSprite.X+1</param>
+                    <param id="1" name="Y">LinkSprite.Y-34</param>
+                </action>
+                <action id="0" name="Call function" sid="9271201570132817" type="Function">
+                    <param id="0" name="Name">&quot;TextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}200{###}200{###}300{###}&quot;You got a Heart Container!&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="7469171187526982" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9538670850241001" type="HeartContainer" />
+                <action id="4" name="Set animation" sid="5349116647563555" type="LinkSprite">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4826289578392259" type="LinkSword">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="6592506239294195" type="LinkWoodShield">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7529378417672961" type="FBoots">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="9501576140634941" type="System">
+                    <param id="0" name="Variable">Containers</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7088328785170464" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Value">Containers * 4</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

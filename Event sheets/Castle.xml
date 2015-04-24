@@ -3,9 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Castle</name>
     <events>
-        <include>Spider</include>
         <include>Octorok</include>
-        <include>Bat</include>
         <include>UI</include>
         <include>Link</include>
         <include>Scene</include>

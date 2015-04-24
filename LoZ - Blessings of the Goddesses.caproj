@@ -2519,6 +2519,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="HeartContainer" sid="2234490062238432">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Persist" sid="4184626263065926">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3557407814240529" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\Items\heartpiece.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -2551,6 +2564,11 @@
                 <member>CrateLg</member>
                 <member>CrateMed</member>
                 <member>CrateSm</member>
+            </members>
+        </family>
+        <family name="SecretWalls" plugin-id="Tilemap" sid="6147897709882644">
+            <members>
+                <member>DungeonSecret</member>
             </members>
         </family>
     </families>

@@ -29,27 +29,5 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3690896363899905">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="4531263320061125" type="LinkSprite">
-                    <param id="0" name="Object">DungeonSecret</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="4872748301070613" type="DungeonSecret">
-                    <param id="0" name="Opacity">33</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6121012565836206">
-            <conditions>
-                <condition id="-22" name="Else" sid="2278023054128038" type="System" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="6423794762884486" type="DungeonSecret">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
