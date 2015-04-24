@@ -863,53 +863,6 @@
                 </condition>
             </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="9740393850259696">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="903076188675892" type="System">
-                            <param id="0" name="Variable">Paused</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="2312025106903527" type="System">
-                            <param id="0" name="Time scale">0</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="1246899665349251" type="System">
-                            <param id="0" name="Group name">&quot;Controls&quot;</param>
-                            <param id="1" name="State">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="4048627533983938" type="System">
-                            <param id="0" name="Variable">Paused</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="385578278174162">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="6179370218778576" type="System" />
-                        <condition id="-14" name="Compare variable" sid="4973868100054162" type="System">
-                            <param id="0" name="Variable">Paused</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set time scale" sid="2403921953068069" type="System">
-                            <param id="0" name="Time scale">1.0</param>
-                        </action>
-                        <action id="-12" name="Set group active" sid="4558162041355854" type="System">
-                            <param id="0" name="Group name">&quot;Controls&quot;</param>
-                            <param id="1" name="State">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2716457678354972" type="System">
-                            <param id="0" name="Variable">Paused</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="4324910938596253">
             <conditions>

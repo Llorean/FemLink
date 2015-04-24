@@ -362,12 +362,103 @@
                             <param id="1" name="Button">9</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="5771905231499617" type="Function">
-                            <param id="0" name="Name">&quot;Menu&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="9378202479750735">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="5119405463913812" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;Stand&quot;&amp;LinkSprite.Direction</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="2146691504104333" type="LinkSprite">
+                                    <param id="0" name="Animation">&quot;Walk&quot;&amp;LinkSprite.Direction</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5771905231499617" type="Function">
+                                    <param id="0" name="Name">&quot;Menu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3614377095406615">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7566517167999173" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3347884434032856">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4494897609087492" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="4447375583364984" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="2812074958623754" type="System">
+                                            <param id="0" name="Group name">&quot;Controls&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3281053366593298" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="7203122636544127" type="System">
+                                            <param id="0" name="Object to create">TextBox</param>
+                                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                                            <param id="2" name="X">270</param>
+                                            <param id="3" name="Y">160</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="846552291457446" type="TextBox">
+                                            <param id="0" name="Width">100</param>
+                                            <param id="1" name="Height">40</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="6026435267180373" type="System">
+                                            <param id="0" name="Object to create">TextDialog</param>
+                                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                                            <param id="2" name="X">270</param>
+                                            <param id="3" name="Y">160</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="3450802792604398" type="TextDialog">
+                                            <param id="0" name="Width">100</param>
+                                            <param id="1" name="Height">40</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="5718265574550987" type="TextDialog">
+                                            <param id="0" name="Text">&quot;PAUSED&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5721746638551144">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7560937533297878" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="4769347311780847" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="9004436894248173" type="System">
+                                            <param id="0" name="Time scale">1.0</param>
+                                        </action>
+                                        <action id="-12" name="Set group active" sid="924390937668236" type="System">
+                                            <param id="0" name="Group name">&quot;Controls&quot;</param>
+                                            <param id="1" name="State">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="9404582937339749" type="System">
+                                            <param id="0" name="Variable">Paused</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="7736809174413154" type="TextBox" />
+                                        <action id="-9" name="Destroy" sid="2599172767338625" type="TextDialog" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
