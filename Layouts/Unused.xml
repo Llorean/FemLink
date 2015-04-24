@@ -643,6 +643,7 @@
                         <Direction></Direction>
                         <Timer>0</Timer>
                         <OrigY>0</OrigY>
+                        <Rate>2</Rate>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -1565,7 +1565,7 @@
         <event-block sid="2645305726574458">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6982177991249156" type="LinkSprite">
-                    <param id="0" name="Object">FaroreItem</param>
+                    <param id="0" name="Object">FaroreBoots</param>
                 </condition>
                 <condition behavior="Platform" id="2" name="Is on floor" sid="4147838506093979" type="LinkSprite" />
                 <condition id="2" inverted="1" name="Is playing" sid="5318760222231582" type="LinkSprite">
@@ -1636,7 +1636,7 @@
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-3" name="Set position" sid="2603570326570972" type="FaroreItem">
+                <action id="-3" name="Set position" sid="2603570326570972" type="FaroreBoots">
                     <param id="0" name="X">LinkSprite.X+1</param>
                     <param id="1" name="Y">LinkSprite.Y-34</param>
                 </action>
@@ -1656,7 +1656,7 @@
                 <action id="-41" name="Wait for signal" sid="1460398613390126" type="System">
                     <param id="0" name="Tag">&quot;textDone&quot;</param>
                 </action>
-                <action id="-9" name="Destroy" sid="5743287727538017" type="FaroreItem" />
+                <action id="-9" name="Destroy" sid="5743287727538017" type="FaroreBoots" />
                 <action id="-15" name="Set visible" sid="2177603641528047" type="FBoots">
                     <param id="0" name="Visibility">1</param>
                 </action>

@@ -207,13 +207,13 @@
                 <condition id="-7" name="Compare instance variable" sid="260646878270483" type="Spider">
                     <param id="0" name="Instance variable">Timer</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">Self.Rate</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="3100907785999546" type="Spider">
                     <param id="0" name="Instance variable">Timer</param>
-                    <param id="1" name="Value">2</param>
+                    <param id="1" name="Value">Self.Rate</param>
                 </action>
                 <action id="4" name="Set animation" sid="8431825323487968" type="Spider">
                     <param id="0" name="Animation">&quot;Climb&quot;</param>
@@ -233,10 +233,10 @@
             </conditions>
             <actions>
                 <action id="-2" name="Set Y" sid="9524302947824653" type="Spider">
-                    <param id="0" name="Y">Self.Y - (dt * 100)</param>
+                    <param id="0" name="Y">Self.Y - (dt * 50)</param>
                 </action>
                 <action id="-6" name="Set height" sid="2264273955594156" type="SpiderString">
-                    <param id="0" name="Height">Self.Height - (dt * 100)</param>
+                    <param id="0" name="Height">Self.Height - (dt * 50)</param>
                 </action>
             </actions>
         </event-block>
@@ -274,10 +274,10 @@
             </conditions>
             <actions>
                 <action id="-2" name="Set Y" sid="4348756456686604" type="Spider">
-                    <param id="0" name="Y">Self.Y + (dt * 100)</param>
+                    <param id="0" name="Y">Self.Y + (dt * 200)</param>
                 </action>
                 <action id="-6" name="Set height" sid="6260303938549078" type="SpiderString">
-                    <param id="0" name="Height">Self.Height + (dt * 100)</param>
+                    <param id="0" name="Height">Self.Height + (dt * 200)</param>
                 </action>
             </actions>
             <sub-events>

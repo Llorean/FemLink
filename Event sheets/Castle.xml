@@ -209,11 +209,21 @@
                         <condition id="5" name="Contains value" sid="557609242504418" type="PassiveItems">
                             <param id="0" name="Value">&quot;Farore&apos;s Boots&quot;</param>
                         </condition>
+                        <condition id="5" name="Contains value" sid="1960472404991259" type="Items">
+                            <param id="0" name="Value">&quot;Bomb&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="7915538855366518" type="Function">
                             <param id="0" name="Name">&quot;Dialog&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Congratulations on completing the demo. Unfortunately this is all there was time to lay out, but check back soon for more areas and more items as we expand this further!&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Congratulations on completing the demo. The bombs and boots are just the basic equipment to start on your adventure!&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="393874603113562" type="System">
+                            <param id="0" name="Tag">&quot;textDone&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4968831152612873" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Unfortunately this is all there was time to lay out, but check back soon for more areas and more items as we expand this further!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -228,6 +238,20 @@
                         <action id="0" name="Call function" sid="958449588615067" type="Function">
                             <param id="0" name="Name">&quot;Dialog&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Ah, good, you&apos;ve found the bombs. They&apos;ll serve you well in retrieving Farore&apos;s Boots from the dungeon. Her boots will prove quite helpful in receiving the true blessings of the goddesses. Bring them to me when you&apos;ve found them.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9055592198210114">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4079978388596115" type="System" />
+                        <condition id="5" name="Contains value" sid="3511353122733628" type="PassiveItems">
+                            <param id="0" name="Value">&quot;Farore&apos;s Boots&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4584455435402263" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You&apos;ve retrieved Farore&apos;s Boots! You&apos;ll still probably want to get the bombs in the East tower before you go.&quot;</param>
                         </action>
                     </actions>
                 </event-block>

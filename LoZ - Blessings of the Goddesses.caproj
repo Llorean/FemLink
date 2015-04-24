@@ -1295,7 +1295,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FaroreItem" sid="8398436785833173">
+        <object-type name="FaroreBoots" sid="8398436785833173">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Persist" sid="517877840116446">
@@ -1304,17 +1304,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9715259714693477" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\fboots\fboots-damage-left.PNG">
-                        <collision-poly>
-                            <point x="0.1875" y="0.28125" />
-                            <point x="0.84375" y="0.28125" />
-                            <point x="0.84375" y="0.75" />
-                            <point x="0.1875" y="0.75" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="6942114515068039" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projects\FemLink\Resources\Sprites\fboots\fboots-damage-left.PNG" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1759,6 +1749,7 @@
                 <instance-variable name="Direction" sid="4424227398881587" type="string" />
                 <instance-variable name="Timer" sid="9621373148575099" type="number" />
                 <instance-variable name="OrigY" sid="3937820623787496" type="number" />
+                <instance-variable name="Rate" sid="8827913721469445" type="number" />
             </instance-variables>
             <container>
                 <type>Spider</type>
