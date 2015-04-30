@@ -603,7 +603,7 @@
                 <condition id="0" name="On key pressed" sid="500109316546413" type="Keyboard">
                     <param id="0" name="Key">122 (F11)</param>
                 </condition>
-                <condition id="-32" name="Is on platform" sid="5285114839097881" type="System">
+                <condition disabled="1" id="-32" name="Is on platform" sid="5285114839097881" type="System">
                     <param id="0" name="Platform">10</param>
                 </condition>
             </conditions>
