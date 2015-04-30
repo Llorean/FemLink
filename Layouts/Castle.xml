@@ -4612,7 +4612,7 @@
                 <instance type="FrameRate" uid="17">
                     <properties>
                         <text>00</text>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>

@@ -331,6 +331,9 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="5212975205265979" type="LinkSprite">
                                             <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="7163038695083821" type="LinkSprite">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="12" name="Fall through" sid="9588023717020343" type="LinkSprite" />
@@ -353,6 +356,9 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="9133836730110727" type="LinkSprite">
                                             <param id="0" name="Animation">&quot;ItemGet&quot;</param>
                                         </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="2108236295537774" type="LinkSprite">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="4" name="Set jump strength" sid="1199601513883373" type="LinkSprite">
@@ -372,6 +378,9 @@
                                         <condition id="3" name="Compare frame" sid="4552039100596373" type="LinkSprite">
                                             <param id="0" name="Comparison">0</param>
                                             <param id="1" name="Number">2</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="5259779412867815" type="LinkSprite">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1544,7 +1553,7 @@
                     <param id="0" name="Instance variable">JustEntered</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-25" name="Go to layout (by name)" sid="8016612784276851" type="System">
+                <action id="-25" name="Go to layout (by name)" sid="9991971657918665" type="System">
                     <param id="0" name="Layout">SceneDoor.Target</param>
                 </action>
             </actions>
@@ -1559,6 +1568,27 @@
                 <action id="-13" name="Set boolean" sid="4468650560271957" type="LinkSprite">
                     <param id="0" name="Instance variable">JustEntered</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7876660767141884">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5559542494386326" type="System">
+                    <param id="0" name="Variable">CurrentHealth</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="5762897823154779" type="Function">
+                    <param id="0" name="Name">&quot;Dialog&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Link was never seen again...&#x0D;&#x0A;&#x0D;&#x0A;Press a key to retry from the last checkpoint.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="481786876792943" type="System">
+                    <param id="0" name="Tag">&quot;TextDone&quot;</param>
+                </action>
+                <action id="-37" name="Load" sid="4626124598727615" type="System">
+                    <param id="0" name="Slot">&quot;checkpoint&quot;</param>
                 </action>
             </actions>
         </event-block>

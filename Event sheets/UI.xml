@@ -566,15 +566,76 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="9677083998034367">
+        <event-block sid="5323217196081691">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="668290744098785" type="System" />
+                <condition id="0" name="On key pressed" sid="9153201365639631" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+                <condition id="-32" name="Is on platform" sid="5807202499904069" type="System">
+                    <param id="0" name="Platform">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6807831710027665">
+                    <conditions>
+                        <condition id="10" name="Is fullscreen" sid="1987630841044795" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="3889678352178793" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="6133212075381798">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4696464879308518" type="System" />
+                        <condition id="10" inverted="1" name="Is fullscreen" sid="1584987190910993" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="3149873376878237" type="Browser">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4748910381836677">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="500109316546413" type="Keyboard">
+                    <param id="0" name="Key">122 (F11)</param>
+                </condition>
+                <condition id="-32" name="Is on platform" sid="5285114839097881" type="System">
+                    <param id="0" name="Platform">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1381310016877441">
+                    <conditions>
+                        <condition id="10" name="Is fullscreen" sid="9130002918684791" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Cancel fullscreen" sid="8708317541152396" type="Browser" />
+                    </actions>
+                </event-block>
+                <event-block sid="3169013995974343">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1251604270251465" type="System" />
+                        <condition id="10" inverted="1" name="Is fullscreen" sid="1748305255929441" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="10" name="Request fullscreen" sid="2012413177218132" type="Browser">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8408473056610301">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2592185409930192" type="System" />
             </conditions>
             <actions>
-                <action id="10" name="Request fullscreen" sid="4100895419735757" type="Browser">
-                    <param id="0" name="Mode">0</param>
-                </action>
-                <action id="0" name="Set cursor style" sid="8163430305423475" type="Mouse">
+                <action id="0" name="Set cursor style" sid="7649399248419721" type="Mouse">
                     <param id="0" name="Cursor style">7</param>
                 </action>
             </actions>

@@ -1243,7 +1243,7 @@
                 <behavior-type name="Platform" sid="7114888826943441">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="Persist" sid="8403270151688078">
+                <behavior-type name="Persist" sid="5925799987053456">
                     <behavior id="Persist" />
                 </behavior-type>
             </behaviors>
