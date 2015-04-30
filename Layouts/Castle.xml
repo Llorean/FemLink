@@ -4478,6 +4478,56 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="SwordGuy" uid="385">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>SwordLeft</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Skill>DownStab</Skill>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>584</x>
+                        <y>1344</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.863636374</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SwordGuy" uid="386">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Skill>UpStab</Skill>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>184</x>
+                        <y>1344</y>
+                        <z>0</z>
+                        <width>88</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.13636364</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

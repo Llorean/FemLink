@@ -1492,7 +1492,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1782505730687776" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\FaroreStatue.png">
+                    <frame duration="1" hotspotX="0.504587" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\FaroreStatue.png">
                         <collision-poly>
                             <point x="0.385321" y="0.182117" />
                             <point x="0.495413" y="0.00867225" />
@@ -2529,6 +2529,91 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3557407814240529" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Projects\FemLink\Resources\Sprites\Items\heartpiece.PNG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FaroreAlcove" sid="9105261852632992">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3703614822904606" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\Scenery\farorestatue-arch.PNG">
+                        <collision-poly>
+                            <point x="0.125" y="0.0818966" />
+                            <point x="0.5" y="0" />
+                            <point x="0.875" y="0.0818966" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Error" sid="8836363236393448">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="ErrorRight" pingpong="0" repeatcount="1" repeatto="0" sid="8895924083724118" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\NPC\error.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.0454545" />
+                            <point x="0.5" y="0" />
+                            <point x="0.8" y="0.0606061" />
+                            <point x="0.95" y="0.5" />
+                            <point x="0.95" y="0.984848" />
+                            <point x="0.5" y="1" />
+                            <point x="0.1" y="0.969697" />
+                            <point x="0.05" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="ErrorLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5574508079368624" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.95" y="0.5" />
+                            <point x="0.9" y="0.969697" />
+                            <point x="0.5" y="1" />
+                            <point x="0.05" y="0.984848" />
+                            <point x="0.05" y="0.5" />
+                            <point x="0.2" y="0.0606061" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.0454545" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SwordGuy" sid="8246771752364407">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Skill" sid="7081178745603763" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="SwordRight" pingpong="0" repeatcount="1" repeatto="0" sid="823271071281059" speed="5">
+                    <frame duration="1" hotspotX="0.136364" hotspotY="1" original-source="C:\Projects\FemLink\Resources\Sprites\NPC\swordtrainer.png">
+                        <collision-poly>
+                            <point x="0.0227273" y="0.03125" />
+                            <point x="0.136364" y="0" />
+                            <point x="0.238636" y="0.046875" />
+                            <point x="0.261364" y="0.984375" />
+                            <point x="0.136364" y="1" />
+                            <point x="0.0909091" y="0.875" />
+                            <point x="0.0568182" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="SwordLeft" pingpong="0" repeatcount="1" repeatto="0" sid="1740856689044057" speed="5">
+                    <frame duration="1" hotspotX="0.863636" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.943182" y="0.5" />
+                            <point x="0.909091" y="0.875" />
+                            <point x="0.863636" y="1" />
+                            <point x="0.738636" y="0.984375" />
+                            <point x="0.761364" y="0.046875" />
+                            <point x="0.863636" y="0" />
+                            <point x="0.977273" y="0.03125" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

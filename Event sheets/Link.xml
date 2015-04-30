@@ -691,7 +691,7 @@
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="1493369232471453" type="LinkSword" />
                                 <condition id="-14" name="Compare variable" sid="4358566149825846" type="System">
-                                    <param id="0" name="Variable">CanUpStab</param>
+                                    <param id="0" name="Variable">SkillUpStab</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -718,7 +718,7 @@
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="1355431930103681" type="LinkSword" />
                                 <condition id="-14" name="Compare variable" sid="1002751140240604" type="System">
-                                    <param id="0" name="Variable">CanDownStab</param>
+                                    <param id="0" name="Variable">SkillDownStab</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -745,7 +745,7 @@
                                 </condition>
                                 <condition id="-9" name="Is visible" sid="8587224175687839" type="LinkSword" />
                                 <condition id="-14" name="Compare variable" sid="9993997269176632" type="System">
-                                    <param id="0" name="Variable">CanDownStab</param>
+                                    <param id="0" name="Variable">SkillDownStab</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
@@ -1565,11 +1565,16 @@
         <event-block sid="2645305726574458">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6982177991249156" type="LinkSprite">
-                    <param id="0" name="Object">FaroreBoots</param>
+                    <param id="0" name="Object">FaroreAlcove</param>
                 </condition>
                 <condition behavior="Platform" id="2" name="Is on floor" sid="4147838506093979" type="LinkSprite" />
                 <condition id="2" inverted="1" name="Is playing" sid="5318760222231582" type="LinkSprite">
                     <param id="0" name="Animation">&quot;ItemGet&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="867211490401274" type="System">
+                    <param id="0" name="Variable">UpPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -1636,9 +1641,18 @@
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="-3" name="Set position" sid="2603570326570972" type="FaroreBoots">
-                    <param id="0" name="X">LinkSprite.X+1</param>
-                    <param id="1" name="Y">LinkSprite.Y-34</param>
+                <action id="0" name="Call function" sid="4669727294869547" type="Function">
+                    <param id="0" name="Name">&quot;Dialog&quot;</param>
+                    <param id="1" name="Parameter {n}"> &quot;Link, you will need to find my shrine in Hyrule Field to receive my blessing. These boots will allow you the freedom of the wind as you leap, granting you the ability to move across even the smallest of ledges with the grace of a butterfly.&quot;</param>
+                </action>
+                <action id="-41" name="Wait for signal" sid="6480829963418561" type="System">
+                    <param id="0" name="Tag">&quot;textDone&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="6431394462841368" type="System">
+                    <param id="0" name="Object to create">FaroreBoots</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">LinkSprite.X + 1</param>
+                    <param id="3" name="Y">LinkSprite.Y - 34</param>
                 </action>
                 <action id="0" name="Call function" sid="6922377060731609" type="Function">
                     <param id="0" name="Name">&quot;TextBox&quot;</param>
@@ -1677,6 +1691,134 @@
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="7236290954614815">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="17908587036496" type="LinkSprite">
+                    <param id="0" name="Object">SwordGuy</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="6518312729452916" type="LinkSprite" />
+                <condition id="-14" name="Compare variable" sid="140693711269338" type="System">
+                    <param id="0" name="Variable">UpPressed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7795845456040634">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2437956426074837" type="SwordGuy">
+                            <param id="0" name="Instance variable">Skill</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UpStab&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="699531936669605" type="System">
+                            <param id="0" name="Variable">SkillUpStab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="4678536932996346" type="LinkSprite">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9423189338443866" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"> &quot;Let me teach you a new skill. If you focus upward while jumping, you can pierce enemies above you with your sword!&#x0D;&#x0A;(Hold the up direction to stab upward while jumping)&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="8991613246703468" type="System">
+                            <param id="0" name="Tag">&quot;textDone&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="156836598815206" type="System">
+                            <param id="0" name="Variable">SkillUpStab</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7557604843268222">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1405732189406701" type="SwordGuy">
+                            <param id="0" name="Instance variable">Skill</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;UpStab&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2630464566856381" type="System">
+                            <param id="0" name="Variable">SkillUpStab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="8012402221165567" type="LinkSprite">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3687972802010541" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Link, I can teach you no more. Use your skills wisely.&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="6796697383422644" type="System">
+                            <param id="0" name="Tag">&quot;textDone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7214185359857269">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3654232122191723" type="SwordGuy">
+                            <param id="0" name="Instance variable">Skill</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;DownStab&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="151975160347406" type="System">
+                            <param id="0" name="Variable">SkillDownStab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="5973926845643952" type="LinkSprite">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5754377961871509" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}"> &quot;Let me teach you a new skill. If you focus downward while jumping or falling, you can pierce enemies below you with your sword!&#x0D;&#x0A;(Hold the up direction to stab upward while jumping or falling)&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="4451986895471779" type="System">
+                            <param id="0" name="Tag">&quot;textDone&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1269798983646775" type="System">
+                            <param id="0" name="Variable">SkillDownStab</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7560004100186413">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5708449914695179" type="SwordGuy">
+                            <param id="0" name="Instance variable">Skill</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;DownStab&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7379850730170054" type="System">
+                            <param id="0" name="Variable">SkillDownStab</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="9542202267581796" type="LinkSprite">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7584518893570175" type="Function">
+                            <param id="0" name="Name">&quot;Dialog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Link, I can teach you no more. Use your skills wisely.&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="7049662948255608" type="System">
+                            <param id="0" name="Tag">&quot;textDone&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="9166269350592924">
             <conditions>

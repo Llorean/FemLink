@@ -5,8 +5,8 @@
     <events>
         <variable constant="0" name="FirstTimeDungeon" sid="865145933536292" static="0" type="number">0</variable>
         <variable constant="0" name="FirstTimeCastle" sid="7065965875023758" static="0" type="number">0</variable>
-        <variable constant="0" name="CanDownStab" sid="8535913918040828" static="0" type="number">0</variable>
-        <variable constant="0" name="CanUpStab" sid="6769258209525856" static="0" type="number">0</variable>
+        <variable constant="0" name="SkillDownStab" sid="8535913918040828" static="0" type="number">0</variable>
+        <variable constant="0" name="SkillUpStab" sid="6769258209525856" static="0" type="number">0</variable>
         <variable constant="0" name="WallJump" sid="2674695433307314" static="0" type="number">0</variable>
         <variable constant="0" name="StabSoundPlayed" sid="4330052218197754" static="0" type="number">0</variable>
         <variable constant="0" name="ItemSwap" sid="4708445886807858" static="0" type="number">0</variable>
