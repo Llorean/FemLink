@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI</name>
     <events>
-        <event-block sid="3397332962239419">
+        <event-block disabled="1" sid="3397332962239419">
             <conditions>
                 <condition id="14" name="On tap" sid="9106834799010055" type="Touch" />
                 <condition disabled="1" id="5" inverted="1" name="Is downloading update" sid="4025374428296222" type="Browser" />

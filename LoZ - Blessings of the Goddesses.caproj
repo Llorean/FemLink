@@ -1266,10 +1266,6 @@
         </object-type>
         <object-type name="SceneDoor" sid="9246497750425484">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Target" sid="3557419769608555" type="string" />
-                <instance-variable name="Origin" sid="2246509593131665" type="string" />
-            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Castle" pingpong="0" repeatcount="1" repeatto="0" sid="3975896865668613" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.333333" original-source="C:\Projects\FemLink\Resources\Sprites\castlearch.PNG">
@@ -2617,6 +2613,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SceneTransition" sid="9031788229499615">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6628382448145449" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SolidWalls" plugin-id="Tilemap" sid="9882587120022268">
@@ -2655,6 +2659,16 @@
             <members>
                 <member>DungeonSecret</member>
             </members>
+        </family>
+        <family name="SceneChange" plugin-id="Sprite" sid="6513050029308283">
+            <members>
+                <member>SceneDoor</member>
+                <member>SceneTransition</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Target" sid="98248676169182" type="string" />
+                <instance-variable name="Origin" sid="1340848605460404" type="string" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
